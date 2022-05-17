@@ -11,8 +11,8 @@ included:
   - Danggn
 excluded:
   # AppDelegate, SceneDelegate file 무시
-  - Danggn/AppDelegate.swift
-  - Danggn/SceneDelegate.swift
+  - Danggn/Application/AppDelegate.swift
+  - Danggn/Application/SceneDelegate.swift
 
 force_cast: error
 force_unwrapping: error
