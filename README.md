@@ -1,3 +1,5 @@
+<img width="77" src="https://img.shields.io/badge/iOS-15.4+-silver"> <img width="95" src="https://img.shields.io/badge/Xcode-13.3.1-blue">
+
 # SwiftLint Rule
 
 ```yml
@@ -37,7 +39,27 @@ force_unwrapping: error
 - [Refactor] : 전면 수정이 있을 때 사용합니다
 - [Setting] : 프로젝트 설정관련이 있을 때 사용합니다.
 
-# 폴더링 Convention
+# Folder Convention
 
 - 약어는 삼가한다.
 - ViewController의 이름은 동사 + 명사 순서로 작성한다.
+
+### 🗂 Folder Structure
+
+```
+Danggn
+    |── Application
+    │   │── AppDelegate
+    │   │── SceneDelegate
+    │
+    |── Resource
+    │   │── Assets.xcassets
+    │   │── LaunchScreen
+    │
+    |── Screen
+    │       |── Temp
+    │── Info.plist
+-----------------------------
+.swiftlint.yml
+.gitignore
+```
