@@ -1,3 +1,26 @@
+# SwiftLint Rule
+
+```yml
+disabled_rules:
+  - trailing_whitespace
+  - orphaned_doc_comment
+  - nesting
+
+opt_in_rules:
+  - let_var_whitespace
+  - force_unwrapping
+
+included:
+  - Danggn
+excluded:
+  # AppDelegate, SceneDelegate file 무시
+  - Danggn/Application/AppDelegate.swift
+  - Danggn/Application/SceneDelegate.swift
+
+force_cast: error
+force_unwrapping: error
+```
+
 # Commit Convention
 
 - [Fix] : 버그, 오류 해결
