@@ -1,6 +1,6 @@
 <img width="77" src="https://img.shields.io/badge/iOS-15.4+-silver"> <img width="95" src="https://img.shields.io/badge/Xcode-13.3.1-blue">
 
-# SwiftLint Rule
+## SwiftLint Rule
 
 ```yml
 disabled_rules:
@@ -23,7 +23,7 @@ force_cast: error
 force_unwrapping: error
 ```
 
-# Commit Convention
+## Commit Convention
 
 - [Fix] : 버그, 오류 해결
 - [Chore] : 코드 수정, 내부 파일 수정
@@ -39,7 +39,7 @@ force_unwrapping: error
 - [Refactor] : 전면 수정이 있을 때 사용합니다
 - [Setting] : 프로젝트 설정관련이 있을 때 사용합니다.
 
-# 🔀 Git branch & [Git Flow](https://techblog.woowahan.com/2553/)
+## 🔀 Git branch & [Git Flow](https://techblog.woowahan.com/2553/)
 
 ```
 develop(default)
@@ -47,7 +47,7 @@ develop(default)
 feature/1-list-item
 ```
 
-# Folder Convention
+## Folder Convention
 
 - 약어는 삼가한다.
 - ViewController의 이름은 동사 + 명사 순서로 작성한다.
