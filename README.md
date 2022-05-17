@@ -39,6 +39,14 @@ force_unwrapping: error
 - [Refactor] : 전면 수정이 있을 때 사용합니다
 - [Setting] : 프로젝트 설정관련이 있을 때 사용합니다.
 
+# 🔀 Git branch & [Git Flow](https://techblog.woowahan.com/2553/)
+
+```
+develop(default)
+
+feature/1-list-item
+```
+
 # Folder Convention
 
 - 약어는 삼가한다.
