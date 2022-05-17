@@ -40,3 +40,4 @@ force_unwrapping: error
 # 폴더링 Convention
 
 - 약어는 삼가한다.
+- ViewController의 이름은 동사 + 명사 순서로 작성한다.
