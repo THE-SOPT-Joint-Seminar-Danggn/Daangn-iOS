@@ -63,6 +63,10 @@ Danggn
     |── Resource
     │   │── Assets.xcassets
     │   │── LaunchScreen
+    │   │── Font
+    │       |── Noto_Sans_SC
+    │       |── Nunito_Sans
+    │       |── Poppins
     │
     |── Screen
     │       |── Temp
