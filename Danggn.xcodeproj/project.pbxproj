@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A9C5AF328355422009B7E46 /* DetailItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9C5AF228355422009B7E46 /* DetailItem.storyboard */; };
+		4A9F8BB0283553D8000FB07B /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F8BAF283553D8000FB07B /* DetailItemViewController.swift */; };
 		4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */; };
 		4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */; };
 		4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */; };
@@ -36,11 +38,11 @@
 		4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE39D962833D033002D99B6 /* SceneDelegate.swift */; };
 		4FE39D9E2833D035002D99B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9D2833D035002D99B6 /* Assets.xcassets */; };
 		4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9F2833D035002D99B6 /* LaunchScreen.storyboard */; };
-		4FE39DAD2833DBCC002D99B6 /* Temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */; };
-		4FE39DAF2833DBE4002D99B6 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A9C5AF228355422009B7E46 /* DetailItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailItem.storyboard; sourceTree = "<group>"; };
+		4A9F8BAF283553D8000FB07B /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
 		4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Regular.otf"; sourceTree = "<group>"; };
 		4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Thin.otf"; sourceTree = "<group>"; };
 		4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Light.otf"; sourceTree = "<group>"; };
@@ -74,8 +76,6 @@
 		4FE39D9D2833D035002D99B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE39DA02833D035002D99B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE39DA22833D035002D99B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Temp.storyboard; sourceTree = "<group>"; };
-		4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A9F8BAC28355359000FB07B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F8BAE2835538E000FB07B /* View */,
+				4A9F8BAD28355382000FB07B /* Controller */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4A9F8BAD28355382000FB07B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F8BAF283553D8000FB07B /* DetailItemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A9F8BAE2835538E000FB07B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A9C5AF228355422009B7E46 /* DetailItem.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4F1ADAA12834080700969E1D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,8 +221,7 @@
 		4FE39DAB2833DB55002D99B6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */,
-				4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */,
+				4A9F8BAC28355359000FB07B /* Detail */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -268,7 +292,6 @@
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				4F1ADAD72834085E00969E1D /* Poppins-Medium.ttf in Resources */,
 				4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */,
-				4FE39DAD2833DBCC002D99B6 /* Temp.storyboard in Resources */,
 				4F1ADAC92834085800969E1D /* NunitoSans-Italic.ttf in Resources */,
 				4F1ADAAE2834083900969E1D /* NotoSansSC-Bold.otf in Resources */,
 				4F1ADAD92834085E00969E1D /* Poppins-Bold.ttf in Resources */,
@@ -281,6 +304,7 @@
 				4F1ADACC2834085800969E1D /* NunitoSans-SemiBold.ttf in Resources */,
 				4F1ADAC42834085800969E1D /* NunitoSans-Light.ttf in Resources */,
 				4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */,
+				4A9C5AF328355422009B7E46 /* DetailItem.storyboard in Resources */,
 				4F1ADACB2834085800969E1D /* NunitoSans-Bold.ttf in Resources */,
 				4F1ADACD2834085800969E1D /* NunitoSans-Black.ttf in Resources */,
 				4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */,
@@ -322,7 +346,7 @@
 			files = (
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
-				4FE39DAF2833DBE4002D99B6 /* TempViewController.swift in Sources */,
+				4A9F8BB0283553D8000FB07B /* DetailItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +489,7 @@
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Temp;
+				INFOPLIST_KEY_UIMainStoryboardFile = DetailItem;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -493,7 +517,7 @@
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Temp;
+				INFOPLIST_KEY_UIMainStoryboardFile = DetailItem;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
