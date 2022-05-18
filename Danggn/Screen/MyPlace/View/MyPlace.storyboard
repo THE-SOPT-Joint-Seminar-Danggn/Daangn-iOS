@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--내 근처-->
+        <!--My Place View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MyPlaceViewController" id="Y6W-OH-hqX" customClass="MyPlaceViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="내 근처" image="and_icon_myplace" selectedImage="and_icon_myplace2" id="UXB-JL-Bfl"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_myPlace_unselected" selectedImage="icon_myPlace_selected" id="UXB-JL-Bfl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,8 +27,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="and_icon_myplace" width="48" height="48"/>
-        <image name="and_icon_myplace2" width="48" height="48"/>
+        <image name="icon_myPlace_selected" width="48" height="48"/>
+        <image name="icon_myPlace_unselected" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

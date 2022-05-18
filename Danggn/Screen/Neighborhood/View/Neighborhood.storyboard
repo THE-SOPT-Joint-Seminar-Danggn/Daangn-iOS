@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--동네생활-->
+        <!--Neighborhood View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="NeighborhoodViewController" id="Y6W-OH-hqX" customClass="NeighborhoodViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="동네생활" image="and_icon_town" selectedImage="and_icon_town2" id="a0R-pq-KiO"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_neighborhood_unselected" selectedImage="icon_neighbohood_selected" springLoaded="YES" id="a0R-pq-KiO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,8 +27,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="and_icon_town" width="48" height="48"/>
-        <image name="and_icon_town2" width="48" height="48"/>
+        <image name="icon_neighbohood_selected" width="48" height="48"/>
+        <image name="icon_neighborhood_unselected" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

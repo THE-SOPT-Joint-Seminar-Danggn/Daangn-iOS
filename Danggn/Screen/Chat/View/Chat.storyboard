@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--채팅-->
+        <!--Chat View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="ChatViewController" id="Y6W-OH-hqX" customClass="ChatViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="채팅" image="and_icon_chatting" selectedImage="and_icon_chatting2" id="ik7-aP-eeb"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_chat_unselected" selectedImage="icon_chat_selected" id="ik7-aP-eeb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,8 +27,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="and_icon_chatting" width="48" height="48"/>
-        <image name="and_icon_chatting2" width="48" height="48"/>
+        <image name="icon_chat_selected" width="48" height="48"/>
+        <image name="icon_chat_unselected" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

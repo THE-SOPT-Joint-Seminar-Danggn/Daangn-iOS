@@ -76,7 +76,7 @@ Danggn
     │       |── View
     │           |── TabBar
     │       |── Controller
-    │           |── TabBarViewController
+    │           |── TabBarController
     │   │── Home
     │       |── Model
     │       |── View
