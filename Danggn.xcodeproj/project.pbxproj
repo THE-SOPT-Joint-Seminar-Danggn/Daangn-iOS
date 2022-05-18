@@ -36,8 +36,20 @@
 		4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE39D962833D033002D99B6 /* SceneDelegate.swift */; };
 		4FE39D9E2833D035002D99B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9D2833D035002D99B6 /* Assets.xcassets */; };
 		4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9F2833D035002D99B6 /* LaunchScreen.storyboard */; };
-		4FE39DAD2833DBCC002D99B6 /* Temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */; };
-		4FE39DAF2833DBE4002D99B6 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */; };
+		E70333942834687200ABF306 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333932834687200ABF306 /* ListItemViewController.swift */; };
+		E70333962834689D00ABF306 /* ListItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333952834689D00ABF306 /* ListItem.storyboard */; };
+		E703339D283469E700ABF306 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E703339C283469E700ABF306 /* TabBar.storyboard */; };
+		E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333AC2834721900ABF306 /* NeighborhoodViewController.swift */; };
+		E70333B02834722E00ABF306 /* Neighborhood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333AF2834722E00ABF306 /* Neighborhood.storyboard */; };
+		E70333B22834723E00ABF306 /* MyPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333B12834723E00ABF306 /* MyPlace.storyboard */; };
+		E70333B62834727800ABF306 /* MyPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333B52834727800ABF306 /* MyPlaceViewController.swift */; };
+		E70333B82834728500ABF306 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333B72834728500ABF306 /* Chat.storyboard */; };
+		E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333B92834728F00ABF306 /* ChatViewController.swift */; };
+		E70333BC2834729D00ABF306 /* MyDanggn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333BB2834729D00ABF306 /* MyDanggn.storyboard */; };
+		E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333BF283472C300ABF306 /* MyDanggnViewController.swift */; };
+		E70333C22834761800ABF306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333C12834761800ABF306 /* TabBarController.swift */; };
+		E7EB78E328354EEF0094D855 /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E228354EEF0094D855 /* HomeTemp.swift */; };
+		E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E428354EF80094D855 /* TabBarTemp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +86,20 @@
 		4FE39D9D2833D035002D99B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE39DA02833D035002D99B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE39DA22833D035002D99B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Temp.storyboard; sourceTree = "<group>"; };
-		4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		E70333932834687200ABF306 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		E70333952834689D00ABF306 /* ListItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListItem.storyboard; sourceTree = "<group>"; };
+		E703339C283469E700ABF306 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		E70333AC2834721900ABF306 /* NeighborhoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborhoodViewController.swift; sourceTree = "<group>"; };
+		E70333AF2834722E00ABF306 /* Neighborhood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Neighborhood.storyboard; sourceTree = "<group>"; };
+		E70333B12834723E00ABF306 /* MyPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPlace.storyboard; sourceTree = "<group>"; };
+		E70333B52834727800ABF306 /* MyPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceViewController.swift; sourceTree = "<group>"; };
+		E70333B72834728500ABF306 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		E70333B92834728F00ABF306 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E70333BB2834729D00ABF306 /* MyDanggn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDanggn.storyboard; sourceTree = "<group>"; };
+		E70333BF283472C300ABF306 /* MyDanggnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDanggnViewController.swift; sourceTree = "<group>"; };
+		E70333C12834761800ABF306 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E7EB78E228354EEF0094D855 /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
+		E7EB78E428354EF80094D855 /* TabBarTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTemp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,10 +220,182 @@
 		4FE39DAB2833DB55002D99B6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4FE39DAC2833DBCC002D99B6 /* Temp.storyboard */,
-				4FE39DAE2833DBE4002D99B6 /* TempViewController.swift */,
+				E70333982834698100ABF306 /* TabBar */,
+				E7033397283468D700ABF306 /* Home */,
+				E70333A22834705C00ABF306 /* Neighborhood */,
+				E70333A32834711700ABF306 /* MyPlace */,
+				E70333A02834700C00ABF306 /* Chat */,
+				E70333A12834703F00ABF306 /* MyDanggn */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		E70333902834673800ABF306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E228354EEF0094D855 /* HomeTemp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E70333912834674600ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E70333952834689D00ABF306 /* ListItem.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70333922834674A00ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333932834687200ABF306 /* ListItemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7033397283468D700ABF306 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E70333902834673800ABF306 /* Model */,
+				E70333912834674600ABF306 /* View */,
+				E70333922834674A00ABF306 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E70333982834698100ABF306 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E70333992834699300ABF306 /* Model */,
+				E703339B2834699E00ABF306 /* View */,
+				E703339A2834699700ABF306 /* Controller */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E70333992834699300ABF306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E428354EF80094D855 /* TabBarTemp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E703339A2834699700ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333C12834761800ABF306 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E703339B2834699E00ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E703339C283469E700ABF306 /* TabBar.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70333A02834700C00ABF306 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E70333A9283471B700ABF306 /* View */,
+				E70333A8283471B000ABF306 /* Controller */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		E70333A12834703F00ABF306 /* MyDanggn */ = {
+			isa = PBXGroup;
+			children = (
+				E70333AB283471C500ABF306 /* View */,
+				E70333AA283471BB00ABF306 /* Controller */,
+			);
+			path = MyDanggn;
+			sourceTree = "<group>";
+		};
+		E70333A22834705C00ABF306 /* Neighborhood */ = {
+			isa = PBXGroup;
+			children = (
+				E70333A42834718400ABF306 /* View */,
+				E70333A52834718C00ABF306 /* Controller */,
+			);
+			path = Neighborhood;
+			sourceTree = "<group>";
+		};
+		E70333A32834711700ABF306 /* MyPlace */ = {
+			isa = PBXGroup;
+			children = (
+				E70333A7283471AB00ABF306 /* View */,
+				E70333A62834719E00ABF306 /* Controller */,
+			);
+			path = MyPlace;
+			sourceTree = "<group>";
+		};
+		E70333A42834718400ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E70333AF2834722E00ABF306 /* Neighborhood.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70333A52834718C00ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333AC2834721900ABF306 /* NeighborhoodViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E70333A62834719E00ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333B52834727800ABF306 /* MyPlaceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E70333A7283471AB00ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E70333B12834723E00ABF306 /* MyPlace.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70333A8283471B000ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333B92834728F00ABF306 /* ChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E70333A9283471B700ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E70333B72834728500ABF306 /* Chat.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E70333AA283471BB00ABF306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E70333BF283472C300ABF306 /* MyDanggnViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E70333AB283471C500ABF306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E70333BB2834729D00ABF306 /* MyDanggn.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,12 +461,14 @@
 				4F1ADAAD2834083900969E1D /* NotoSansSC-Medium.otf in Resources */,
 				4F1ADAC72834085800969E1D /* NunitoSans-Regular.ttf in Resources */,
 				4F1ADAC12834085800969E1D /* NunitoSans-LightItalic.ttf in Resources */,
+				E70333962834689D00ABF306 /* ListItem.storyboard in Resources */,
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				4F1ADAD72834085E00969E1D /* Poppins-Medium.ttf in Resources */,
 				4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */,
-				4FE39DAD2833DBCC002D99B6 /* Temp.storyboard in Resources */,
 				4F1ADAC92834085800969E1D /* NunitoSans-Italic.ttf in Resources */,
+				E703339D283469E700ABF306 /* TabBar.storyboard in Resources */,
 				4F1ADAAE2834083900969E1D /* NotoSansSC-Bold.otf in Resources */,
+				E70333B82834728500ABF306 /* Chat.storyboard in Resources */,
 				4F1ADAD92834085E00969E1D /* Poppins-Bold.ttf in Resources */,
 				4F1ADAAF2834083900969E1D /* NotoSansSC-Black.otf in Resources */,
 				4F1ADAC22834085800969E1D /* NunitoSans-BoldItalic.ttf in Resources */,
@@ -281,8 +479,11 @@
 				4F1ADACC2834085800969E1D /* NunitoSans-SemiBold.ttf in Resources */,
 				4F1ADAC42834085800969E1D /* NunitoSans-Light.ttf in Resources */,
 				4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */,
+				E70333BC2834729D00ABF306 /* MyDanggn.storyboard in Resources */,
 				4F1ADACB2834085800969E1D /* NunitoSans-Bold.ttf in Resources */,
 				4F1ADACD2834085800969E1D /* NunitoSans-Black.ttf in Resources */,
+				E70333B02834722E00ABF306 /* Neighborhood.storyboard in Resources */,
+				E70333B22834723E00ABF306 /* MyPlace.storyboard in Resources */,
 				4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */,
 				4F1ADAD82834085E00969E1D /* Poppins-Regular.ttf in Resources */,
 				4F1ADAC32834085800969E1D /* NunitoSans-ExtraLight.ttf in Resources */,
@@ -320,9 +521,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70333B62834727800ABF306 /* MyPlaceViewController.swift in Sources */,
+				E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */,
+				E7EB78E328354EEF0094D855 /* HomeTemp.swift in Sources */,
+				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
+				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
+				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
+				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
-				4FE39DAF2833DBE4002D99B6 /* TempViewController.swift in Sources */,
+				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +673,7 @@
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Temp;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -493,7 +701,7 @@
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Temp;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
