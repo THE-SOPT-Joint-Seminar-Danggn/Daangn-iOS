@@ -26,7 +26,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ios_icon_home"/>
                                 <connections>
-                                    <action selector="homeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3nW-k4-Wob"/>
+                                    <action selector="homeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U3h-nH-JHh"/>
                                 </connections>
                             </button>
                         </barButtonItem>
