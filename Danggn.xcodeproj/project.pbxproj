@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A08289928357B2C00A582CD /* DetailItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A08289828357B2C00A582CD /* DetailItem.storyboard */; };
-		4A08289D28357DF700A582CD /* DetailItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08289C28357DF700A582CD /* DetailItemViewController.swift */; };
+		4A08289928357B2C00A582CD /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A08289828357B2C00A582CD /* ItemDetail.storyboard */; };
+		4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08289C28357DF700A582CD /* ItemDetailViewController.swift */; };
 		4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */; };
 		4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */; };
 		4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */; };
@@ -55,8 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A08289828357B2C00A582CD /* DetailItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailItem.storyboard; sourceTree = "<group>"; };
-		4A08289C28357DF700A582CD /* DetailItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemViewController.swift; sourceTree = "<group>"; };
+		4A08289828357B2C00A582CD /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
+		4A08289C28357DF700A582CD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Regular.otf"; sourceTree = "<group>"; };
 		4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Thin.otf"; sourceTree = "<group>"; };
 		4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Light.otf"; sourceTree = "<group>"; };
@@ -117,31 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A08289528357A6E00A582CD /* DetailItem */ = {
-			isa = PBXGroup;
-			children = (
-				4A08289728357A8500A582CD /* Controller */,
-				4A08289628357A8100A582CD /* View */,
-			);
-			path = DetailItem;
-			sourceTree = "<group>";
-		};
-		4A08289628357A8100A582CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A08289828357B2C00A582CD /* DetailItem.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A08289728357A8500A582CD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A08289C28357DF700A582CD /* DetailItemViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		4F1ADAA12834080700969E1D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +224,6 @@
 		4FE39DAB2833DB55002D99B6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4A08289528357A6E00A582CD /* DetailItem */,
 				E70333982834698100ABF306 /* TabBar */,
 				E7033397283468D700ABF306 /* Home */,
 				E70333A22834705C00ABF306 /* Neighborhood */,
@@ -271,6 +245,7 @@
 		E70333912834674600ABF306 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A08289828357B2C00A582CD /* ItemDetail.storyboard */,
 				E70333952834689D00ABF306 /* ListItem.storyboard */,
 			);
 			path = View;
@@ -279,6 +254,7 @@
 		E70333922834674A00ABF306 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4A08289C28357DF700A582CD /* ItemDetailViewController.swift */,
 				E70333932834687200ABF306 /* ListItemViewController.swift */,
 			);
 			path = Controller;
@@ -519,7 +495,7 @@
 				4F1ADAC32834085800969E1D /* NunitoSans-ExtraLight.ttf in Resources */,
 				4F1ADAC52834085800969E1D /* NunitoSans-BlackItalic.ttf in Resources */,
 				4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */,
-				4A08289928357B2C00A582CD /* DetailItem.storyboard in Resources */,
+				4A08289928357B2C00A582CD /* ItemDetail.storyboard in Resources */,
 				4F1ADAC82834085800969E1D /* NunitoSans-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +535,7 @@
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
-				4A08289D28357DF700A582CD /* DetailItemViewController.swift in Sources */,
+				4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */,
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,
