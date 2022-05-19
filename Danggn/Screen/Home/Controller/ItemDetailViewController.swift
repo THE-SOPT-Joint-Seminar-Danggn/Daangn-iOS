@@ -14,7 +14,7 @@ class ItemDetailViewController: UIViewController {
 
     }
 
-    @IBAction func homeButton(_ sender: UIButton) {
+    @IBAction func homeButtonDidTap(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
