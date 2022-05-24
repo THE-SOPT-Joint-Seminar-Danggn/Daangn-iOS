@@ -134,6 +134,7 @@
                     <connections>
                         <outlet property="chatButton" destination="Ghb-uY-YUZ" id="mts-Rf-bTV"/>
                         <outlet property="itemPriceLabel" destination="x1f-Tt-mBo" id="YLY-VQ-OcT"/>
+                        <outlet property="likeButton" destination="tLN-rN-d33" id="sRc-p0-Q2Y"/>
                         <outlet property="proposalPriceLabel" destination="274-PF-qBW" id="KN6-9v-8Qd"/>
                     </connections>
                 </viewController>
