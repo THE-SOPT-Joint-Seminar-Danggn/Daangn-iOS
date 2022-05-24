@@ -80,8 +80,10 @@ Danggn
     │   │── Home
     │       |── Model
     │       |── View
-    │           |── ListItem
+    │           |── ItemDetail
+    |           |── ListItem
     │       |── Controller
+    |           |── ItemDetailViewController
     │           |── ListItemViewController
     │   │── Neighborhood
     │       |── View
