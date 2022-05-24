@@ -33,10 +33,10 @@ class ItemDetailViewController: UIViewController {
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
     @IBAction func likeButtonDidTab(_ sender: UIButton) {
         if toggleButtonChecked == false {
-            toggleButtonChecked = true
+            toggleButtonChecked.toggle()
             likeButtonSelected()
         } else {
-            toggleButtonChecked = false
+            toggleButtonChecked.toggle()
             likeButtonNotSelected()
         }
     }
