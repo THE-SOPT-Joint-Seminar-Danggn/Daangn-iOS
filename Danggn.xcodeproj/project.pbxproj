@@ -50,6 +50,9 @@
 		E70333C22834761800ABF306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333C12834761800ABF306 /* TabBarController.swift */; };
 		E7EB78E328354EEF0094D855 /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E228354EEF0094D855 /* HomeTemp.swift */; };
 		E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E428354EF80094D855 /* TabBarTemp.swift */; };
+		E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */; };
+		E7F2375E283DDD7000177E7C /* ListItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */; };
+		E7F2375F283DDD7000177E7C /* ListItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +103,9 @@
 		E70333C12834761800ABF306 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E7EB78E228354EEF0094D855 /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 		E7EB78E428354EF80094D855 /* TabBarTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTemp.swift; sourceTree = "<group>"; };
+		E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
+		E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE39DA22833D035002D99B6 /* Info.plist */,
+				E7EB78E928366C7A0094D855 /* Global */,
 				4FE39DAB2833DB55002D99B6 /* Screen */,
 				4FE39DAA2833DA97002D99B6 /* Resource */,
 				4FE39DA92833D9D2002D99B6 /* Application */,
@@ -242,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				E70333952834689D00ABF306 /* ListItem.storyboard */,
+				E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				E70333932834687200ABF306 /* ListItemViewController.swift */,
+				E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +407,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E7EB78E6283660530094D855 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E7EB78E928366C7A0094D855 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E6283660530094D855 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -464,6 +489,7 @@
 				E70333962834689D00ABF306 /* ListItem.storyboard in Resources */,
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				4F1ADAD72834085E00969E1D /* Poppins-Medium.ttf in Resources */,
+				E7F2375F283DDD7000177E7C /* ListItemCollectionViewCell.xib in Resources */,
 				4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */,
 				4F1ADAC92834085800969E1D /* NunitoSans-Italic.ttf in Resources */,
 				E703339D283469E700ABF306 /* TabBar.storyboard in Resources */,
@@ -527,9 +553,11 @@
 				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
+				E7F2375E283DDD7000177E7C /* ListItemCollectionViewCell.swift in Sources */,
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
+				E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,6 +697,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFS6YUQ2Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -697,6 +726,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFS6YUQ2Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

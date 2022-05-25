@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "and_icon_alarm.png",
+      "filename" : "Property 1=ios_icon_heart_off.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Property 1=ios_icon_heart_off@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Property 1=ios_icon_heart_off@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -17,5 +19,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

@@ -59,6 +59,9 @@ Danggn
     |── Application
     │   │── AppDelegate
     │   │── SceneDelegate
+    |
+    |── Global
+    │   │── Extension
     │
     |── Resource
     │   │── Assets.xcassets

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "and_icon_cate.png",
+      "filename" : "Property 1=ios_icon_cate.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Property 1=ios_icon_cate@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Property 1=ios_icon_cate@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
