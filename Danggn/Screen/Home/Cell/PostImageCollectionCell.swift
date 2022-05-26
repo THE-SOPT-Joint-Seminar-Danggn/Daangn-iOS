@@ -10,8 +10,9 @@ import UIKit
 class PostImageCollectionCell: UICollectionViewCell {
     
     static let identifier = "PostImageCollectionCell"
-
+    
     @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,16 @@ class PostImageCollectionCell: UICollectionViewCell {
     
     func setData(postImageData: PostImageModel) {
         postImage.image = UIImage(named: postImageData.postImageName)
+    }
+
+}
+
+extension PostImageCollectionCell: UICollectionViewDelegate {
+    // feed collectionView를 스크롤하면 pageControl도 알맞은 위치로 변경
+    // 색깔이 변하지 않음...
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let page = Int(targetContentOffset.pointee.x / self.frame.width)
+        pageControl.currentPage = page
     }
 
 }

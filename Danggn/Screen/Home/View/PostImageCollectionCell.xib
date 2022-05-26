@@ -23,16 +23,22 @@
                             <constraint firstAttribute="width" constant="375" id="t00-No-V4D"/>
                         </constraints>
                     </imageView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="k9z-DX-1LW">
+                        <rect key="frame" x="129.5" y="326" width="116" height="26"/>
+                    </pageControl>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="k9z-DX-1LW" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Ikv-s8-gAX"/>
                 <constraint firstAttribute="bottom" secondItem="J1W-Zk-VG9" secondAttribute="bottom" id="RIO-Rz-aEO"/>
                 <constraint firstItem="J1W-Zk-VG9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lXB-RG-Owt"/>
                 <constraint firstItem="J1W-Zk-VG9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="whf-Fm-3Ey"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="k9z-DX-1LW" secondAttribute="bottom" constant="23" id="woB-pa-awH"/>
                 <constraint firstAttribute="trailing" secondItem="J1W-Zk-VG9" secondAttribute="trailing" id="xhx-sX-NaI"/>
             </constraints>
             <connections>
+                <outlet property="pageControl" destination="k9z-DX-1LW" id="smm-by-fp0"/>
                 <outlet property="postImage" destination="J1W-Zk-VG9" id="2Qm-kq-wM3"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
