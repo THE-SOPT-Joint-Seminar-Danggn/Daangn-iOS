@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ItemDetailViewController: UIViewController {
+class ItemDetailViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var itemDetailTableView: UITableView!
+    
     @IBOutlet weak var itemPriceLabel: UILabel!
     @IBOutlet weak var proposalPriceLabel: UILabel!
     
@@ -21,6 +23,19 @@ class ItemDetailViewController: UIViewController {
         super.viewDidLoad()
         setChatButton()
         likeButtonNotSelected()
+        setPostImageTableView()
+    }
+    
+    func setPostImageTableView() {
+        let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
+        itemDetailTableView.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
+        
+        itemDetailTableView.delegate = self
+        itemDetailTableView.dataSource = self
+        
+        itemDetailTableView.estimatedRowHeight = 375
+        itemDetailTableView.rowHeight = UITableView.automaticDimension
+        
     }
 
     @IBAction func homeButtonDidTap(_ sender: UIButton) {
@@ -51,5 +66,22 @@ class ItemDetailViewController: UIViewController {
     
     private func setChatButton() {
         chatButton.layer.cornerRadius = 5
+    }
+}
+
+//extension ItemDetailViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 375
+//    }
+//}
+
+extension ItemDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
+        return cell
     }
 }
