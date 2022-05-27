@@ -13,6 +13,10 @@ class ListItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
         setNavigationUI()
         registerCell()
     }
@@ -41,6 +45,8 @@ extension ListItemViewController {
         // 여백을 주기 위해 동네명을 UIButton으로 만들고 UIView에 담아 myArea라는 UIBarButtonItem애 customView로 대입
         let myAreaButton = UIButton(frame: CGRect(x: 10, y: 0, width: 50, height: 50))
         myAreaButton.setTitle("영통동", for: .normal)
+        myAreaButton.titleLabel?.font = UIFont(name: "Roboto", size: 18)
+        myAreaButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         myAreaButton.setTitleColor(.label, for: .normal)
         myAreaButton.sizeToFit()
         
