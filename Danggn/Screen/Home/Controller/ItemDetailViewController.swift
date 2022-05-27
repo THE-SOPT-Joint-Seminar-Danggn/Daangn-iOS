@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemDetailViewController: UIViewController, UITableViewDelegate {
+class ItemDetailViewController: UIViewController {
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -24,17 +24,31 @@ class ItemDetailViewController: UIViewController, UITableViewDelegate {
         setChatButton()
         likeButtonNotSelected()
         setPostImageTableView()
+        setPostDetailTableView()
     }
     
     func setPostImageTableView() {
         let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
         itemDetailTableView.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
         
+        
         itemDetailTableView.delegate = self
         itemDetailTableView.dataSource = self
         
-        itemDetailTableView.estimatedRowHeight = 375
-        itemDetailTableView.rowHeight = UITableView.automaticDimension
+//        itemDetailTableView.estimatedRowHeight = 375
+//        itemDetailTableView.rowHeight = UITableView.automaticDimension
+        
+    }
+    
+    func setPostDetailTableView() {
+        let postDetailNib = UINib(nibName: PostDetailTableViewCell.identifier, bundle: nil)
+        itemDetailTableView.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
+        
+        itemDetailTableView.delegate = self
+        itemDetailTableView.dataSource = self
+        
+//        itemDetailTableView.estimatedRowHeight = 321
+//        itemDetailTableView.rowHeight = UITableView.automaticDimension
         
     }
 
@@ -69,19 +83,54 @@ class ItemDetailViewController: UIViewController, UITableViewDelegate {
     }
 }
 
-//extension ItemDetailViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 375
-//    }
-//}
+// section 마다 크기를 주었더니 잘 보이게 됨.
+extension ItemDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 375
+        case 1:
+            return 321
+        default:
+            return 0
+        }
+    }
+}
 
 extension ItemDetailViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    // section 마다 cell 다르게
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        var count: Int
+        
+        switch section {
+        case 0:
+            count = 1
+            // 이렇게 했을 때 3개가 나온 이유?
+//          count = PostImageModel.sampleData.count
+        case 1:
+            count = 1
+        default:
+            count = 0
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
-        return cell
+       // 이 부분 좀 더 이해하고 싶다
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }

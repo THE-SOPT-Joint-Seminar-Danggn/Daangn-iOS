@@ -8,16 +8,29 @@
 import UIKit
 
 class PostDetailTableViewCell: UITableViewCell {
+    
+    // cell을 구분하기 위한 identifier
+    static let identifier = "PostDetailTableViewCell"
+    
+    @IBOutlet weak var postDetailTableView: UIView!
+    
+    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var stateButton: UIButton!
+    
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var postLable: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
