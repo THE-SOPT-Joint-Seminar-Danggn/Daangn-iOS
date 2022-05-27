@@ -8,6 +8,8 @@
 import UIKit
 
 class ItemDetailViewController: UIViewController {
+    
+    private var postCell = PostDetailTableViewCell()
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -30,8 +32,7 @@ class ItemDetailViewController: UIViewController {
     func setPostImageTableView() {
         let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
         itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
-        
-        
+    
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
         
@@ -132,5 +133,31 @@ extension ItemDetailViewController: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+    }
+}
+
+extension ItemDetailViewController: PostDetailTableViewCellDelegate {
+    func presentActionSheet() {
+            let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
+            
+            let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
+                self.postCell.stateButton.titleLabel?.text = "판매중"
+            }
+            let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
+                self.postCell.stateButton.titleLabel?.text = "예약중"
+            }
+            let soldOutAction = UIAlertAction(title: "판매완료", style: .default) { _ in
+                self.postCell.stateButton.titleLabel?.text = "판매완료"
+            }
+            
+            let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+            
+            actionSheet.addAction(sellingAction)
+            actionSheet.addAction(reservedAction)
+            actionSheet.addAction(soldOutAction)
+            actionSheet.addAction(cancelAction)
+            
+            // 쇽샥 코드
+        self.present(actionSheet, animated: true)
     }
 }
