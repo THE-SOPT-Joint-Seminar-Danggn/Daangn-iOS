@@ -96,6 +96,9 @@
                             <fontDescription key="titleFontDescription" name="Poppins-ExtraBold" family="Poppins" pointSize="14"/>
                             <directionalEdgeInsets key="contentInsets" top="0.0" leading="10" bottom="0.0" trailing="0.0"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="stateButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d9a-5h-Jdi"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최태성 한능검 심화기출 500제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-Xv-YpH">
                         <rect key="frame" x="15" y="153" width="345" height="31.5"/>

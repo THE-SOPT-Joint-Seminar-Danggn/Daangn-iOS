@@ -10,6 +10,12 @@
 		4A08289928357B2C00A582CD /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A08289828357B2C00A582CD /* ItemDetail.storyboard */; };
 		4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08289C28357DF700A582CD /* ItemDetailViewController.swift */; };
 		4A8D5A43283D550800081CA5 /* temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8D5A42283D550800081CA5 /* temp.swift */; };
+		4AE9380A283FDCF000961E5B /* PostImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE93808283FDCF000961E5B /* PostImageTableViewCell.swift */; };
+		4AE9380B283FDCF000961E5B /* PostImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */; };
+		4AE9380E283FDCFB00961E5B /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9380C283FDCFB00961E5B /* PostDetailTableViewCell.swift */; };
+		4AE9380F283FDCFB00961E5B /* PostDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */; };
+		4AE93812283FDD2F00961E5B /* PostImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE93810283FDD2F00961E5B /* PostImageCollectionCell.swift */; };
+		4AE93813283FDD2F00961E5B /* PostImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */; };
 		4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */; };
 		4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */; };
 		4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */; };
@@ -58,6 +64,12 @@
 		4A08289828357B2C00A582CD /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		4A08289C28357DF700A582CD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		4A8D5A42283D550800081CA5 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
+		4AE93808283FDCF000961E5B /* PostImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageTableViewCell.swift; sourceTree = "<group>"; };
+		4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostImageTableViewCell.xib; sourceTree = "<group>"; };
+		4AE9380C283FDCFB00961E5B /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailTableViewCell.xib; sourceTree = "<group>"; };
+		4AE93810283FDD2F00961E5B /* PostImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCollectionCell.swift; sourceTree = "<group>"; };
+		4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostImageCollectionCell.xib; sourceTree = "<group>"; };
 		4F1ADAA32834083900969E1D /* NotoSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Regular.otf"; sourceTree = "<group>"; };
 		4F1ADAA42834083900969E1D /* NotoSansSC-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Thin.otf"; sourceTree = "<group>"; };
 		4F1ADAA52834083900969E1D /* NotoSansSC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Light.otf"; sourceTree = "<group>"; };
@@ -117,6 +129,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AE93814283FDD5900961E5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AE93808283FDCF000961E5B /* PostImageTableViewCell.swift */,
+				4AE9380C283FDCFB00961E5B /* PostDetailTableViewCell.swift */,
+				4AE93810283FDD2F00961E5B /* PostImageCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4F1ADAA12834080700969E1D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +269,9 @@
 			children = (
 				4A08289828357B2C00A582CD /* ItemDetail.storyboard */,
 				E70333952834689D00ABF306 /* ListItem.storyboard */,
+				4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */,
+				4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */,
+				4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +288,7 @@
 		E7033397283468D700ABF306 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4AE93814283FDD5900961E5B /* Cell */,
 				E70333902834673800ABF306 /* Model */,
 				E70333912834674600ABF306 /* View */,
 				E70333922834674A00ABF306 /* Controller */,
@@ -468,6 +494,7 @@
 				4F1ADAC72834085800969E1D /* NunitoSans-Regular.ttf in Resources */,
 				4F1ADAC12834085800969E1D /* NunitoSans-LightItalic.ttf in Resources */,
 				E70333962834689D00ABF306 /* ListItem.storyboard in Resources */,
+				4AE93813283FDD2F00961E5B /* PostImageCollectionCell.xib in Resources */,
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				4F1ADAD72834085E00969E1D /* Poppins-Medium.ttf in Resources */,
 				4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */,
@@ -475,6 +502,7 @@
 				E703339D283469E700ABF306 /* TabBar.storyboard in Resources */,
 				4F1ADAAE2834083900969E1D /* NotoSansSC-Bold.otf in Resources */,
 				E70333B82834728500ABF306 /* Chat.storyboard in Resources */,
+				4AE9380F283FDCFB00961E5B /* PostDetailTableViewCell.xib in Resources */,
 				4F1ADAD92834085E00969E1D /* Poppins-Bold.ttf in Resources */,
 				4F1ADAAF2834083900969E1D /* NotoSansSC-Black.otf in Resources */,
 				4F1ADAC22834085800969E1D /* NunitoSans-BoldItalic.ttf in Resources */,
@@ -497,6 +525,7 @@
 				4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */,
 				4A08289928357B2C00A582CD /* ItemDetail.storyboard in Resources */,
 				4F1ADAC82834085800969E1D /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				4AE9380B283FDCF000961E5B /* PostImageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,14 +560,17 @@
 				E70333B62834727800ABF306 /* MyPlaceViewController.swift in Sources */,
 				E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */,
 				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
+				4AE9380A283FDCF000961E5B /* PostImageTableViewCell.swift in Sources */,
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
+				4AE93812283FDD2F00961E5B /* PostImageCollectionCell.swift in Sources */,
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
 				4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */,
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
 				4A8D5A43283D550800081CA5 /* temp.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,
+				4AE9380E283FDCFB00961E5B /* PostDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,11 +29,11 @@ class ItemDetailViewController: UIViewController {
     
     func setPostImageTableView() {
         let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
-        itemDetailTableView.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
+        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
         
         
-        itemDetailTableView.delegate = self
-        itemDetailTableView.dataSource = self
+        itemDetailTableView?.delegate = self
+        itemDetailTableView?.dataSource = self
         
 //        itemDetailTableView.estimatedRowHeight = 375
 //        itemDetailTableView.rowHeight = UITableView.automaticDimension
@@ -42,10 +42,10 @@ class ItemDetailViewController: UIViewController {
     
     func setPostDetailTableView() {
         let postDetailNib = UINib(nibName: PostDetailTableViewCell.identifier, bundle: nil)
-        itemDetailTableView.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
+        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
         
-        itemDetailTableView.delegate = self
-        itemDetailTableView.dataSource = self
+        itemDetailTableView?.delegate = self
+        itemDetailTableView?.dataSource = self
         
 //        itemDetailTableView.estimatedRowHeight = 321
 //        itemDetailTableView.rowHeight = UITableView.automaticDimension
@@ -71,15 +71,15 @@ class ItemDetailViewController: UIViewController {
     }
     
     func likeButtonNotSelected() {
-        likeButton.setImage(UIImage(named: "icon_heart_off"), for: .normal)
+        likeButton?.setImage(UIImage(named: "icon_heart_off"), for: .normal)
     }
     
     func likeButtonSelected() {
-        likeButton.setImage(UIImage(named: "icon_heart_on"), for: .normal)
+        likeButton?.setImage(UIImage(named: "icon_heart_on"), for: .normal)
     }
     
     private func setChatButton() {
-        chatButton.layer.cornerRadius = 5
+        chatButton?.layer.cornerRadius = 5
     }
 }
 
