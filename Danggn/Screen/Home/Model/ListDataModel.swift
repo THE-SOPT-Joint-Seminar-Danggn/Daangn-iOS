@@ -52,7 +52,6 @@ extension ListDataModel {
             listTitle: "기본 셔츠 반팔",
             listLocation: "수원시 영통구",
             listPrice: "23,000원",
-            listLikeCount: 111),
-        
+            listLikeCount: 111)
     ]
 }

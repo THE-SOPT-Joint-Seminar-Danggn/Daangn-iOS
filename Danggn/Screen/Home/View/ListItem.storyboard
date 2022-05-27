@@ -41,6 +41,9 @@
                                 <rect key="frame" x="298" y="655" width="62" height="62"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="icon_create"/>
+                                <connections>
+                                    <action selector="itemCreateButtondidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lqz-OQ-kZK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

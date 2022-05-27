@@ -16,6 +16,10 @@ class ListItemViewController: UIViewController {
         setNavigationUI()
         registerCell()
     }
+    
+    @IBAction func itemCreateButtondidTap(_ sender: Any) {
+        
+    }
 }
 
 extension ListItemViewController {
@@ -45,7 +49,6 @@ extension ListItemViewController {
         
         let myArea = UIBarButtonItem(customView: leftBarView)
         navigationItem.leftBarButtonItem = myArea
-
     }
 }
 
@@ -105,12 +108,5 @@ extension ListItemViewController: UICollectionViewDelegateFlowLayout {
         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        <#code#>
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        <#code#>
-//    }
+
 }
