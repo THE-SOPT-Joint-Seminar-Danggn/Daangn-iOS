@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Property 1=ios_icon_bell.png",
+      "filename" : "KakaoTalk_20220514_152055741 3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Property 1=ios_icon_bell@2x.png",
+      "filename" : "KakaoTalk_20220514_152055741 3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Property 1=ios_icon_bell@3x.png",
+      "filename" : "KakaoTalk_20220514_152055741 3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,8 +19,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

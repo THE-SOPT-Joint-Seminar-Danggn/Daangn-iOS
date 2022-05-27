@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KxZ-iJ-Ibg">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,13 +14,13 @@
             <objects>
                 <viewController storyboardIdentifier="ListItemViewController" id="Y6W-OH-hqX" customClass="ListItemViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FUI-fk-Rzu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oHG-Uh-3DH">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oHG-Uh-3DH">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,24 +37,34 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjm-W0-zrO">
+                                <rect key="frame" x="298" y="655" width="62" height="62"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icon_create"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FUI-fk-Rzu" secondAttribute="trailing" id="CAG-yf-nLv"/>
-                            <constraint firstItem="FUI-fk-Rzu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Gcb-Dv-4uT"/>
+                            <constraint firstItem="FUI-fk-Rzu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-2" id="Gcb-Dv-4uT"/>
                             <constraint firstItem="FUI-fk-Rzu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YrZ-ww-bTG"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FUI-fk-Rzu" secondAttribute="bottom" id="oH8-A7-R4H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cjm-W0-zrO" secondAttribute="trailing" constant="15" id="Znc-K5-fKJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Cjm-W0-zrO" secondAttribute="bottom" constant="12" id="gHR-z2-2eS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FUI-fk-Rzu" secondAttribute="bottom" constant="2" id="oH8-A7-R4H"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icon_home_unselected" selectedImage="icon_home_selected" id="FrG-9Y-dAZ"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ful-u8-db8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="listCollectionView" destination="FUI-fk-Rzu" id="k3g-7E-rnK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="75"/>
+            <point key="canvasLocation" x="640.79999999999995" y="74.630541871921181"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J58-Bh-7uA">
@@ -62,8 +72,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KxZ-iJ-Ibg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JSn-1k-m9z">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -76,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_create" width="62" height="62"/>
         <image name="icon_home_selected" width="48" height="48"/>
         <image name="icon_home_unselected" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">

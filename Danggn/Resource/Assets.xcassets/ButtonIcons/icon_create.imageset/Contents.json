@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Property 1=ios_icon_bell.png",
+      "filename" : "ios_floating_button.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Property 1=ios_icon_bell@2x.png",
+      "filename" : "ios_floating_button@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Property 1=ios_icon_bell@3x.png",
+      "filename" : "ios_floating_button@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
