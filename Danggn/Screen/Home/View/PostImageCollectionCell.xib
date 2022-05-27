@@ -25,6 +25,9 @@
                     </imageView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="k9z-DX-1LW">
                         <rect key="frame" x="129.5" y="326" width="116" height="26"/>
+                        <connections>
+                            <action selector="pageChanged:" destination="gTV-IL-0wX" eventType="valueChanged" id="LmZ-Cy-NyB"/>
+                        </connections>
                     </pageControl>
                 </subviews>
             </view>

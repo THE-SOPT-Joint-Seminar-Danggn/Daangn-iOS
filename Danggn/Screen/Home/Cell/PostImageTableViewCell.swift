@@ -36,11 +36,10 @@ extension PostImageTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return PostImageModel.sampleData.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCollectionCell.identifier, for: indexPath) as? PostImageCollectionCell else { return UICollectionViewCell() }
         
-        cell.setData(postImageData: PostImageModel.sampleData[indexPath.row])
+        cell.setData(postImageData: PostImageModel.sampleData[indexPath.row], pageControlIndex: indexPath.row)
         
         return cell
     }

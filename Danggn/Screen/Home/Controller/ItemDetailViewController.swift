@@ -9,7 +9,7 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    private var postCell = PostDetailTableViewCell()
+    private lazy var postCell = PostDetailTableViewCell()
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -129,6 +129,7 @@ extension ItemDetailViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -138,26 +139,26 @@ extension ItemDetailViewController: UITableViewDataSource {
 
 extension ItemDetailViewController: PostDetailTableViewCellDelegate {
     func presentActionSheet() {
-            let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
-            
-            let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
-                self.postCell.stateButton.titleLabel?.text = "판매중"
-            }
-            let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
-                self.postCell.stateButton.titleLabel?.text = "예약중"
-            }
-            let soldOutAction = UIAlertAction(title: "판매완료", style: .default) { _ in
-                self.postCell.stateButton.titleLabel?.text = "판매완료"
-            }
-            
-            let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
-            
-            actionSheet.addAction(sellingAction)
-            actionSheet.addAction(reservedAction)
-            actionSheet.addAction(soldOutAction)
-            actionSheet.addAction(cancelAction)
-            
-            // 쇽샥 코드
-        self.present(actionSheet, animated: true)
+        let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
+        
+        let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
+            self.postCell.stateButton?.titleLabel?.text = "판매중"
+        }
+        let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
+            self.postCell.stateButton?.titleLabel?.text = "예약중"
+        }
+        let soldOutAction = UIAlertAction(title: "판매완료", style: .default) { _ in
+            self.postCell.stateButton?.titleLabel?.text = "판매완료"
+        }
+        
+        let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(sellingAction)
+        actionSheet.addAction(reservedAction)
+        actionSheet.addAction(soldOutAction)
+        actionSheet.addAction(cancelAction)
+        
+        // 쇽샥 코드
+    self.present(actionSheet, animated: true)
     }
 }

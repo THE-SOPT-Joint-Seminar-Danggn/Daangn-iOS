@@ -26,6 +26,7 @@ class PostDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var stateButton: UIButton!
+    @IBOutlet weak var stateLabel: UILabel!
     
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -37,6 +38,10 @@ class PostDetailTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func changeSellStatus(status: String) {
+        stateLabel.text = status
     }
     
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
