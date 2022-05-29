@@ -18,8 +18,8 @@ class PostImageCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         pageControl.numberOfPages = 3
         
-        pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.currentPageIndicatorTintColor = UIColor.gray
+        pageControl.pageIndicatorTintColor = UIColor.gray
+        pageControl.currentPageIndicatorTintColor = UIColor.white
         }
     
     func setData(postImageData: PostImageModel, pageControlIndex: Int) {
@@ -28,9 +28,9 @@ class PostImageCollectionCell: UICollectionViewCell {
     }
 }
 
+// 페이지 컨트롤
 extension PostImageCollectionCell: UICollectionViewDelegate {
-    // feed collectionView를 스크롤하면 pageControl도 알맞은 위치로 변경
-    // 색깔이 변하지 않음...
+
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let page = Int(targetContentOffset.pointee.x / self.frame.width)
         pageControl.currentPage = page

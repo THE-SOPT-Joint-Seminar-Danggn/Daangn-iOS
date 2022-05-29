@@ -11,9 +11,9 @@ class ListItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
-        self.navigationController?.pushViewController(viewController, animated: true)
+      let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
+      let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+      self.navigationController?.pushViewController(viewController, animated: true)
     }
 
 }

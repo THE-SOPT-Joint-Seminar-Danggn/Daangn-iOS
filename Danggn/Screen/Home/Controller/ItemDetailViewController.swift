@@ -35,10 +35,6 @@ class ItemDetailViewController: UIViewController {
     
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
-        
-//        itemDetailTableView.estimatedRowHeight = 375
-//        itemDetailTableView.rowHeight = UITableView.automaticDimension
-        
     }
     
     func setPostDetailTableView() {
@@ -47,9 +43,6 @@ class ItemDetailViewController: UIViewController {
         
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
-        
-//        itemDetailTableView.estimatedRowHeight = 321
-//        itemDetailTableView.rowHeight = UITableView.automaticDimension
         
     }
 
@@ -79,7 +72,7 @@ class ItemDetailViewController: UIViewController {
     }
 }
 
-// section 마다 크기를 주었더니 잘 보이게 됨.
+// section 마다 높이를 주는 코드
 extension ItemDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -95,20 +88,17 @@ extension ItemDetailViewController: UITableViewDelegate {
 
 extension ItemDetailViewController: UITableViewDataSource {
     
+    // section의 개수
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    // section 마다 cell 다르게
+    // section마다 포함될 row의 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count: Int
         
         switch section {
-        case 0:
-            count = 1
-            // 이렇게 했을 때 3개가 나온 이유?
-//          count = PostImageModel.sampleData.count
-        case 1:
+        case 0...1:
             count = 1
         default:
             count = 0
@@ -117,7 +107,7 @@ extension ItemDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       // 이 부분 좀 더 이해하고 싶다
+        
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
@@ -152,8 +142,7 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         actionSheet.addAction(reservedAction)
         actionSheet.addAction(soldOutAction)
         actionSheet.addAction(cancelAction)
-        
-        // 쇽샥 코드
-    self.present(actionSheet, animated: true)
+
+        self.present(actionSheet, animated: true)
     }
 }
