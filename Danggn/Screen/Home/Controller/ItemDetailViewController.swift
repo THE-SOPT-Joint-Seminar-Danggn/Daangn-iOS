@@ -65,7 +65,7 @@ class ItemDetailViewController: UIViewController {
         likeButton?.setImage(UIImage(named: "icon_heart_on"), for: .normal)
     }
     
-    private func setChatButton() {
+    func setChatButton() {
         chatButton?.layer.cornerRadius = 5
     }
 }
