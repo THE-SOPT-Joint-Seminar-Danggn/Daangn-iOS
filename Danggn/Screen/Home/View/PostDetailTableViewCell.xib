@@ -80,7 +80,7 @@
                         <color key="textColor" red="0.51764705882352935" green="0.53333333333333333" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGd-n8-POM">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGd-n8-POM">
                         <rect key="frame" x="16" y="99" width="99" height="39"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="99" id="Ryw-xl-b89"/>
@@ -88,12 +88,11 @@
                         </constraints>
                         <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" title="판매중" imagePadding="24" cornerStyle="medium">
+                        <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" imagePadding="24" cornerStyle="medium">
                             <backgroundConfiguration key="background">
                                 <color key="strokeColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                             </backgroundConfiguration>
-                            <fontDescription key="titleFontDescription" name="Poppins" family="Poppins" pointSize="14"/>
-                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="13" bottom="0.0" trailing="0.0"/>
+                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="15"/>
                         </buttonConfiguration>
                         <connections>
                             <action selector="stateButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d9a-5h-Jdi"/>
@@ -136,6 +135,15 @@
                             <constraint firstAttribute="width" constant="50" id="aEj-gD-aY0"/>
                         </constraints>
                     </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="판매중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnL-vk-KCV">
+                        <rect key="frame" x="28" y="108" width="58" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="Sna-X1-Rj4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="XGd-n8-POM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5Xb-1i-EMF"/>
@@ -152,6 +160,7 @@
                     <constraint firstAttribute="trailing" secondItem="9d2-e1-Pd5" secondAttribute="trailing" constant="47" id="Qpl-iC-KTk"/>
                     <constraint firstItem="9d2-e1-Pd5" firstAttribute="top" secondItem="cjR-L8-2nv" secondAttribute="bottom" constant="5" id="Qrc-aq-Fw8"/>
                     <constraint firstItem="XGd-n8-POM" firstAttribute="top" secondItem="iA2-qh-qqQ" secondAttribute="bottom" constant="18" id="Sjn-id-zhv"/>
+                    <constraint firstItem="XGd-n8-POM" firstAttribute="leading" secondItem="DnL-vk-KCV" secondAttribute="trailing" constant="-70" id="Slv-Ss-Voc"/>
                     <constraint firstAttribute="trailing" secondItem="4cu-Xv-YpH" secondAttribute="trailing" constant="15" id="Swc-vz-aQo"/>
                     <constraint firstAttribute="trailing" secondItem="zkg-dg-DVd" secondAttribute="trailing" constant="15" id="X10-TB-eFG"/>
                     <constraint firstAttribute="trailing" secondItem="IIf-ag-tdL" secondAttribute="trailing" constant="16" id="Xq7-kL-Ic3"/>
@@ -164,6 +173,7 @@
                     <constraint firstItem="457-TK-UL1" firstAttribute="top" secondItem="bno-ox-g8a" secondAttribute="bottom" constant="14" id="oKl-nc-8tr"/>
                     <constraint firstItem="e4R-N0-MxU" firstAttribute="leading" secondItem="bno-ox-g8a" secondAttribute="trailing" constant="9" id="ofm-pQ-ZWt"/>
                     <constraint firstAttribute="trailing" secondItem="457-TK-UL1" secondAttribute="trailing" constant="15" id="ozv-m9-22G"/>
+                    <constraint firstItem="DnL-vk-KCV" firstAttribute="top" secondItem="XGd-n8-POM" secondAttribute="bottom" constant="-30" id="s0r-De-IKU"/>
                     <constraint firstItem="bno-ox-g8a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tBf-cD-dQN"/>
                     <constraint firstItem="4cu-Xv-YpH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="wkr-Do-XJV"/>
                     <constraint firstItem="EYj-JA-POu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="xL7-ZE-9LW"/>
@@ -178,6 +188,7 @@
                 <outlet property="postDetailTableView" destination="H2p-sc-9uM" id="Y35-sq-VdN"/>
                 <outlet property="postLable" destination="457-TK-UL1" id="mFg-Pq-uTr"/>
                 <outlet property="stateButton" destination="XGd-n8-POM" id="zzG-Rq-fng"/>
+                <outlet property="stateLabel" destination="DnL-vk-KCV" id="mhM-yV-fJb"/>
                 <outlet property="titleLable" destination="4cu-Xv-YpH" id="EwQ-T8-19d"/>
                 <outlet property="userNameLabel" destination="zgP-2u-lo6" id="whY-g5-nMW"/>
                 <outlet property="userProfileImage" destination="WMw-IZ-M8S" id="uZt-oe-xlb"/>

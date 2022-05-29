@@ -9,7 +9,7 @@ import UIKit
 
 // 액션시트를 띄우는 프로토콜 선언
 protocol PostDetailTableViewCellDelegate: AnyObject {
-    func presentActionSheet()
+    func presentActionSheet(_ cell: PostDetailTableViewCell)
 }
 
 class PostDetailTableViewCell: UITableViewCell {
@@ -40,11 +40,7 @@ class PostDetailTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func changeSellStatus(status: String) {
-        stateLabel.text = status
-    }
-    
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
-        delegate?.presentActionSheet()
+        delegate?.presentActionSheet(self)
     }
 }

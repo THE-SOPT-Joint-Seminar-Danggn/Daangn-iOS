@@ -62,13 +62,8 @@ class ItemDetailViewController: UIViewController {
     
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
     @IBAction func likeButtonDidTab(_ sender: UIButton) {
-        if toggleButtonChecked == false {
-            toggleButtonChecked.toggle()
-            likeButtonSelected()
-        } else {
-            toggleButtonChecked.toggle()
-            likeButtonNotSelected()
-        }
+        likeButton.isSelected.toggle()
+        likeButton.isSelected ? likeButtonSelected() : likeButtonNotSelected()
     }
     
     func likeButtonNotSelected() {
@@ -138,17 +133,17 @@ extension ItemDetailViewController: UITableViewDataSource {
 }
 
 extension ItemDetailViewController: PostDetailTableViewCellDelegate {
-    func presentActionSheet() {
+    func presentActionSheet(_ cell: PostDetailTableViewCell) {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
-            self.postCell.stateButton?.titleLabel?.text = "판매중"
+            cell.stateLabel?.text = "판매중"
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
-            self.postCell.stateButton?.titleLabel?.text = "예약중"
+            cell.stateLabel?.text = "예약중"
         }
         let soldOutAction = UIAlertAction(title: "판매완료", style: .default) { _ in
-            self.postCell.stateButton?.titleLabel?.text = "판매완료"
+            cell.stateLabel?.text = "판매완료"
         }
         
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
