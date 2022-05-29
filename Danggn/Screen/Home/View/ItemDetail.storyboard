@@ -31,14 +31,14 @@
                                     <constraint firstAttribute="height" constant="1" id="xOd-Oi-myV"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-rN-d33">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-rN-d33">
                                 <rect key="frame" x="16" y="823" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="uSc-v8-lXL"/>
                                     <constraint firstAttribute="height" constant="24" id="vEk-qT-woe"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="icon_heart_off" title=""/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="" image="icon_heart_off"/>
                                 <connections>
                                     <action selector="likeButtonDidTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H7n-MV-fX1"/>
                                 </connections>

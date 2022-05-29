@@ -32,13 +32,8 @@ class ItemDetailViewController: UIViewController {
     
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
     @IBAction func likeButtonDidTab(_ sender: UIButton) {
-        if toggleButtonChecked == false {
-            toggleButtonChecked.toggle()
-            likeButtonSelected()
-        } else {
-            toggleButtonChecked.toggle()
-            likeButtonNotSelected()
-        }
+        likeButton.isSelected.toggle()
+        likeButton.isSelected ? likeButtonSelected() : likeButtonNotSelected()
     }
     
     func likeButtonNotSelected() {
@@ -49,7 +44,7 @@ class ItemDetailViewController: UIViewController {
         likeButton.setImage(UIImage(named: "icon_heart_on"), for: .normal)
     }
     
-    private func setChatButton() {
+    func setChatButton() {
         chatButton.layer.cornerRadius = 5
     }
 }
