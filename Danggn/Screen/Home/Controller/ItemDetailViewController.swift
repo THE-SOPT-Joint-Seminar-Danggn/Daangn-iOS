@@ -19,8 +19,6 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var chatButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     
-    var toggleButtonChecked = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setChatButton()
