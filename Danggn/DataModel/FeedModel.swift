@@ -16,8 +16,8 @@ struct FeedResponse: Codable {
 
 struct FeedData: Codable {
     let id: String
-    let tile: String
-    let region: String
+    let title: String
+    let address: String
     let image: String
     let price: Int
     let createdAt: String

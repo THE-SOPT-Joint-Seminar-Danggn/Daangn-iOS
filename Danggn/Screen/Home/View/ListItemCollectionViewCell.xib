@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -34,25 +34,25 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VG-LW-3Kk">
-                        <rect key="frame" x="135" y="15" width="38.666666666666657" height="22"/>
+                        <rect key="frame" x="135" y="15" width="38.5" height="22"/>
                         <fontDescription key="fontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBJ-Ea-hkV">
-                        <rect key="frame" x="135" y="41" width="29" height="18.333333333333329"/>
+                        <rect key="frame" x="135" y="41" width="29" height="18.5"/>
                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                         <color key="textColor" red="0.51764705882352935" green="0.53333333333333333" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sq-R8-9BJ">
-                        <rect key="frame" x="135" y="62.333333333333343" width="40.666666666666657" height="22"/>
+                        <rect key="frame" x="135" y="62.5" width="41" height="22"/>
                         <fontDescription key="fontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-tG-9P8">
-                        <rect key="frame" x="293.33333333333331" y="99" width="60.666666666666686" height="24"/>
+                        <rect key="frame" x="293.5" y="99" width="60.5" height="24"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn8-ve-QsQ">
                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -60,7 +60,7 @@
                                 <state key="normal" image="icon_heart_unselected"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-Iu-6YK">
-                                <rect key="frame" x="29" y="0.0" width="31.666666666666671" height="24"/>
+                                <rect key="frame" x="29" y="0.0" width="31.5" height="24"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

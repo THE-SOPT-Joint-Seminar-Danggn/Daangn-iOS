@@ -16,7 +16,7 @@ struct ListDataModel {
 }
 
 extension ListDataModel {
-    static let samleData: [ListDataModel] = [
+    static let sampleData: [ListDataModel] = [
         ListDataModel(
             listImage: "image1",
             listTitle: "기본 셔츠 반팔",

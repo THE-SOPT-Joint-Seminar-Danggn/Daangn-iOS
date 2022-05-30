@@ -11,17 +11,20 @@ class ListItemViewController: UIViewController {
     
     @IBOutlet weak var listCollectionView: UICollectionView!
     
+    var feedDataList = [FeedData]() {
+        didSet {
+            listCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
+        getData()
         setNavigationUI()
         registerCell()
     }
     
-    @IBAction func itemCreateButtondidTap(_ sender: Any) {
+    @IBAction func itemCreateButtonDidTap(_ sender: UIButton) {
         
     }
 }
@@ -29,22 +32,22 @@ class ListItemViewController: UIViewController {
 extension ListItemViewController {
     func setNavigationUI() {
         
-        let navigationBar = UINavigationBarAppearance()
-        navigationBar.shadowColor = .gray
-        self.navigationController?.navigationBar.standardAppearance = navigationBar
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.shadowColor = .gray
+        self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
 
-        let search = navigationItem.setRightButtonUI(self, imageName: UIImage(named: "icon_search"))
-        let menu = navigationItem.setRightButtonUI(self, imageName: UIImage(named: "icon_menu"))
-        let bell = navigationItem.setRightButtonUI(self, imageName: UIImage(named: "icon_bell"))
+        let search = navigationItem.setRightButtonUI(imageName: UIImage(named: "icon_search"))
+        let menu = navigationItem.setRightButtonUI(imageName: UIImage(named: "icon_menu"))
+        let bell = navigationItem.setRightButtonUI(imageName: UIImage(named: "icon_bell"))
     
         let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         spacer.width = 16
         navigationItem.rightBarButtonItems = [bell, spacer, menu, spacer, search]
-    
+
         // LeftBarButtonItem 설정
         // 여백을 주기 위해 동네명을 UIButton으로 만들고 UIView에 담아 myArea라는 UIBarButtonItem애 customView로 대입
         let myAreaButton = UIButton(frame: CGRect(x: 10, y: 0, width: 50, height: 50))
-        myAreaButton.setTitle("영통동", for: .normal)
+        myAreaButton.setTitle("경기동", for: .normal)
         myAreaButton.titleLabel?.font = UIFont(name: "Roboto", size: 18)
         myAreaButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         myAreaButton.setTitleColor(.label, for: .normal)
@@ -62,36 +65,39 @@ extension ListItemViewController {
     
     // CollectionViewCell 등록
     func registerCell() {
-        let nib = UINib(nibName: "ListItemCollectionViewCell", bundle: nil)
-        listCollectionView.register(nib, forCellWithReuseIdentifier: "ListItemCollectionViewCell")
+        let nib = UINib(nibName: ListItemCollectionViewCell.identifier, bundle: nil)
+        listCollectionView.register(nib, forCellWithReuseIdentifier: ListItemCollectionViewCell.identifier)
         listCollectionView.delegate = self
         listCollectionView.dataSource = self
     }
 }
 
 extension ListItemViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
 }
 
 extension ListItemViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-        ListDataModel.samleData.count
+        print("numberOfItemsInSection")
+        return feedDataList.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+            print("cellForItemAt")
             guard let cell = listCollectionView.dequeueReusableCell(
             withReuseIdentifier: "ListItemCollectionViewCell",
             for: indexPath) as? ListItemCollectionViewCell
             else { return UICollectionViewCell() }
-        
-            cell.setData(listData: ListDataModel.samleData[indexPath.row])
+            cell.setData(feedData: feedDataList[indexPath.row])
             return cell
     }
+    
 }
 
 extension ListItemViewController: UICollectionViewDelegateFlowLayout {
@@ -115,4 +121,19 @@ extension ListItemViewController: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
 
+}
+
+extension ListItemViewController {
+    func getData() {
+        FeedService.shared.getImage { response in
+            switch response {
+            case .success(let feedResponse):
+                guard let feedResponse = feedResponse as? FeedResponse else {return}
+                guard let feedData = feedResponse.data else {return}
+                self.feedDataList = feedData
+            default:
+                print("fail")
+            }
+        }
+    }
 }

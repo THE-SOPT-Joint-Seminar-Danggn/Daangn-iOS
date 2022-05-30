@@ -9,7 +9,7 @@ import UIKit
 
 extension UINavigationItem {
     
-    func setRightButtonUI(_ target: Any?, imageName: UIImage?) -> UIBarButtonItem {
+    func setRightButtonUI(imageName: UIImage?) -> UIBarButtonItem {
         
         let button = UIButton(type: .system)
         button.setImage((imageName), for: .normal)

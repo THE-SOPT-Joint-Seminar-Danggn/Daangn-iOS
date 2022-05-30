@@ -18,13 +18,11 @@ extension FeedService {
     // completion 클로저를 @escaping closure로 정의
     let url = APIConstants.feedURL                                  // URL
     let header: HTTPHeaders = ["Content-Type": "application/json"]     // HTTP Headers
-//    let body: Parameters
     
     // 요청서
     // Request 생성
     let dataRequest = AF.request(url,
                                 method: .get,
-//                                parameters: body,
                                 encoding: JSONEncoding.default,
                                 headers: header)
     
@@ -38,7 +36,7 @@ extension FeedService {
             guard let value = response.value else { return }
             
             // 해당 응답을 가지고 case 분기처리 (200, 400, 500인지 - 200: 성공을 해서 데이터를 잘 받았는지 확인
-            let networkResult = self.judgeStatus(by: statusCode, value, [FeedData].self)
+            let networkResult = self.judgeStatus(by: statusCode, value, FeedResponse.self)
             completion(networkResult)
         
         // 실패 시에는 바로 networkFail(통신 실패)라는 신호
@@ -47,7 +45,6 @@ extension FeedService {
         }
     }
 }
-
     
     // 상태 코드와 값(value, data, response)를 가지고 통신의 결과를 핸들링하는 함수입니다.
     private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ response: T.Type) -> NetworkResult<Any> {

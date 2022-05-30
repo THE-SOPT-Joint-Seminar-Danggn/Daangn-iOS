@@ -24,17 +24,22 @@ class ListItemCollectionViewCell: UICollectionViewCell {
         setBorder()
     }
     
-    func setData(listData: ListDataModel) {
-        listImageView.image = UIImage(named: listData.listImage)
-        listTitleLabel.text = listData.listTitle
-        listLocationLabel.text = listData.listLocation
-        listPriceLabel.text = listData.listPrice
-        listLikeCount.text = "\(listData.listLikeCount)"
+    func setData(feedData: FeedData) {
+//        listImageView.image = UIImage(named: feedData.image)
+        listTitleLabel.text = feedData.title
+        listLocationLabel.text = feedData.address
+        listPriceLabel.text = "\(feedData.price)"
+        listLikeCount.text = "12"
     }
     
     func setBorder() {
         listItemBorderView.clipsToBounds = true
         listItemBorderView.layer.cornerRadius = 10
-        listItemBorderView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
+        listItemBorderView.layer.maskedCorners = CACornerMask(
+                                                    arrayLiteral: .layerMaxXMaxYCorner,
+                                                                .layerMaxXMinYCorner,
+                                                                .layerMinXMaxYCorner,
+                                                                .layerMinXMinYCorner
+                                                    )
     }
 }
