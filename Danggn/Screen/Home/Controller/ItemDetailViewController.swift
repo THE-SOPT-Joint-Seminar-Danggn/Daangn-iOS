@@ -48,11 +48,11 @@ class ItemDetailViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func chatButtonDIdTab(_ sender: UIButton) {
+    @IBAction func chatButtonDIdTap(_ sender: UIButton) {
     }
     
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
-    @IBAction func likeButtonDidTab(_ sender: UIButton) {
+    @IBAction func likeButtonDidTap(_ sender: UIButton) {
         likeButton.isSelected.toggle()
         likeButton.isSelected ? likeButtonSelected() : likeButtonNotSelected()
     }
