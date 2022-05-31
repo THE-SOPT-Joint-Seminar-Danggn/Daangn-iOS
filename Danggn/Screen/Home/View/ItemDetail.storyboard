@@ -19,7 +19,7 @@
         <!--Item Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ItemDetailViewController" id="Y6W-OH-hqX" customClass="ItemDetailViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemDetailViewController" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="ItemDetailViewController" customModule="Danggn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,10 @@
                                     <action selector="chatButtonDIdTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bdc-IV-ckf"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-Q4-JHa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,10 +107,14 @@
                             <constraint firstItem="274-PF-qBW" firstAttribute="top" secondItem="x1f-Tt-mBo" secondAttribute="bottom" id="DYE-zg-1qm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="68" id="Jq2-iT-rig"/>
                             <constraint firstItem="x1f-Tt-mBo" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="19" id="Okd-lU-z3P"/>
+                            <constraint firstItem="W9I-H5-vrV" firstAttribute="top" secondItem="ZYb-Q4-JHa" secondAttribute="bottom" id="OnP-dC-k5F"/>
                             <constraint firstItem="274-PF-qBW" firstAttribute="leading" secondItem="NY7-7Y-sOu" secondAttribute="trailing" constant="18" id="fxF-Oe-qdo"/>
                             <constraint firstItem="W9I-H5-vrV" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gYu-RI-iCP"/>
                             <constraint firstItem="NY7-7Y-sOu" firstAttribute="leading" secondItem="tLN-rN-d33" secondAttribute="trailing" constant="16" id="gm0-cB-lur"/>
                             <constraint firstItem="Ghb-uY-YUZ" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="25" id="grr-KE-AaP"/>
+                            <constraint firstItem="ZYb-Q4-JHa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iKu-zu-nIy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZYb-Q4-JHa" secondAttribute="trailing" id="s4z-8v-a87"/>
+                            <constraint firstItem="ZYb-Q4-JHa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sux-Bm-wJX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4tw-wQ-ywQ">
@@ -133,6 +141,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="chatButton" destination="Ghb-uY-YUZ" id="mts-Rf-bTV"/>
+                        <outlet property="itemDetailTableView" destination="ZYb-Q4-JHa" id="TH9-pC-mlc"/>
                         <outlet property="itemPriceLabel" destination="x1f-Tt-mBo" id="YLY-VQ-OcT"/>
                         <outlet property="likeButton" destination="tLN-rN-d33" id="sRc-p0-Q2Y"/>
                         <outlet property="proposalPriceLabel" destination="274-PF-qBW" id="KN6-9v-8Qd"/>
