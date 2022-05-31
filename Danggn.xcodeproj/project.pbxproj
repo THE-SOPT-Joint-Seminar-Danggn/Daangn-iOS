@@ -45,6 +45,7 @@
 		4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE39D962833D033002D99B6 /* SceneDelegate.swift */; };
 		4FE39D9E2833D035002D99B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9D2833D035002D99B6 /* Assets.xcassets */; };
 		4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE39D9F2833D035002D99B6 /* LaunchScreen.storyboard */; };
+		C17655F719CFF7A4D5A98DAC /* Pods_Danggn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8475C0C3F8165FEF23B6CDE /* Pods_Danggn.framework */; };
 		E70333942834687200ABF306 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333932834687200ABF306 /* ListItemViewController.swift */; };
 		E70333962834689D00ABF306 /* ListItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333952834689D00ABF306 /* ListItem.storyboard */; };
 		E703339D283469E700ABF306 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E703339C283469E700ABF306 /* TabBar.storyboard */; };
@@ -57,10 +58,22 @@
 		E70333BC2834729D00ABF306 /* MyDanggn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333BB2834729D00ABF306 /* MyDanggn.storyboard */; };
 		E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333BF283472C300ABF306 /* MyDanggnViewController.swift */; };
 		E70333C22834761800ABF306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333C12834761800ABF306 /* TabBarController.swift */; };
+		E7C2C1E2283F0B8C00C0CED1 /* ListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2C1E1283F0B8C00C0CED1 /* ListDataModel.swift */; };
 		E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E428354EF80094D855 /* TabBarTemp.swift */; };
+		E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */; };
+		E7F2375E283DDD7000177E7C /* ListItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */; };
+		E7F2375F283DDD7000177E7C /* ListItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */; };
+		E7F53C71284065C70078B8C2 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F53C70284065C70078B8C2 /* APIConstants.swift */; };
+		E7F53C73284066FE0078B8C2 /* NetworkResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F53C72284066FE0078B8C2 /* NetworkResults.swift */; };
+		E7F53C7628406DDC0078B8C2 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F53C7528406DDC0078B8C2 /* FeedModel.swift */; };
+		E7F53C79284070090078B8C2 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F53C78284070090078B8C2 /* FeedService.swift */; };
+		E7F53C7D2840F1180078B8C2 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7F53C7C2840F1180078B8C2 /* ItemDetail.storyboard */; };
+		E7F53C7F2840F18C0078B8C2 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F53C7E2840F18C0078B8C2 /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		289C9054B49733CA08C0D180 /* Pods-Danggn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Danggn.debug.xcconfig"; path = "Target Support Files/Pods-Danggn/Pods-Danggn.debug.xcconfig"; sourceTree = "<group>"; };
 		4A08289828357B2C00A582CD /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		4A08289C28357DF700A582CD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		4A8D5A42283D550800081CA5 /* temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temp.swift; sourceTree = "<group>"; };
@@ -103,6 +116,8 @@
 		4FE39D9D2833D035002D99B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE39DA02833D035002D99B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE39DA22833D035002D99B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6E9950F0304BE712A546FB /* Pods-Danggn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Danggn.release.xcconfig"; path = "Target Support Files/Pods-Danggn/Pods-Danggn.release.xcconfig"; sourceTree = "<group>"; };
+		C8475C0C3F8165FEF23B6CDE /* Pods_Danggn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Danggn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70333932834687200ABF306 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 		E70333952834689D00ABF306 /* ListItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListItem.storyboard; sourceTree = "<group>"; };
 		E703339C283469E700ABF306 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -115,7 +130,17 @@
 		E70333BB2834729D00ABF306 /* MyDanggn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyDanggn.storyboard; sourceTree = "<group>"; };
 		E70333BF283472C300ABF306 /* MyDanggnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDanggnViewController.swift; sourceTree = "<group>"; };
 		E70333C12834761800ABF306 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E7C2C1E1283F0B8C00C0CED1 /* ListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataModel.swift; sourceTree = "<group>"; };
 		E7EB78E428354EF80094D855 /* TabBarTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTemp.swift; sourceTree = "<group>"; };
+		E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
+		E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		E7F53C70284065C70078B8C2 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		E7F53C72284066FE0078B8C2 /* NetworkResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResults.swift; sourceTree = "<group>"; };
+		E7F53C7528406DDC0078B8C2 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		E7F53C78284070090078B8C2 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		E7F53C7C2840F1180078B8C2 /* ItemDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
+		E7F53C7E2840F18C0078B8C2 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +148,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17655F719CFF7A4D5A98DAC /* Pods_Danggn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31D7DB10938B91CCF27C5B5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8475C0C3F8165FEF23B6CDE /* Pods_Danggn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4AE93814283FDD5900961E5B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +236,8 @@
 			children = (
 				4FE39D932833D033002D99B6 /* Danggn */,
 				4FE39D922833D033002D99B6 /* Products */,
+				C5F4445E19F9843C826323F9 /* Pods */,
+				31D7DB10938B91CCF27C5B5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				4FE39DA22833D035002D99B6 /* Info.plist */,
+				E7EB78E928366C7A0094D855 /* Global */,
+				E7F53C7428406DC10078B8C2 /* DataModel */,
+				E7F53C6F284065AE0078B8C2 /* Network */,
+				E7F53C7728406FE60078B8C2 /* Service */,
 				4FE39DAB2833DB55002D99B6 /* Screen */,
 				4FE39DAA2833DA97002D99B6 /* Resource */,
 				4FE39DA92833D9D2002D99B6 /* Application */,
@@ -256,10 +296,19 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		C5F4445E19F9843C826323F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				289C9054B49733CA08C0D180 /* Pods-Danggn.debug.xcconfig */,
+				9C6E9950F0304BE712A546FB /* Pods-Danggn.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E70333902834673800ABF306 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A8D5A42283D550800081CA5 /* temp.swift */,
+				E7C2C1E1283F0B8C00C0CED1 /* ListDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +318,7 @@
 			children = (
 				4A08289828357B2C00A582CD /* ItemDetail.storyboard */,
 				E70333952834689D00ABF306 /* ListItem.storyboard */,
+				E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */,
 				4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */,
 				4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */,
 				4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */,
@@ -279,8 +329,11 @@
 		E70333922834674A00ABF306 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+      
 				4A08289C28357DF700A582CD /* ItemDetailViewController.swift */,
+
 				E70333932834687200ABF306 /* ListItemViewController.swift */,
+				E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,6 +483,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E7EB78E6283660530094D855 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E7EB78E928366C7A0094D855 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB78E6283660530094D855 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		E7F53C6F284065AE0078B8C2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E7F53C70284065C70078B8C2 /* APIConstants.swift */,
+				E7F53C72284066FE0078B8C2 /* NetworkResults.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E7F53C7428406DC10078B8C2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7F53C7528406DDC0078B8C2 /* FeedModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		E7F53C7728406FE60078B8C2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E7F53C78284070090078B8C2 /* FeedService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,10 +531,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FE39DA52833D035002D99B6 /* Build configuration list for PBXNativeTarget "Danggn" */;
 			buildPhases = (
+				01F1FB8B5EB0D08AB94D9EB6 /* [CP] Check Pods Manifest.lock */,
 				4FE39D8D2833D033002D99B6 /* Sources */,
 				4FE39D8E2833D033002D99B6 /* Frameworks */,
 				4FE39D8F2833D033002D99B6 /* Resources */,
 				4FE39DA82833D138002D99B6 /* SwiftLint */,
+				4834AD5F5903829E17DBBA44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,6 +593,7 @@
 				4AE93813283FDD2F00961E5B /* PostImageCollectionCell.xib in Resources */,
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				4F1ADAD72834085E00969E1D /* Poppins-Medium.ttf in Resources */,
+				E7F2375F283DDD7000177E7C /* ListItemCollectionViewCell.xib in Resources */,
 				4FE39DA12833D035002D99B6 /* LaunchScreen.storyboard in Resources */,
 				4F1ADAC92834085800969E1D /* NunitoSans-Italic.ttf in Resources */,
 				E703339D283469E700ABF306 /* TabBar.storyboard in Resources */,
@@ -520,6 +617,7 @@
 				E70333B22834723E00ABF306 /* MyPlace.storyboard in Resources */,
 				4F1ADAAB2834083900969E1D /* NotoSansSC-Thin.otf in Resources */,
 				4F1ADAD82834085E00969E1D /* Poppins-Regular.ttf in Resources */,
+				E7F53C7D2840F1180078B8C2 /* ItemDetail.storyboard in Resources */,
 				4F1ADAC32834085800969E1D /* NunitoSans-ExtraLight.ttf in Resources */,
 				4F1ADAC52834085800969E1D /* NunitoSans-BlackItalic.ttf in Resources */,
 				4F1ADAAC2834083900969E1D /* NotoSansSC-Light.otf in Resources */,
@@ -532,6 +630,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01F1FB8B5EB0D08AB94D9EB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Danggn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4834AD5F5903829E17DBBA44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Danggn/Pods-Danggn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Danggn/Pods-Danggn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Danggn/Pods-Danggn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4FE39DA82833D138002D99B6 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,17 +695,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70333B62834727800ABF306 /* MyPlaceViewController.swift in Sources */,
+				E7F53C79284070090078B8C2 /* FeedService.swift in Sources */,
 				E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */,
+				E7F53C7F2840F18C0078B8C2 /* ItemDetailViewController.swift in Sources */,
+				E7F53C71284065C70078B8C2 /* APIConstants.swift in Sources */,
+				E7F53C73284066FE0078B8C2 /* NetworkResults.swift in Sources */,
 				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
 				4AE9380A283FDCF000961E5B /* PostImageTableViewCell.swift in Sources */,
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
+				E7F53C7628406DDC0078B8C2 /* FeedModel.swift in Sources */,
+				E7F2375E283DDD7000177E7C /* ListItemCollectionViewCell.swift in Sources */,
 				4AE93812283FDD2F00961E5B /* PostImageCollectionCell.swift in Sources */,
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
+
+				E7C2C1E2283F0B8C00C0CED1 /* ListDataModel.swift in Sources */,
 				4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */,
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
-				4A8D5A43283D550800081CA5 /* temp.swift in Sources */,
+				E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,
 				4AE9380E283FDCFB00961E5B /* PostDetailTableViewCell.swift in Sources */,
 			);
@@ -704,11 +849,13 @@
 		};
 		4FE39DA62833D035002D99B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289C9054B49733CA08C0D180 /* Pods-Danggn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFS6YUQ2Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -732,11 +879,13 @@
 		};
 		4FE39DA72833D035002D99B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6E9950F0304BE712A546FB /* Pods-Danggn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFS6YUQ2Y4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Danggn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
