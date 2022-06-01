@@ -42,5 +42,22 @@ class PostDetailTableViewCell: UITableViewCell {
     
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
         delegate?.presentActionSheet(self)
+        feedOnSale()
+    }
+}
+
+extension PostDetailTableViewCell {
+    // 상품 판매 상태 변경 요청
+    func feedOnSale() {
+        FeedOnSaleService.shared.feedOnSale(feedId: "4ioqqfnas328sd",
+                                            onSale: [0, 1, 2]) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? BaseResponse<BlankData> else { return }
+                print(data)
+            default:
+                return
+            }
+        }
     }
 }

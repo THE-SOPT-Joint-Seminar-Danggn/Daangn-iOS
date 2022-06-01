@@ -147,6 +147,8 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
 }
 
 extension ItemDetailViewController {
+    
+    // 상품 좋아요 통신
     func feedLike() {
         FeedLikeService.shared.feedLike(feedId: "4ioqqfnas328sd") { response in
             switch response {
