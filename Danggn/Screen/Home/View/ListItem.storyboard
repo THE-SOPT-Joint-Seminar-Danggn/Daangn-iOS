@@ -76,8 +76,6 @@
                     <tabBarItem key="tabBarItem" title="" image="icon_home_unselected" selectedImage="icon_home_selected" id="FrG-9Y-dAZ"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ful-u8-db8"/>
-                    <tabBarItem key="tabBarItem" title="" image="icon_home_unselected" selectedImage="icon_home_selected" id="X3Y-UZ-zXw"/>
-                    <navigationItem key="navigationItem" id="bmd-Zb-KHA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listCollectionView" destination="FUI-fk-Rzu" id="k3g-7E-rnK"/>
@@ -107,6 +105,9 @@
             <point key="canvasLocation" x="-246" y="84"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hlM-yv-ZdC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_create" width="62" height="62"/>
         <image name="icon_home_selected" width="48" height="48"/>

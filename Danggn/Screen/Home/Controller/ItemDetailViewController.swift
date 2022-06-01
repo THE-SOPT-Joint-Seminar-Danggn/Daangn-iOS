@@ -53,6 +53,7 @@ class ItemDetailViewController: UIViewController {
     
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
     @IBAction func likeButtonDidTap(_ sender: UIButton) {
+        feedLike()
         likeButton.isSelected.toggle()
         likeButton.isSelected ? likeButtonSelected() : likeButtonNotSelected()
     }
@@ -142,5 +143,19 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         actionSheet.addAction(cancelAction)
 
         self.present(actionSheet, animated: true)
+    }
+}
+
+extension ItemDetailViewController {
+    func feedLike() {
+        FeedLikeService.shared.feedLike(feedId: "4ioqqfnas328sd") { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? BaseResponse<BlankData> else { return }
+                print(data)
+            default:
+                return
+            }
+        }
     }
 }
