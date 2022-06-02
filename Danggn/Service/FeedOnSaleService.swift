@@ -13,7 +13,7 @@ class FeedOnSaleService {
     private init() {}
     
     func feedOnSale(feedId: String,
-                    onSale: [Int],
+                    onSale: Int,
                     completion: @escaping (NetworkResult<Any>) -> Void)
     {
         
@@ -63,6 +63,5 @@ class FeedOnSaleService {
             guard let decodeData = try? decoder.decode(BaseResponse<T>.self, from: data) else { return .pathErr }
             
             return .success(decodeData)
-        
     }
 }
