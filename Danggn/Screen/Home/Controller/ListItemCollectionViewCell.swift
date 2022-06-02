@@ -25,11 +25,19 @@ class ListItemCollectionViewCell: UICollectionViewCell {
     }
     
     func setData(feedData: FeedData) {
-//        listImageView.image = UIImage(named: feedData.image)
+        listImageView.image = getImage(imageURL: feedData.image)
         listTitleLabel.text = feedData.title
-        listLocationLabel.text = feedData.address
-        listPriceLabel.text = "\(feedData.price)"
+        listLocationLabel.text = feedData.region
+        listPriceLabel.text = "\(feedData.price)원"
         listLikeCount.text = "12"
+    }
+    
+    func setMockData(listData: ListDataModel) {
+        listImageView.image = UIImage(named: listData.listImage)
+        listTitleLabel.text = listData.listTitle
+        listLocationLabel.text = listData.listLocation
+        listPriceLabel.text = listData.listPrice
+        listLikeCount.text = "\(listData.listLikeCount)"
     }
     
     func setBorder() {
@@ -42,4 +50,19 @@ class ListItemCollectionViewCell: UICollectionViewCell {
                                                                 .layerMinXMinYCorner
                                                     )
     }
+}
+
+extension ListItemCollectionViewCell {
+//    func getImage(imageURL: String){
+//        let url = URL(string: imageURL)
+//        var image: UIImage?
+//        DispatchQueue.global().async {
+//            guard let url = url as? URL else {return}
+//            if let data = try? Data(contentsOf: url) {
+//            image = UIImage(data: data)
+//                
+//            }
+//        }
+//    }
+    
 }

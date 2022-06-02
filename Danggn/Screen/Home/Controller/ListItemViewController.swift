@@ -82,14 +82,12 @@ extension ListItemViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-        print("numberOfItemsInSection")
         return feedDataList.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            print("cellForItemAt")
             guard let cell = listCollectionView.dequeueReusableCell(
             withReuseIdentifier: "ListItemCollectionViewCell",
             for: indexPath) as? ListItemCollectionViewCell
