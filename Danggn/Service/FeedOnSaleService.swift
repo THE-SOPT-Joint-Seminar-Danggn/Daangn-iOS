@@ -13,15 +13,14 @@ class FeedOnSaleService {
     private init() {}
     
     func feedOnSale(feedId: String,
-                    onSale: Int,
+                    onSale: String,
                     completion: @escaping (NetworkResult<Any>) -> Void)
     {
-        
         // API 명세서 작성
         let url = APIConstants.feedOnSale
-        let header: HTTPHeaders = [ "Content-Type" : "application/json" ]
+        let header: HTTPHeaders = ["Content-Type" : "application/json"]
         let body: Parameters = [
-            "feedId": feedId,
+            "id": feedId,
             "onSale": onSale
         ]
         
@@ -40,6 +39,7 @@ class FeedOnSaleService {
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
+                print(statusCode)
                 
             case .failure:
                 completion(.networkFail)

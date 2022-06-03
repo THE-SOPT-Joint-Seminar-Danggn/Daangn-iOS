@@ -17,7 +17,7 @@ class FeedLikeService {
     // completion 클로저를 @escaping 클로저로 정의합니다.
         
         // API 명세서 작성
-        let url = APIConstants.likeFeedURL + "4ioqqfnas328sd"
+        let url = APIConstants.likeFeedURL + "628f3743b32d474b28bba948"
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         
         // 요청서 작성
