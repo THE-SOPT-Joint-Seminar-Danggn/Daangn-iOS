@@ -18,7 +18,7 @@ struct FeedData: Codable {
     let id: String
     let title: String
     let region: String
-    let image: String
+    let image: String?
     let price: Int
     let createdAt: String
 }
