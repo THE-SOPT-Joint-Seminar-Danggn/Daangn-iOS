@@ -165,31 +165,14 @@ extension ItemDetailViewController {
         FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<FeedDetailData> else { return }
-                print(data)
-//                self.serverResponseData = serverResponseData.data
-//                completion()
-//                print(serverResponseData.message)
+                guard let serverResponseData = data as? BaseResponse<FeedDetailData> else { return }
+                self.serverResponseData = serverResponseData.data
+                completion()
+                print(serverResponseData.message)
+                print(serverResponseData)
                 
-//                guard let title = data.data?.title else { return }
-//                guard let category = data.data?.category else { return }
-//                guard let content = data.data?.content else { return }
-//                guard let createdAt = data.data?.createdAt else { return }œ
-//                guard let view = data.data?.view else { return }
-//                guard let userName = data.data?.user?.name else { return }
-//                guard let userArea = data.data?.user?.area else { return }
-                
-//                self.itemDetailTableView.reloadData()
-//                guard let isPriceSuggestion = data.data?.isPriceSuggestion else { return }
-
-//                print(title)
-//                print(category)
-//                print(content)
-//                print(view)
-//                print(createdAt)
-//                print(isPriceSuggestion)
             default:
-                print("여기야?")
+                return
             }
         }
     }

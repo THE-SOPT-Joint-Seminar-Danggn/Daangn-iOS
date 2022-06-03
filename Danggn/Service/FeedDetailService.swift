@@ -34,7 +34,8 @@ class FeedDetailService {
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
-                print(response.response?.statusCode)
+                // 여기에서는 200으로 맞는 결과가 나온다
+                print(statusCode)
 
             case .failure:
                 completion(.networkFail)
@@ -48,7 +49,7 @@ class FeedDetailService {
         case 400: return .pathErr
         case 500: return .serverErr
         default: return .networkFail
-            
+
         }
     }
     

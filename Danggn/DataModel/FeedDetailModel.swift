@@ -7,18 +7,23 @@
 
 import Foundation
 
+// MARK: - DataClass
 struct FeedDetailData: Codable {
+    let id: String
     let image: [String]
-    let onSale: Int
-    let title, category, createdAt, content: String
-    let view: Int
-    let price, isPriceSuggestion: String
-    let isLiked: Bool
-    let user: User?
+    let user: User
+    let onSale, title, category, createdAt: String
+    let view, price: Int
+    let isPriceSuggestion, isLiked: Bool
 }
 
 // MARK: - User
 struct User: Codable {
     let profile: String
-    let name, area: String
+    let name, region, id: String
+
+    enum CodingKeys: String, CodingKey {
+        case profile, name, region
+        case id = "_id"
+    }
 }
