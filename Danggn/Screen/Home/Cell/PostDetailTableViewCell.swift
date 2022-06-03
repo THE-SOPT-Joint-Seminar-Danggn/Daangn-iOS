@@ -31,6 +31,23 @@ class PostDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var postLable: UILabel!
+    @IBOutlet weak var createdLabel: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+    
+    
+    func setData(feedDetail: FeedDetailData?) {
+//        userProfileImage.image = UIImage(named: [feedDetail.user?.profile])
+        guard let feedDetail = feedDetail else { return }
+        
+        userNameLabel.text = feedDetail.user?.name
+        addressLabel.text = feedDetail.user?.area
+        
+        titleLable.text = feedDetail.title
+        categoryLabel.text = feedDetail.category
+        postLable.text = feedDetail.content
+        createdLabel.text = feedDetail.createdAt
+        viewLabel.text = "조회 \(feedDetail.view)"
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

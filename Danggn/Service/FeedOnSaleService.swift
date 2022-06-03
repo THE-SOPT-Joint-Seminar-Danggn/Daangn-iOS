@@ -39,7 +39,6 @@ class FeedOnSaleService {
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
-                print(statusCode)
                 
             case .failure:
                 completion(.networkFail)

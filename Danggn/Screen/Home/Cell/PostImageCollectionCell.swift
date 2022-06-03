@@ -35,7 +35,6 @@ extension PostImageCollectionCell: UICollectionViewDelegate {
         let page = Int(targetContentOffset.pointee.x / self.frame.width)
         pageControl.currentPage = page
     }
-
 }
 
 // 임의로 만든 더미데이터

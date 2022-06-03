@@ -10,6 +10,8 @@ import UIKit
 class ItemDetailViewController: UIViewController {
     
     private lazy var postCell = PostDetailTableViewCell()
+    
+    private var serverResponseData: FeedDetailData?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -21,11 +23,13 @@ class ItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedDetail()
         setChatButton()
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
+        feedDetail {
+            print("ddd")
+        }
     }
     
     func setPostImageTableView() {
@@ -111,10 +115,14 @@ extension ItemDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
+            // 일부 데이터 붙여 주어야 함
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
-            cell.setData(feedDetail: <#T##FeedDetailData#>)
+            // 여기다 일부 데이터를 붙여 주어야 하는디
+            self.feedDetail {
+                cell.setData(feedDetail: self.serverResponseData)
+            }
             cell.delegate = self
             return cell
         default:
@@ -129,15 +137,15 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
             cell.stateLabel?.text = "판매중"
-            self.feedOnSale(onSale: 0)
+            self.feedOnSale(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
             cell.stateLabel?.text = "예약중"
-            self.feedOnSale(onSale: 1)
+            self.feedOnSale(onSale: "1")
         }
         let soldOutAction = UIAlertAction(title: "판매완료", style: .default) { _ in
             cell.stateLabel?.text = "판매완료"
-            self.feedOnSale(onSale: 2)
+            self.feedOnSale(onSale: "2")
         }
         
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
@@ -153,28 +161,35 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
 
 extension ItemDetailViewController {
     // 상품 상세 페이지 서버 통신
-    func feedDetail() {
-        FeedDetailService.shared.feedDetail(feedId: "4ioqqfnas328sd") { response in
+    func feedDetail(completion: @escaping () -> Void) {
+        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<FeedDetailData> {
-                }
+                guard let data = data as? BaseResponse<FeedDetailData> else { return }
+                print(data)
+//                self.serverResponseData = serverResponseData.data
+//                completion()
+//                print(serverResponseData.message)
+                
 //                guard let title = data.data?.title else { return }
 //                guard let category = data.data?.category else { return }
 //                guard let content = data.data?.content else { return }
-//                guard let createdAt = data.data?.createdAt else { return }
+//                guard let createdAt = data.data?.createdAt else { return }œ
 //                guard let view = data.data?.view else { return }
-//                guard let isPriceSuggestion = data.data?.isPriceSuggestion else { return }
 //                guard let userName = data.data?.user?.name else { return }
 //                guard let userArea = data.data?.user?.area else { return }
-//
+                
+//                self.itemDetailTableView.reloadData()
+//                guard let isPriceSuggestion = data.data?.isPriceSuggestion else { return }
+
 //                print(title)
 //                print(category)
 //                print(content)
 //                print(view)
+//                print(createdAt)
 //                print(isPriceSuggestion)
             default:
-                return
+                print("여기야?")
             }
         }
     }
@@ -183,7 +198,7 @@ extension ItemDetailViewController {
 extension ItemDetailViewController {
     // 상품 좋아요
     func feedLike() {
-        FeedLikeService.shared.feedLike(feedId: "4ioqqfnas328sd") { response in
+        FeedLikeService.shared.feedLike(feedId: "628f3743b32d474b28bba948") { response in
             switch response {
             case .success(let data):
                 guard let data = data as? BaseResponse<BlankData> else { return }
@@ -197,8 +212,8 @@ extension ItemDetailViewController {
 
 extension ItemDetailViewController {
     // 상품 판매 상태 변경 요청
-    func feedOnSale(onSale: Int) {
-        FeedOnSaleService.shared.feedOnSale(feedId: "4ioqqfnas328sd",
+    func feedOnSale(onSale: String) {
+        FeedOnSaleService.shared.feedOnSale(feedId: "628f3743b32d474b28bba948",
                                             onSale: onSale) { response in
             switch response {
             case .success(let data):
