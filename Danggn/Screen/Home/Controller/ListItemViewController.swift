@@ -61,8 +61,8 @@ extension ListItemViewController {
     }
 }
 
+//MARK: - cell 관리
 extension ListItemViewController {
-    
     // CollectionViewCell 등록
     func registerCell() {
         let nib = UINib(nibName: ListItemCollectionViewCell.identifier, bundle: nil)
@@ -74,7 +74,6 @@ extension ListItemViewController {
 
 extension ListItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
     }
 }
 
@@ -82,16 +81,14 @@ extension ListItemViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-        print("numberOfItemsInSection")
         return feedDataList.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            print("cellForItemAt")
             guard let cell = listCollectionView.dequeueReusableCell(
-            withReuseIdentifier: "ListItemCollectionViewCell",
+                withReuseIdentifier: ListItemCollectionViewCell.identifier,
             for: indexPath) as? ListItemCollectionViewCell
             else { return UICollectionViewCell() }
             cell.setData(feedData: feedDataList[indexPath.row])
