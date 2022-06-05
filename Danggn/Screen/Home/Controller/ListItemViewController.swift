@@ -61,7 +61,7 @@ extension ListItemViewController {
     }
 }
 
-//MARK: - cell 관리
+// MARK: - cell 관리
 extension ListItemViewController {
     // CollectionViewCell 등록
     func registerCell() {
@@ -74,6 +74,9 @@ extension ListItemViewController {
 
 extension ListItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -96,7 +99,6 @@ extension ListItemViewController: UICollectionViewDataSource {
     }
     
 }
-
 extension ListItemViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(
@@ -134,3 +136,5 @@ extension ListItemViewController {
         }
     }
 }
+
+
