@@ -2,7 +2,7 @@
 //  PostDetailTableViewCell.swift
 //  Danggn
 //
-//  Created by 황찬미 on 2022/05/27.
+//  Created by 황찬미 on 2022/06/03.
 //
 
 import UIKit
@@ -31,6 +31,32 @@ class PostDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var postLable: UILabel!
+    @IBOutlet weak var createdLabel: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+    
+    func setData(feedDetail: FeedDetailData?) {
+//        userProfileImage.image = UIImage(named: [feedDetail.user?.profile])
+        guard let feedDetail = feedDetail else { return }
+        userProfileImage.image = feedDetail.image[]
+
+        userNameLabel.text = feedDetail.user.name
+        addressLabel.text = feedDetail.user.region
+        
+        titleLable.text = feedDetail.title
+        categoryLabel.text = feedDetail.category
+        createdLabel.text = feedDetail.createdAt
+        viewLabel.text = "조회 \(feedDetail.view)"
+    }
+    
+//    func setData(feedDetail: PostDetailModel) {
+//        userNameLabel.text = feedDetail.userName
+//        addressLabel.text = feedDetail.userRegion
+//        titleLable.text = feedDetail.title
+//        categoryLabel.text = feedDetail.category
+//        postLable.text = feedDetail.content
+//        createdLabel.text = feedDetail.createdAt
+//        viewLabel.text = feedDetail.view
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,5 +68,20 @@ class PostDetailTableViewCell: UITableViewCell {
     
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
         delegate?.presentActionSheet(self)
+    }
+}
+
+extension UIImageView {
+    func load(imgURL: String) {
+        let url = URL(string: imgURL)
+        if url != nil {
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: url!) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async { self?.image = image }
+                    }
+                }
+            }
+        }
     }
 }

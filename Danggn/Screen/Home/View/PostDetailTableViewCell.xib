@@ -185,13 +185,15 @@
             <connections>
                 <outlet property="addressLabel" destination="V8r-fS-6uM" id="b2w-tH-Yzx"/>
                 <outlet property="categoryLabel" destination="bno-ox-g8a" id="kxL-zK-Orl"/>
+                <outlet property="createdLabel" destination="e4R-N0-MxU" id="Fby-Yr-WRx"/>
                 <outlet property="postDetailTableView" destination="H2p-sc-9uM" id="Y35-sq-VdN"/>
-                <outlet property="postLable" destination="457-TK-UL1" id="mFg-Pq-uTr"/>
+                <outlet property="postLable" destination="e4R-N0-MxU" id="iee-3S-PuC"/>
                 <outlet property="stateButton" destination="XGd-n8-POM" id="zzG-Rq-fng"/>
                 <outlet property="stateLabel" destination="DnL-vk-KCV" id="mhM-yV-fJb"/>
                 <outlet property="titleLable" destination="4cu-Xv-YpH" id="EwQ-T8-19d"/>
                 <outlet property="userNameLabel" destination="zgP-2u-lo6" id="whY-g5-nMW"/>
                 <outlet property="userProfileImage" destination="WMw-IZ-M8S" id="uZt-oe-xlb"/>
+                <outlet property="viewLabel" destination="IIf-ag-tdL" id="3Uo-BX-kJF"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="81.361607142857139"/>
         </tableViewCell>

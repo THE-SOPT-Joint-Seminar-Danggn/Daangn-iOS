@@ -11,4 +11,8 @@ struct APIConstants {
     
     // MARK: - Feature URL
     static let feedURL = baseURL + "/feed"
+    
+    static let detailFeedURL = baseURL + "/feed/"
+    static let likeFeedURL = baseURL + "/feed/like/"
+    static let feedOnSale = baseURL + "/feed/on-sale"
 }

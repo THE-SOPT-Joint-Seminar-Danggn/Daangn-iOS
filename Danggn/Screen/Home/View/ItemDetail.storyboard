@@ -40,7 +40,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="" image="icon_heart_off"/>
                                 <connections>
-                                    <action selector="likeButtonDidTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="H7n-MV-fX1"/>
+                                    <action selector="likeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dbz-jc-pca"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY7-7Y-sOu" userLabel="Line 4">
@@ -87,7 +87,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="FE7E35" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="chatButtonDIdTab:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bdc-IV-ckf"/>
+                                    <action selector="chatButtonDIdTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QdG-C4-DSb"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-Q4-JHa">
@@ -125,7 +125,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icon_home"/>
                                 <connections>
-                                    <action selector="homeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U3h-nH-JHh"/>
+                                    <action selector="homeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MQm-Fp-SWu"/>
                                 </connections>
                             </button>
                         </barButtonItem>
