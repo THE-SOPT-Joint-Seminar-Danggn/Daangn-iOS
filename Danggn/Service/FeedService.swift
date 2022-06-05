@@ -10,6 +10,7 @@ import Alamofire
 
 class FeedService {
     static let shared = FeedService()
+    
     private init() {}
 }
 

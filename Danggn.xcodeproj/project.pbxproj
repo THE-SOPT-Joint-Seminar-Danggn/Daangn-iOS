@@ -56,6 +56,7 @@
 		E70333BC2834729D00ABF306 /* MyDanggn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70333BB2834729D00ABF306 /* MyDanggn.storyboard */; };
 		E70333C0283472C300ABF306 /* MyDanggnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333BF283472C300ABF306 /* MyDanggnViewController.swift */; };
 		E70333C22834761800ABF306 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70333C12834761800ABF306 /* TabBarController.swift */; };
+		E7A63916284C4BB200795415 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A08289828357B2C00A582CD /* ItemDetail.storyboard */; };
 		E7C2C1E2283F0B8C00C0CED1 /* ListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2C1E1283F0B8C00C0CED1 /* ListDataModel.swift */; };
 		E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E428354EF80094D855 /* TabBarTemp.swift */; };
 		E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB78E7283660630094D855 /* UINavigationItem+Extension.swift */; };
@@ -591,6 +592,7 @@
 				4F1ADAAD2834083900969E1D /* NotoSansSC-Medium.otf in Resources */,
 				4F1ADAC72834085800969E1D /* NunitoSans-Regular.ttf in Resources */,
 				4F1ADAC12834085800969E1D /* NunitoSans-LightItalic.ttf in Resources */,
+				E7A63916284C4BB200795415 /* ItemDetail.storyboard in Resources */,
 				E70333962834689D00ABF306 /* ListItem.storyboard in Resources */,
 				4AE93813283FDD2F00961E5B /* PostImageCollectionCell.xib in Resources */,
 				4F1ADACE2834085800969E1D /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
