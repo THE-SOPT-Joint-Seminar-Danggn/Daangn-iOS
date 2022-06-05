@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-W2-vQY">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bEx-W2-vQY">
                         <rect key="frame" x="15" y="16" width="103" height="103"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="103" id="7yy-0r-XkW"/>
@@ -51,22 +51,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rfw-tG-9P8">
-                        <rect key="frame" x="293.5" y="99" width="60.5" height="24"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn8-ve-QsQ">
-                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="icon_heart_unselected"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ff-Iu-6YK">
-                                <rect key="frame" x="29" y="0.0" width="31.5" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rI-GI-54Y">
                         <rect key="frame" x="14" y="135" width="346" height="1"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,12 +58,33 @@
                             <constraint firstAttribute="height" constant="1" id="7a1-r7-DuT"/>
                         </constraints>
                     </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rKK-fL-N3P">
+                        <rect key="frame" x="293.5" y="104" width="64.5" height="18"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-sq-oHX">
+                                <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="IxJ-KV-eJS"/>
+                                    <constraint firstAttribute="width" constant="18" id="ccH-kL-3bj"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icon_heart_off"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgK-GB-S4g">
+                                <rect key="frame" x="23" y="0.0" width="41.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="OBJ-Ea-hkV" firstAttribute="top" secondItem="9VG-LW-3Kk" secondAttribute="bottom" constant="4" id="KvO-cn-2Cl"/>
-                <constraint firstAttribute="trailing" secondItem="rfw-tG-9P8" secondAttribute="trailing" constant="21" id="V4A-lm-KDS"/>
+                <constraint firstAttribute="trailing" secondItem="rKK-fL-N3P" secondAttribute="trailing" constant="17" id="e0x-hi-29I"/>
                 <constraint firstItem="bEx-W2-vQY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="fEM-rr-ncL"/>
                 <constraint firstItem="3rI-GI-54Y" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="14" id="is7-6F-tJd"/>
                 <constraint firstItem="5sq-R8-9BJ" firstAttribute="leading" secondItem="bEx-W2-vQY" secondAttribute="trailing" constant="17" id="nyO-5w-dbI"/>
@@ -87,18 +92,18 @@
                 <constraint firstItem="OBJ-Ea-hkV" firstAttribute="leading" secondItem="bEx-W2-vQY" secondAttribute="trailing" constant="17" id="p0e-iF-EAa"/>
                 <constraint firstItem="5sq-R8-9BJ" firstAttribute="top" secondItem="OBJ-Ea-hkV" secondAttribute="bottom" constant="3" id="qwn-Fa-Cad"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="3rI-GI-54Y" secondAttribute="trailing" constant="15" id="sWO-hG-MeF"/>
-                <constraint firstItem="rfw-tG-9P8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="99" id="tBT-42-L7s"/>
                 <constraint firstItem="bEx-W2-vQY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="vBZ-sy-xwx"/>
                 <constraint firstItem="3rI-GI-54Y" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="vpD-pK-CBM"/>
                 <constraint firstItem="9VG-LW-3Kk" firstAttribute="leading" secondItem="bEx-W2-vQY" secondAttribute="trailing" constant="17" id="wCw-uJ-FAX"/>
                 <constraint firstItem="9VG-LW-3Kk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="z0w-hl-WGg"/>
+                <constraint firstItem="3rI-GI-54Y" firstAttribute="top" secondItem="rKK-fL-N3P" secondAttribute="bottom" constant="13" id="zYV-Kr-Q11"/>
             </constraints>
             <size key="customSize" width="358" height="232"/>
             <connections>
                 <outlet property="listImageView" destination="bEx-W2-vQY" id="8Ac-zj-Yeb"/>
                 <outlet property="listItemBorderView" destination="3rI-GI-54Y" id="f5X-y7-sT0"/>
-                <outlet property="listLikeButton" destination="rn8-ve-QsQ" id="HEJ-Sx-Lxk"/>
-                <outlet property="listLikeCount" destination="0ff-Iu-6YK" id="IC2-Kq-Abb"/>
+                <outlet property="listLikeButton" destination="KIx-sq-oHX" id="nBm-vp-xel"/>
+                <outlet property="listLikeCount" destination="IgK-GB-S4g" id="LOt-Es-VaJ"/>
                 <outlet property="listLocationLabel" destination="OBJ-Ea-hkV" id="a4D-Ky-QRF"/>
                 <outlet property="listPriceLabel" destination="5sq-R8-9BJ" id="pu0-Lp-ZJY"/>
                 <outlet property="listTitleLabel" destination="9VG-LW-3Kk" id="H8S-A2-wsg"/>
@@ -107,6 +112,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="icon_heart_unselected" width="24" height="24"/>
+        <image name="icon_heart_off" width="24" height="24"/>
     </resources>
 </document>

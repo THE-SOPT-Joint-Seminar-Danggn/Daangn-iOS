@@ -10,6 +10,7 @@ import Alamofire
 
 class FeedService {
     static let shared = FeedService()
+    
     private init() {}
 }
 
@@ -31,6 +32,7 @@ extension FeedService {
         // 요청(Request)를 하고 넘겨받은 응답의 결과를 가지고 성공 또는 실패 분기 처리
         switch response.result {
         case .success:
+            print("response success")
             // 성공 시에는 상태코드(Status Code)와 값(Value)
             guard let statusCode = response.response?.statusCode else { return }
             guard let value = response.value else { return }
@@ -41,6 +43,7 @@ extension FeedService {
         
         // 실패 시에는 바로 networkFail(통신 실패)라는 신호
         case .failure:
+            print("response failure")
             completion(.networkFail)
         }
     }
@@ -50,9 +53,9 @@ extension FeedService {
     private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ response: T.Type) -> NetworkResult<Any> {
         
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let decodedData = try? decoder.decode(response.self, from: data)
         else {
+            print("path error")
             return .pathErr
         }
         

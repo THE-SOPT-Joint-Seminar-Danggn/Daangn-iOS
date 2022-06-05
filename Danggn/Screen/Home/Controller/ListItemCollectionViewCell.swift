@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListItemCollectionViewCell: UICollectionViewCell {
     
@@ -24,22 +25,47 @@ class ListItemCollectionViewCell: UICollectionViewCell {
         setBorder()
     }
     
+    override func prepareForReuse() {
+        super .prepareForReuse()
+        
+        listImageView.image = nil
+    }
+    
     func setData(feedData: FeedData) {
-//        listImageView.image = UIImage(named: feedData.image)
+        getImage(imageURL: feedData.image)
         listTitleLabel.text = feedData.title
-        listLocationLabel.text = feedData.address
-        listPriceLabel.text = "\(feedData.price)"
+        listLocationLabel.text = feedData.region
+        listPriceLabel.text = "\(feedData.price)원"
         listLikeCount.text = "12"
+    }
+    
+    func setMockData(listData: ListDataModel) {
+        listImageView.image = UIImage(named: listData.listImage)
+        listTitleLabel.text = listData.listTitle
+        listLocationLabel.text = listData.listLocation
+        listPriceLabel.text = listData.listPrice
+        listLikeCount.text = "\(listData.listLikeCount)"
     }
     
     func setBorder() {
         listItemBorderView.clipsToBounds = true
         listItemBorderView.layer.cornerRadius = 10
-        listItemBorderView.layer.maskedCorners = CACornerMask(
-                                                    arrayLiteral: .layerMaxXMaxYCorner,
-                                                                .layerMaxXMinYCorner,
-                                                                .layerMinXMaxYCorner,
-                                                                .layerMinXMinYCorner
-                                                    )
+    }
+}
+
+// 이미지 비동기 처리
+extension ListItemCollectionViewCell {
+    func getImage(imageURL: String?) {
+        guard let imageURL = imageURL else { return }
+        let url = URL(string: imageURL)
+        
+        DispatchQueue.global().async {
+            guard let url = url else {return}
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                 self.listImageView.image = UIImage(data: data)
+                }
+            }
+        }
     }
 }
