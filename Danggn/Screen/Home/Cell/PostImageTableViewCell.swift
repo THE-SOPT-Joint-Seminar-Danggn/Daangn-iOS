@@ -11,6 +11,9 @@ class PostImageTableViewCell: UITableViewCell, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var postImageData: [FeedDetailData] = []
+//    var ImageData: [String] = []
+    
     static let identifier = "PostImageTableViewCell"
     
     override func awakeFromNib() {
@@ -30,6 +33,12 @@ class PostImageTableViewCell: UITableViewCell, UICollectionViewDelegate {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+//    func setData(feedDetail: FeedDetailData) {
+//        feedDetail.index
+//        collectionView(<#T##collectionView: UICollectionView##UICollectionView#>, cellForItemAt: )
+//        collectionView.setData(feedDetail)
+//    }
 }
 
 extension PostImageTableViewCell: UICollectionViewDataSource {
@@ -44,6 +53,7 @@ extension PostImageTableViewCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCollectionCell.identifier, for: indexPath) as? PostImageCollectionCell else { return UICollectionViewCell() }
         
         cell.setData(postImageData: PostImageModel.sampleData[indexPath.row], pageControlIndex: indexPath.row)
+//        cell.setData(postImageData: ImageData[indexPath.row], pageControlIndex: indexPath.row)
         
         return cell
     }
@@ -56,3 +66,21 @@ extension PostImageTableViewCell: UICollectionViewDelegateFlowLayout {
         return 0
     }
 }
+
+//extension PostImageTableViewCell {
+//    // 상품 상세 페이지 서버 통신
+//    func postImage(completion: @escaping () -> Void) {
+//        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
+//            switch response {
+//            case .success(let data):
+//                guard let postImageData = data as? BaseResponse<FeedDetailData> else { return }
+//                self.postImageData = postImageData.data
+//                completion()
+//                print(postImageData.data)
+//                print(postImageData)
+//            default:
+//                return
+//            }
+//        }
+//    }
+//}

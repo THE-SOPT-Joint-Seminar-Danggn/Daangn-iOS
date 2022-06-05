@@ -34,10 +34,10 @@ class PostDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var viewLabel: UILabel!
     
-    
     func setData(feedDetail: FeedDetailData?) {
 //        userProfileImage.image = UIImage(named: [feedDetail.user?.profile])
         guard let feedDetail = feedDetail else { return }
+        userProfileImage.image = feedDetail.image[]
 
         userNameLabel.text = feedDetail.user.name
         addressLabel.text = feedDetail.user.region
@@ -68,5 +68,20 @@ class PostDetailTableViewCell: UITableViewCell {
     
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
         delegate?.presentActionSheet(self)
+    }
+}
+
+extension UIImageView {
+    func load(imgURL: String) {
+        let url = URL(string: imgURL)
+        if url != nil {
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: url!) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async { self?.image = image }
+                    }
+                }
+            }
+        }
     }
 }

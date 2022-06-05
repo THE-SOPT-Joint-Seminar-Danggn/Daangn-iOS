@@ -23,6 +23,7 @@ class PostImageCollectionCell: UICollectionViewCell {
         }
     
     func setData(postImageData: PostImageModel, pageControlIndex: Int) {
+//        postImage.image = UIImage(named: postImageData?.image)
         postImage.image = UIImage(named: postImageData.postImageName)
         pageControl.currentPage = pageControlIndex
     }
@@ -30,7 +31,6 @@ class PostImageCollectionCell: UICollectionViewCell {
 
 // 페이지 컨트롤
 extension PostImageCollectionCell: UICollectionViewDelegate {
-
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let page = Int(targetContentOffset.pointee.x / self.frame.width)
         pageControl.currentPage = page
@@ -52,3 +52,19 @@ extension PostImageModel {
     PostImageModel(postImageName: "imageDetail_3")
     ]
 }
+
+// 이미지 url로 변경해 주는 코드
+//extension UIImageView {
+//    func load(imgURL: [String]) {
+//        let url = URL(string: imgURL)
+//        if url != nil {
+//            DispatchQueue.global().async { [weak self] in
+//                if let data = try? Data(contentsOf: url!) {
+//                    if let image = UIImage(data: data) {
+//                        DispatchQueue.main.async { self?.image = image }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

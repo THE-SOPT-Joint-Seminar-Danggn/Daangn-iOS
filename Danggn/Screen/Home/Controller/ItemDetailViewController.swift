@@ -11,7 +11,7 @@ class ItemDetailViewController: UIViewController {
     
     private lazy var postCell = PostDetailTableViewCell()
     
-    private var serverResponseData: FeedDetailData?
+    private var feedDetailData: FeedDetailData?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -27,9 +27,11 @@ class ItemDetailViewController: UIViewController {
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
-        feedDetail {
-            print("ddd")
-        }
+        
+//        self.feedDetail {
+//            self.itemPriceLabel.text = "\(self.feedDetailData?.price)"
+//            self.proposalPriceLabel.text = "\(self.feedDetailData?.price)"
+//        }
     }
     
     func setPostImageTableView() {
@@ -115,13 +117,16 @@ extension ItemDetailViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
-            // 일부 데이터 붙여 주어야 함
+//             일부 데이터 붙여 주어야 함
+//            self.feedDetail {
+//                cell.setData(feedDetail: self.feedDetailData)
+//            }
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
             // 여기다 일부 데이터를 붙여 주어야 하는디
             self.feedDetail {
-                cell.setData(feedDetail: self.serverResponseData)
+                cell.setData(feedDetail: self.feedDetailData)
             }
             cell.delegate = self
             return cell
@@ -165,11 +170,11 @@ extension ItemDetailViewController {
         FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
             switch response {
             case .success(let data):
-                guard let serverResponseData = data as? BaseResponse<FeedDetailData> else { return }
-                self.serverResponseData = serverResponseData.data
+                guard let feedDetailData = data as? BaseResponse<FeedDetailData> else { return }
+                self.feedDetailData = feedDetailData.data
                 completion()
-                print(serverResponseData.message)
-                print(serverResponseData)
+                print(feedDetailData.data)
+                print(feedDetailData)
                 
             default:
                 return

@@ -17,9 +17,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hlM-yv-ZdC"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m57-Lc-QaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,9 +102,6 @@
             <point key="canvasLocation" x="-246" y="84"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hlM-yv-ZdC"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_create" width="62" height="62"/>
         <image name="icon_home_selected" width="48" height="48"/>
