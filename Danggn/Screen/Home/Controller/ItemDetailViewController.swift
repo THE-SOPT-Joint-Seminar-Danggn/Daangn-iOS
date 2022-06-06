@@ -11,7 +11,15 @@ class ItemDetailViewController: UIViewController {
     
     private lazy var postCell = PostDetailTableViewCell()
     
-    private var feedDetailData: FeedDetailData?
+//    var feedDetailData: [FeedDetailData] {
+//        didSet {
+//            print(feedDetailData.id)
+//            }
+//        }
+//    }
+    
+    var feedDetailData: [FeedDetailData]?
+    var postId: String?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -27,6 +35,13 @@ class ItemDetailViewController: UIViewController {
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
+        print(postId)
+//        let url = URL(string: )
+//
+        
+//        feedDetail {
+//            print("아 제발 붙어주세요 ㅠㅠ")
+//        }
         
 //        self.feedDetail {
 //            self.itemPriceLabel.text = "\(self.feedDetailData?.price)"
@@ -125,9 +140,9 @@ extension ItemDetailViewController: UITableViewDataSource {
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
             // 여기다 일부 데이터를 붙여 주어야 하는디
-            self.feedDetail {
-                cell.setData(feedDetail: self.feedDetailData)
-            }
+//            self.feedDetail {
+//                cell.setData(feedDetail: self.feed)
+//            }
             cell.delegate = self
             return cell
         default:
@@ -164,24 +179,41 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
     }
 }
 
-extension ItemDetailViewController {
-    // 상품 상세 페이지 서버 통신
-    func feedDetail(completion: @escaping () -> Void) {
-        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
-            switch response {
-            case .success(let data):
-                guard let feedDetailData = data as? BaseResponse<FeedDetailData> else { return }
-                self.feedDetailData = feedDetailData.data
-                completion()
-                print(feedDetailData.data)
-                print(feedDetailData)
-                
-            default:
-                return
-            }
-        }
-    }
-}
+//extension ItemDetailViewController {
+//    // 상품 상세 페이지 서버 통신
+//    func feedDetail(feedId: String) {
+//        FeedDetailService.shared.feedDetail(feedId: feedId) { response in
+//            switch response {
+//            case .success(let data):
+////                if let feedDetailData = data as? FeedDetailModel {
+////                    self.feedDetailData = feedDetailData.data
+////                }
+////                self.feedDetailData = feedDetailData.data
+////                print(feedDetailData.data)
+////                print(feedDetailData)
+//            default:
+//                return
+//            }
+//        }
+//    }
+//}
+
+//extension ItemDetailViewController {
+//    // 상품 상세 페이지 서버 통신
+//    func feedDetail(completion: @escaping () -> Void) {
+//        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
+//            switch response {
+//            case .success(let data):
+//                guard let feedDetailData = data as? FeedDetailModel else { return }
+//                completion()
+//                print(feedDetailData.data)
+//                print(feedDetailData)
+//            default:
+//                return
+//            }
+//        }
+//    }
+//}
 
 extension ItemDetailViewController {
     // 상품 좋아요
@@ -189,7 +221,7 @@ extension ItemDetailViewController {
         FeedLikeService.shared.feedLike(feedId: "628f3743b32d474b28bba948") { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<BlankData> else { return }
+                guard let data = data as? FeedLikeModel else { return }
                 print(data)
             default:
                 return
@@ -205,10 +237,24 @@ extension ItemDetailViewController {
                                             onSale: onSale) { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<BlankData> else { return }
+                guard let data = data as? FeedOnSaleModel else { return }
                 print(data)
             default:
                 return
+            }
+        }
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
             }
         }
     }
