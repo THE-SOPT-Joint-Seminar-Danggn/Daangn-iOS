@@ -19,7 +19,7 @@ class ItemDetailViewController: UIViewController {
 //    }
     
     var feedDetailData: [FeedDetailData]?
-    var postId: String?
+    var feedId: String?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -35,7 +35,9 @@ class ItemDetailViewController: UIViewController {
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
-        print(postId)
+        if feedId = feedId {
+            feedDetail(feedId: feedId)
+        }
 //        let url = URL(string: )
 //
         
@@ -179,24 +181,19 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
     }
 }
 
-//extension ItemDetailViewController {
-//    // 상품 상세 페이지 서버 통신
-//    func feedDetail(feedId: String) {
-//        FeedDetailService.shared.feedDetail(feedId: feedId) { response in
-//            switch response {
-//            case .success(let data):
-////                if let feedDetailData = data as? FeedDetailModel {
-////                    self.feedDetailData = feedDetailData.data
-////                }
-////                self.feedDetailData = feedDetailData.data
-////                print(feedDetailData.data)
-////                print(feedDetailData)
-//            default:
-//                return
-//            }
-//        }
-//    }
-//}
+extension ItemDetailViewController {
+    // 상품 상세 페이지 서버 통신
+    func feedDetail(feedId: String) {
+        FeedDetailService.shared.feedDetail(feedId: feedId) { response in
+            switch response {
+            case .success(let data):
+                print(feedId)
+            default:
+                return
+            }
+        }
+    }
+}
 
 //extension ItemDetailViewController {
 //    // 상품 상세 페이지 서버 통신
