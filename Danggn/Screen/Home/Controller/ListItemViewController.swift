@@ -23,9 +23,9 @@ class ListItemViewController: UIViewController {
         setNavigationUI()
         registerCell()
         
-        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
-        self.navigationController?.pushViewController(viewController, animated: true)
+//        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+//        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @IBAction func itemCreateButtonDidTap(_ sender: UIButton) {

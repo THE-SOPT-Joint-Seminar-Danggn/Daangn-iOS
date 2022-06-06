@@ -98,12 +98,6 @@
                             <action selector="stateButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d9a-5h-Jdi"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최태성 한능검 심화기출 500제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-Xv-YpH">
-                        <rect key="frame" x="15" y="153" width="345" height="31.5"/>
-                        <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="19"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도서/티켓/음반" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bno-ox-g8a">
                         <rect key="frame" x="15" y="192.5" width="81" height="21.5"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
@@ -141,6 +135,12 @@
                             <constraint firstAttribute="width" constant="58" id="Sna-X1-Rj4"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="최태성 한능검 심화기출 500제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-Xv-YpH">
+                        <rect key="frame" x="14" y="153" width="345" height="31.5"/>
+                        <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -190,8 +190,8 @@
                 <outlet property="postLable" destination="e4R-N0-MxU" id="iee-3S-PuC"/>
                 <outlet property="stateButton" destination="XGd-n8-POM" id="zzG-Rq-fng"/>
                 <outlet property="stateLabel" destination="DnL-vk-KCV" id="mhM-yV-fJb"/>
-                <outlet property="titleLable" destination="4cu-Xv-YpH" id="EwQ-T8-19d"/>
-                <outlet property="userNameLabel" destination="zgP-2u-lo6" id="whY-g5-nMW"/>
+                <outlet property="titleLable" destination="4cu-Xv-YpH" id="xp0-sq-f4c"/>
+                <outlet property="userNameLabel" destination="zgP-2u-lo6" id="Wr2-XY-Zkh"/>
                 <outlet property="userProfileImage" destination="WMw-IZ-M8S" id="uZt-oe-xlb"/>
                 <outlet property="viewLabel" destination="IIf-ag-tdL" id="3Uo-BX-kJF"/>
             </connections>

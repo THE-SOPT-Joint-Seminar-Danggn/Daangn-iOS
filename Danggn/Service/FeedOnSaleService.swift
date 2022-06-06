@@ -49,7 +49,7 @@ class FeedOnSaleService {
         // 분기 처리해 주는 함수
         private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
             switch statusCode {
-            case 200: return isVaildData(data: data, type: BlankData.self)
+            case 200: return isVaildData(data: data)
             case 400: return .pathErr
             case 500: return .serverErr
             default: return .networkFail
@@ -57,9 +57,9 @@ class FeedOnSaleService {
         }
         
         // 서버에서 준 json 데이터를 decode 해 주는 함수 그리고 그 데이터를 networkresult success로 보내준다.
-    private func isVaildData<T: Codable>(data: Data, type: T.Type) -> NetworkResult<Any> {
+    private func isVaildData(data: Data) -> NetworkResult<Any> {
             let decoder = JSONDecoder()
-            guard let decodeData = try? decoder.decode(BaseResponse<T>.self, from: data) else { return .pathErr }
+        guard let decodeData = try? decoder.decode(FeedOnSaleModel.self, from: data) else { return .pathErr }
             
             return .success(decodeData)
     }

@@ -17,7 +17,7 @@ class FeedLikeService {
     // completion 클로저를 @escaping 클로저로 정의합니다.
         
         // API 명세서 작성
-        let url = APIConstants.likeFeedURL + "628f3743b32d474b28bba948"
+        let url = APIConstants.likeFeedURL + "\(feedId)"
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         
         // 요청서 작성
@@ -45,7 +45,7 @@ class FeedLikeService {
     // 서버 통신 자체는 성공일지라도 응답 실패로 원하는 데이터를 받지 못하였을 때 분기처리해 주는 메서드
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
-        case 200: return isVaildData(data: data, type: BlankData.self)
+        case 200: return isVaildData(data: data)
         case 400: return .pathErr
         case 500: return .serverErr
         default: return .networkFail
@@ -53,9 +53,9 @@ class FeedLikeService {
     }
     
     // 통신이 성공하고 원하는 데이터가 들어왔을 때 데이터를 처리해 주는 함수
-    private func isVaildData<T: Codable>(data: Data, type:T.Type) -> NetworkResult<Any> {
+    private func isVaildData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(BaseResponse<T>.self, from: data) else { return .pathErr }
+        guard let decodeData = try? decoder.decode(FeedLikeModel.self, from: data) else { return .pathErr }
         
         return .success(decodeData)
     }

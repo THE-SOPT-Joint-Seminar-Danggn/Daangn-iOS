@@ -9,12 +9,13 @@ import UIKit
 
 // 액션시트를 띄우는 프로토콜 선언
 protocol PostDetailTableViewCellDelegate: AnyObject {
-    func presentActionSheet(_ cell: PostDetailTableViewCell)
+    func presentActionSheet(_ cell: PostDetailTableCell)
 }
 
-class PostDetailTableViewCell: UITableViewCell {
+class PostDetailTableCell: UITableViewCell {
     
     weak var delegate: PostDetailTableViewCellDelegate?
+    var feedId: String?
     
     // cell을 구분하기 위한 identifier
     static let identifier = "PostDetailTableViewCell"
@@ -34,11 +35,13 @@ class PostDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var viewLabel: UILabel!
     
-    func setData(feedDetail: FeedDetailData?) {
+    func setData(feedDetail: FeedDetailData) {
 //        userProfileImage.image = UIImage(named: [feedDetail.user?.profile])
-        guard let feedDetail = feedDetail else { return }
-        userProfileImage.image = feedDetail.image[]
-
+//        guard let feedDetail = feedDetail else { return }
+        
+        // String 값을 url로 불러와서 ... 이미지로 변환해 주기
+        // 여기로 값이 자꾸 안 오는 이유는??????
+//        getImage(imageURL: feedDetail.user.profile)
         userNameLabel.text = feedDetail.user.name
         addressLabel.text = feedDetail.user.region
         
@@ -60,6 +63,8 @@ class PostDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // feedId의 값을 넘어오기 위해서는???
+        feedDetail(feedId: feedId ?? "")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -71,16 +76,32 @@ class PostDetailTableViewCell: UITableViewCell {
     }
 }
 
-extension UIImageView {
-    func load(imgURL: String) {
-        let url = URL(string: imgURL)
-        if url != nil {
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url!) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async { self?.image = image }
-                    }
-                }
+//extension PostDetailTableViewCell {
+//    func getImage(imageURL: String?) {
+//        guard let imageURL = imageURL else { return }
+//        let url = URL(string: imageURL)
+//
+//        DispatchQueue.global().async {
+//            guard let url = url else {return}
+//            if let data = try? Data(contentsOf: url) {
+//                DispatchQueue.main.async {
+//                 self.userProfileImage.image = UIImage(data: data)
+//                }
+//            }
+//        }
+//    }
+//}
+
+extension PostDetailTableCell {
+    // 상품 상세 페이지 서버 통신
+    func feedDetail(feedId: String) {
+        FeedDetailService.shared.feedDetail(feedId: feedId) { response in
+            switch response {
+            case .success(let data):
+                print(data)
+                self.setData(feedDetail: data.data)
+            default:
+                print("아님?")
             }
         }
     }

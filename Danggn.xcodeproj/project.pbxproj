@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08289C28357DF700A582CD /* ItemDetailViewController.swift */; };
-		4A5EADB728473E4F0039CBE6 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A08289828357B2C00A582CD /* ItemDetail.storyboard */; };
+		4AB07A43284CE88D0090C730 /* FeedLikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */; };
+		4AB07A45284CEA6D0090C730 /* FeedOnSaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */; };
 		4AB75E9D284A3F4100D55204 /* PostImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB75E9C284A3F4100D55204 /* PostImageTableViewCell.swift */; };
 		4AB75E9F284A3F5500D55204 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB75E9E284A3F5500D55204 /* PostDetailTableViewCell.swift */; };
 		4ADAC09F28474AAF00B8193A /* FeedLikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADAC09E28474AAF00B8193A /* FeedLikeService.swift */; };
@@ -78,6 +79,8 @@
 		289C9054B49733CA08C0D180 /* Pods-Danggn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Danggn.debug.xcconfig"; path = "Target Support Files/Pods-Danggn/Pods-Danggn.debug.xcconfig"; sourceTree = "<group>"; };
 		4A08289828357B2C00A582CD /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		4A08289C28357DF700A582CD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeModel.swift; sourceTree = "<group>"; };
+		4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOnSaleModel.swift; sourceTree = "<group>"; };
 		4AB75E9C284A3F4100D55204 /* PostImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageTableViewCell.swift; sourceTree = "<group>"; };
 		4AB75E9E284A3F5500D55204 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4ADAC09E28474AAF00B8193A /* FeedLikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeService.swift; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				E7F53C7528406DDC0078B8C2 /* FeedModel.swift */,
 				4ADAC0A028474E8B00B8193A /* BaseResponse.swift */,
 				4ADAC0A72847DBF800B8193A /* FeedDetailModel.swift */,
+				4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */,
+				4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				4ADAC0A328479F6A00B8193A /* FeedOnSaleService.swift in Sources */,
 				E7F53C71284065C70078B8C2 /* APIConstants.swift in Sources */,
 				E7F53C73284066FE0078B8C2 /* NetworkResults.swift in Sources */,
+				4AB07A45284CEA6D0090C730 /* FeedOnSaleModel.swift in Sources */,
 				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
@@ -732,6 +738,7 @@
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
 				4ADAC09F28474AAF00B8193A /* FeedLikeService.swift in Sources */,
+				4AB07A43284CE88D0090C730 /* FeedLikeModel.swift in Sources */,
 				E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */,
 				4AB75E9D284A3F4100D55204 /* PostImageTableViewCell.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,

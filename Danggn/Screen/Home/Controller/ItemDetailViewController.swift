@@ -11,14 +11,9 @@ class ItemDetailViewController: UIViewController {
     
     private lazy var postCell = PostDetailTableViewCell()
     
-//    var feedDetailData: [FeedDetailData] {
-//        didSet {
-//            print(feedDetailData.id)
-//            }
-//        }
-//    }
+    private lazy var tableView = itemDetailTableView
     
-    var feedDetailData: [FeedDetailData]?
+    var feedDetailData: FeedDetailData?
     var proposalPrice: Bool = false
     var feedId: String?
 
@@ -36,7 +31,9 @@ class ItemDetailViewController: UIViewController {
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
-//        feedDetail(feedId: feedId).
+        
+        self.feedDetail(feedId: feedId ?? "")
+
         
 //        let url = URL(string: )
 //
@@ -145,14 +142,11 @@ extension ItemDetailViewController: UITableViewDataSource {
 //            self.feedDetail {
 //                cell.setData(feedDetail: self.feedDetailData)
 //            }
+ 
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
-            // 여기다 일부 데이터를 붙여 주어야 하는디
-//            self.feedDetail {
-//                cell.setData(feedDetail: self.feed)
-//            }
-            cell.delegate = self
+            // 여기서 cell을 쏴주어야 하는가?
             return cell
         default:
             return UITableViewCell()
@@ -194,11 +188,13 @@ extension ItemDetailViewController {
         FeedDetailService.shared.feedDetail(feedId: feedId) { response in
             switch response {
             case .success(let data):
-                print(data)
-                if let data = data as? FeedDetailData {
-                    self.itemPriceLabel.text = "\(data.price)원"
-                    self.proposalPriceLabel.text = data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
-                }
+//                print(data)
+                self.itemPriceLabel.text = "\(data.data.price)원"
+                self.proposalPriceLabel.text = data.data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+                
+//                self.tableView?.reloadData()
+//                self.postCell.setData(feedDetail: data.data)
+//                itemDetailTableView.cell
             default:
                 print("아님?")
             }
@@ -254,16 +250,16 @@ extension ItemDetailViewController {
     }
 }
 
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+//extension UIImageView {
+//    func load(url: URL) {
+//        DispatchQueue.global().async { [weak self] in
+//            if let data = try? Data(contentsOf: url) {
+//                if let image = UIImage(data: data) {
+//                    DispatchQueue.main.async {
+//                        self?.image = image
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

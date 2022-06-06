@@ -13,10 +13,10 @@ class FeedDetailService {
     private init() {}
     
     func feedDetail(feedId: String,
-                    completion: @escaping (NetworkResult<Any>) -> Void)
+                    completion: @escaping (NetworkResult<FeedDetailModel>) -> Void)
     {
         // 명세서를 준비하는 단계
-        let url = APIConstants.detailFeedURL + "628f3743b32d474b28bba948"
+        let url = APIConstants.detailFeedURL + "\(feedId)"
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
         // 요청서
@@ -34,8 +34,6 @@ class FeedDetailService {
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
-                // 여기에서는 200으로 맞는 결과가 나온다
-                print(statusCode)
 
             case .failure:
                 completion(.networkFail)
@@ -43,9 +41,9 @@ class FeedDetailService {
         }
     }
     
-    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
+    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<FeedDetailModel> {
         switch statusCode {
-        case 200: return isVaildData(data: data, type: FeedDetailData.self)
+        case 200: return isVaildData(data: data)
         case 400: return .pathErr
         case 500: return .serverErr
         default: return .networkFail
@@ -53,9 +51,9 @@ class FeedDetailService {
         }
     }
     
-    private func isVaildData<T: Codable>(data: Data, type: T.Type) -> NetworkResult<Any> {
+    private func isVaildData(data: Data) -> NetworkResult<FeedDetailModel> {
         let decoder = JSONDecoder()
-        guard let decodeData = try? decoder.decode(BaseResponse<T>.self, from: data) else { return .pathErr }
+        guard let decodeData = try? decoder.decode(FeedDetailModel.self, from: data) else { return .pathErr }
         
         return .success(decodeData)
     }
