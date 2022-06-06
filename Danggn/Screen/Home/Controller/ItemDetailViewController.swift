@@ -9,9 +9,13 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    private lazy var postCell = PostDetailTableViewCell()
+    private lazy var postCell = PostDetailTableCell()
     
-    private var feedDetailData: FeedDetailData?
+    private lazy var tableView = itemDetailTableView
+    
+    var feedDetailData: FeedDetailData?
+    var proposalPrice: Bool = false
+    var feedId: String?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
     
@@ -28,23 +32,38 @@ class ItemDetailViewController: UIViewController {
         setPostImageTableView()
         setPostDetailTableView()
         
+        self.feedDetail(feedId: feedId ?? "")
+//        let url = URL(string: )
+//
+        
+//        feedDetail {
+//            print("아 제발 붙어주세요 ㅠㅠ")
+//        }
+        
 //        self.feedDetail {
 //            self.itemPriceLabel.text = "\(self.feedDetailData?.price)"
 //            self.proposalPriceLabel.text = "\(self.feedDetailData?.price)"
 //        }
     }
     
+//    private func feedDetail() {
+//        if let feedId = feedId,
+//            !proposalPrice {
+//            feedDetail(feedId: feedId)
+//        }
+//    }
+    
     func setPostImageTableView() {
-        let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
+        let postImageNib = UINib(nibName: PostImageTableCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableCell.identifier)
     
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
     }
     
     func setPostDetailTableView() {
-        let postDetailNib = UINib(nibName: PostDetailTableViewCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
+        let postDetailNib = UINib(nibName: PostDetailTableCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableCell.identifier)
         
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
@@ -116,19 +135,16 @@ extension ItemDetailViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableCell.identifier, for: indexPath) as? PostImageTableCell else { return UITableViewCell() }
 //             일부 데이터 붙여 주어야 함
 //            self.feedDetail {
 //                cell.setData(feedDetail: self.feedDetailData)
 //            }
+ 
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
-            // 여기다 일부 데이터를 붙여 주어야 하는디
-            self.feedDetail {
-                cell.setData(feedDetail: self.feedDetailData)
-            }
-            cell.delegate = self
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableCell.identifier, for: indexPath) as? PostDetailTableCell else { return UITableViewCell() }
+            // 여기서 cell을 쏴주어야 하는가?
             return cell
         default:
             return UITableViewCell()
@@ -137,7 +153,7 @@ extension ItemDetailViewController: UITableViewDataSource {
 }
 
 extension ItemDetailViewController: PostDetailTableViewCellDelegate {
-    func presentActionSheet(_ cell: PostDetailTableViewCell) {
+    func presentActionSheet(_ cell: PostDetailTableCell) {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
@@ -166,30 +182,48 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
 
 extension ItemDetailViewController {
     // 상품 상세 페이지 서버 통신
-    func feedDetail(completion: @escaping () -> Void) {
-        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
+    func feedDetail(feedId: String) {
+        FeedDetailService.shared.feedDetail(feedId: feedId) { response in
             switch response {
             case .success(let data):
-                guard let feedDetailData = data as? BaseResponse<FeedDetailData> else { return }
-                self.feedDetailData = feedDetailData.data
-                completion()
-                print(feedDetailData.data)
-                print(feedDetailData)
+//                print(data)
+                self.itemPriceLabel.text = "\(data.data.price)원"
+                self.proposalPriceLabel.text = data.data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
                 
+//                self.tableView?.reloadData()
+//                self.postCell.setData(feedDetail: data.data)
+//                itemDetailTableView.cell
             default:
-                return
+                print("아님?")
             }
         }
     }
 }
 
+// extension ItemDetailViewController {
+//    // 상품 상세 페이지 서버 통신
+//    func feedDetail(completion: @escaping () -> Void) {
+//        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
+//            switch response {
+//            case .success(let data):
+//                guard let feedDetailData = data as? FeedDetailModel else { return }
+//                completion()
+//                print(feedDetailData.data)
+//                print(feedDetailData)
+//            default:
+//                return
+//            }
+//        }
+//    }
+// }
+
 extension ItemDetailViewController {
     // 상품 좋아요
     func feedLike() {
-        FeedLikeService.shared.feedLike(feedId: "628f3743b32d474b28bba948") { response in
+        FeedLikeService.shared.feedLike(feedId: feedId ?? "") { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<BlankData> else { return }
+                guard let data = data as? FeedLikeModel else { return }
                 print(data)
             default:
                 return
@@ -201,11 +235,11 @@ extension ItemDetailViewController {
 extension ItemDetailViewController {
     // 상품 판매 상태 변경 요청
     func feedOnSale(onSale: String) {
-        FeedOnSaleService.shared.feedOnSale(feedId: "628f3743b32d474b28bba948",
+        FeedOnSaleService.shared.feedOnSale(feedId: feedId ?? "",
                                             onSale: onSale) { response in
             switch response {
             case .success(let data):
-                guard let data = data as? BaseResponse<BlankData> else { return }
+                guard let data = data as? FeedOnSaleModel else { return }
                 print(data)
             default:
                 return
@@ -213,3 +247,17 @@ extension ItemDetailViewController {
         }
     }
 }
+
+// extension UIImageView {
+//    func load(url: URL) {
+//        DispatchQueue.global().async { [weak self] in
+//            if let data = try? Data(contentsOf: url) {
+//                if let image = UIImage(data: data) {
+//                    DispatchQueue.main.async {
+//                        self?.image = image
+//                    }
+//                }
+//            }
+//        }
+//    }
+// }

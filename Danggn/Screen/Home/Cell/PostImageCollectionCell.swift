@@ -54,7 +54,7 @@ extension PostImageModel {
 }
 
 // 이미지 url로 변경해 주는 코드
-//extension UIImageView {
+// extension UIImageView {
 //    func load(imgURL: [String]) {
 //        let url = URL(string: imgURL)
 //        if url != nil {
@@ -67,4 +67,4 @@ extension PostImageModel {
 //            }
 //        }
 //    }
-//}
+// }

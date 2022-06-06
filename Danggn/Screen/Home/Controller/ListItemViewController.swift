@@ -23,9 +23,9 @@ class ListItemViewController: UIViewController {
         setNavigationUI()
         registerCell()
         
-        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
-        self.navigationController?.pushViewController(viewController, animated: true)
+//        let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+//        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     @IBAction func itemCreateButtonDidTap(_ sender: UIButton) {
@@ -79,7 +79,8 @@ extension ListItemViewController {
 extension ListItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController")
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController") as? ItemDetailViewController else { return }
+        viewController.feedId = feedDataList[indexPath.row].id
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -140,5 +141,3 @@ extension ListItemViewController {
         }
     }
 }
-
-
