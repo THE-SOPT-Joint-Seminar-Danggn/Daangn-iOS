@@ -19,6 +19,7 @@ class ItemDetailViewController: UIViewController {
 //    }
     
     var feedDetailData: [FeedDetailData]?
+    var proposalPrice: Bool = false
     var feedId: String?
 
     @IBOutlet weak var itemDetailTableView: UITableView!
@@ -35,9 +36,8 @@ class ItemDetailViewController: UIViewController {
         likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
-        if feedId = feedId {
-            feedDetail(feedId: feedId)
-        }
+//        feedDetail(feedId: feedId).
+        
 //        let url = URL(string: )
 //
         
@@ -50,6 +50,13 @@ class ItemDetailViewController: UIViewController {
 //            self.proposalPriceLabel.text = "\(self.feedDetailData?.price)"
 //        }
     }
+    
+//    private func feedDetail() {
+//        if let feedId = feedId,
+//            !proposalPrice {
+//            feedDetail(feedId: feedId)
+//        }
+//    }
     
     func setPostImageTableView() {
         let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
@@ -187,9 +194,13 @@ extension ItemDetailViewController {
         FeedDetailService.shared.feedDetail(feedId: feedId) { response in
             switch response {
             case .success(let data):
-                print(feedId)
+                print(data)
+                if let data = data as? FeedDetailData {
+                    self.itemPriceLabel.text = "\(data.price)원"
+                    self.proposalPriceLabel.text = data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+                }
             default:
-                return
+                print("아님?")
             }
         }
     }
@@ -215,7 +226,7 @@ extension ItemDetailViewController {
 extension ItemDetailViewController {
     // 상품 좋아요
     func feedLike() {
-        FeedLikeService.shared.feedLike(feedId: "628f3743b32d474b28bba948") { response in
+        FeedLikeService.shared.feedLike(feedId: feedId ?? "") { response in
             switch response {
             case .success(let data):
                 guard let data = data as? FeedLikeModel else { return }
@@ -230,7 +241,7 @@ extension ItemDetailViewController {
 extension ItemDetailViewController {
     // 상품 판매 상태 변경 요청
     func feedOnSale(onSale: String) {
-        FeedOnSaleService.shared.feedOnSale(feedId: "628f3743b32d474b28bba948",
+        FeedOnSaleService.shared.feedOnSale(feedId: feedId ?? "",
                                             onSale: onSale) { response in
             switch response {
             case .success(let data):
