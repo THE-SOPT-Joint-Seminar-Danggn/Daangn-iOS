@@ -141,5 +141,3 @@ extension ListItemViewController {
         }
     }
 }
-
-

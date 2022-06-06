@@ -9,7 +9,7 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    private lazy var postCell = PostDetailTableViewCell()
+    private lazy var postCell = PostDetailTableCell()
     
     private lazy var tableView = itemDetailTableView
     
@@ -33,8 +33,6 @@ class ItemDetailViewController: UIViewController {
         setPostDetailTableView()
         
         self.feedDetail(feedId: feedId ?? "")
-
-        
 //        let url = URL(string: )
 //
         
@@ -56,16 +54,16 @@ class ItemDetailViewController: UIViewController {
 //    }
     
     func setPostImageTableView() {
-        let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
+        let postImageNib = UINib(nibName: PostImageTableCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableCell.identifier)
     
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
     }
     
     func setPostDetailTableView() {
-        let postDetailNib = UINib(nibName: PostDetailTableViewCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
+        let postDetailNib = UINib(nibName: PostDetailTableCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableCell.identifier)
         
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
@@ -137,7 +135,7 @@ extension ItemDetailViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableViewCell.identifier, for: indexPath) as? PostImageTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableCell.identifier, for: indexPath) as? PostImageTableCell else { return UITableViewCell() }
 //             일부 데이터 붙여 주어야 함
 //            self.feedDetail {
 //                cell.setData(feedDetail: self.feedDetailData)
@@ -145,7 +143,7 @@ extension ItemDetailViewController: UITableViewDataSource {
  
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableViewCell.identifier, for: indexPath) as? PostDetailTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableCell.identifier, for: indexPath) as? PostDetailTableCell else { return UITableViewCell() }
             // 여기서 cell을 쏴주어야 하는가?
             return cell
         default:
@@ -155,7 +153,7 @@ extension ItemDetailViewController: UITableViewDataSource {
 }
 
 extension ItemDetailViewController: PostDetailTableViewCellDelegate {
-    func presentActionSheet(_ cell: PostDetailTableViewCell) {
+    func presentActionSheet(_ cell: PostDetailTableCell) {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
@@ -202,7 +200,7 @@ extension ItemDetailViewController {
     }
 }
 
-//extension ItemDetailViewController {
+// extension ItemDetailViewController {
 //    // 상품 상세 페이지 서버 통신
 //    func feedDetail(completion: @escaping () -> Void) {
 //        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
@@ -217,7 +215,7 @@ extension ItemDetailViewController {
 //            }
 //        }
 //    }
-//}
+// }
 
 extension ItemDetailViewController {
     // 상품 좋아요
@@ -250,7 +248,7 @@ extension ItemDetailViewController {
     }
 }
 
-//extension UIImageView {
+// extension UIImageView {
 //    func load(url: URL) {
 //        DispatchQueue.global().async { [weak self] in
 //            if let data = try? Data(contentsOf: url) {
@@ -262,4 +260,4 @@ extension ItemDetailViewController {
 //            }
 //        }
 //    }
-//}
+// }

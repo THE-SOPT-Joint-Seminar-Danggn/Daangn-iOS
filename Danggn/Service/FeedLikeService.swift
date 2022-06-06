@@ -10,15 +10,14 @@ import Alamofire
 
 class FeedLikeService {
     static let shared = FeedLikeService()
+    
     private init() {}
     
-    func feedLike(feedId: String, completion: @escaping (NetworkResult<Any>) -> Void)
-    {
-    // completion 클로저를 @escaping 클로저로 정의합니다.
-        
+    func feedLike(feedId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         // API 명세서 작성
+        
         let url = APIConstants.likeFeedURL + "\(feedId)"
-        let header: HTTPHeaders = ["Content-Type" : "application/json"]
+        let header: HTTPHeaders = ["Content-Type": "application/json"]
         
         // 요청서 작성
         let dataRequest = AF.request(url,

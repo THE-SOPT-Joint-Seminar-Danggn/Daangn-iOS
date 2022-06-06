@@ -64,7 +64,7 @@ class PostDetailTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // feedId의 값을 넘어오기 위해서는???
-        feedDetail(feedId: feedId ?? "")
+        feedDetail(feedId: "628f3743b32d474b28bba948")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -74,9 +74,11 @@ class PostDetailTableCell: UITableViewCell {
     @IBAction func stateButtonDidTap(_ sender: UIButton) {
         delegate?.presentActionSheet(self)
     }
+    
+//    let url = URL(string: "https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/274554211_7058140590927107_9076750575401386959_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=yRBiAOFUvO8AX998_s6&_nc_ht=scontent-ssn1-1.xx&oh=00_AT-g67pKCk_7v55g66vWHn6dJw7DcJn_OSTnOiR_Xl0dxA&oe=6291C318")
 }
 
-//extension PostDetailTableViewCell {
+// extension PostDetailTableViewCell {
 //    func getImage(imageURL: String?) {
 //        guard let imageURL = imageURL else { return }
 //        let url = URL(string: imageURL)
@@ -90,7 +92,7 @@ class PostDetailTableCell: UITableViewCell {
 //            }
 //        }
 //    }
-//}
+// }
 
 extension PostDetailTableCell {
     // 상품 상세 페이지 서버 통신

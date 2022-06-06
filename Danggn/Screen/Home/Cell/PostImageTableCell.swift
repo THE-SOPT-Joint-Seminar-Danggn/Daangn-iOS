@@ -67,7 +67,7 @@ extension PostImageTableCell: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//extension PostImageTableViewCell {
+// xtension PostImageTableViewCell {
 //    // 상품 상세 페이지 서버 통신
 //    func postImage(completion: @escaping () -> Void) {
 //        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
@@ -83,4 +83,4 @@ extension PostImageTableCell: UICollectionViewDelegateFlowLayout {
 //            }
 //        }
 //    }
-//}
+// }

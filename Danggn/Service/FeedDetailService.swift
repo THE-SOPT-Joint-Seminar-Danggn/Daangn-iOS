@@ -10,12 +10,11 @@ import Alamofire
 
 class FeedDetailService {
     static let shared = FeedDetailService()
+    
     private init() {}
     
     func feedDetail(feedId: String,
-                    completion: @escaping (NetworkResult<FeedDetailModel>) -> Void)
-    {
-        // 명세서를 준비하는 단계
+                    completion: @escaping (NetworkResult<FeedDetailModel>) -> Void) {
         let url = APIConstants.detailFeedURL + "\(feedId)"
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         

@@ -36,4 +36,3 @@ struct User: Codable {
         case id = "_id"
     }
 }
-
