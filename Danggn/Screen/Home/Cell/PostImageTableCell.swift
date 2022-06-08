@@ -43,6 +43,10 @@ class PostImageTableCell: UITableViewCell, UICollectionViewDelegate {
 
 extension PostImageTableCell: UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+    }
+    
     // 몇 개의 셀을 보여 줄 것인지
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return PostImageModel.sampleData.count

@@ -17,12 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5zQ-a2-db5">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5zQ-a2-db5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="375" id="Eiu-XO-qTO"/>
-                            <constraint firstAttribute="width" constant="375" id="S3H-uq-d47"/>
+                            <constraint firstAttribute="width" secondItem="5zQ-a2-db5" secondAttribute="height" multiplier="1:1" id="Du1-VO-AQI"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aqO-cM-4k8">
                             <size key="itemSize" width="375" height="375"/>
