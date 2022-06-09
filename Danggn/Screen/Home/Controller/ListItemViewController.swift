@@ -79,7 +79,9 @@ extension ListItemViewController {
 extension ListItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "ItemDetail", bundle: nil)
-        guard let viewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetailViewController") as? ItemDetailViewController else { return }
+        guard let viewController = storyBoard.instantiateViewController(
+            withIdentifier: "ItemDetailViewController")
+                as? ItemDetailViewController else { return }
         viewController.feedId = feedDataList[indexPath.row].id
         self.navigationController?.pushViewController(viewController, animated: true)
     }

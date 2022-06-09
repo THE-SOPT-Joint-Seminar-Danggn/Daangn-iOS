@@ -24,95 +24,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-H5-vrV" userLabel="Line 3">
-                                <rect key="frame" x="0.0" y="793" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOM-SY-04N">
+                                <rect key="frame" x="0.0" y="794" width="414" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-uY-YUZ">
+                                        <rect key="frame" x="275" y="13.5" width="122" height="41"/>
+                                        <color key="backgroundColor" red="0.99607843137254903" green="0.49411764705882355" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="6C8-4j-2Fp"/>
+                                            <constraint firstAttribute="height" constant="41" id="PzV-4h-jOs"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="채팅 목록 보기">
+                                            <fontDescription key="titleFontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="FE7E35" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="chatButtonDIdTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QdG-C4-DSb"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dw3-9B-p0b">
+                                        <rect key="frame" x="74" y="12.5" width="67.5" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-Tt-mBo" userLabel="가격">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="EA4-ka-jN1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안불가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="274-PF-qBW" userLabel="가격제안불가">
+                                                <rect key="frame" x="0.0" y="24" width="67.5" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="FKs-sb-Ty8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="13"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-rN-d33">
+                                        <rect key="frame" x="16" y="22" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="uSc-v8-lXL"/>
+                                            <constraint firstAttribute="height" constant="24" id="vEk-qT-woe"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="" image="icon_heart_off"/>
+                                        <state key="selected" image="icon_heart_on"/>
+                                        <connections>
+                                            <action selector="likeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OYH-eI-3SH"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY7-7Y-sOu" userLabel="Line 4">
+                                        <rect key="frame" x="56" y="21" width="1" height="40"/>
+                                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1ej-Nd-2hO"/>
+                                            <constraint firstAttribute="width" constant="1" id="Ph8-gV-OJ4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="xOd-Oi-myV"/>
+                                    <constraint firstItem="tLN-rN-d33" firstAttribute="leading" secondItem="pOM-SY-04N" secondAttribute="leading" constant="16" id="769-hK-5ku"/>
+                                    <constraint firstItem="NY7-7Y-sOu" firstAttribute="top" secondItem="pOM-SY-04N" secondAttribute="top" constant="21" id="86u-w7-X92"/>
+                                    <constraint firstItem="NY7-7Y-sOu" firstAttribute="leading" secondItem="tLN-rN-d33" secondAttribute="trailing" constant="16" id="JIM-LF-qkU"/>
+                                    <constraint firstItem="tLN-rN-d33" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="Khf-te-OdF"/>
+                                    <constraint firstAttribute="height" constant="68" id="jnF-ki-hU8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghb-uY-YUZ" secondAttribute="trailing" constant="17" id="rhE-gp-Nxa"/>
+                                    <constraint firstItem="Ghb-uY-YUZ" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="tls-m0-Zsf"/>
+                                    <constraint firstItem="dw3-9B-p0b" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="wKp-ts-clA"/>
+                                    <constraint firstItem="dw3-9B-p0b" firstAttribute="leading" secondItem="NY7-7Y-sOu" secondAttribute="leading" constant="18" id="wOE-xZ-XWX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-rN-d33">
-                                <rect key="frame" x="16" y="823" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="uSc-v8-lXL"/>
-                                    <constraint firstAttribute="height" constant="24" id="vEk-qT-woe"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" image="icon_heart_off"/>
-                                <connections>
-                                    <action selector="likeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dbz-jc-pca"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY7-7Y-sOu" userLabel="Line 4">
-                                <rect key="frame" x="56" y="815" width="1" height="40"/>
-                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1ej-Nd-2hO"/>
-                                    <constraint firstAttribute="width" constant="1" id="Ph8-gV-OJ4"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-Tt-mBo" userLabel="가격">
-                                <rect key="frame" x="75" y="813" width="67" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="EA4-ka-jN1"/>
-                                    <constraint firstAttribute="width" constant="67" id="MmJ-36-3k4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안불가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="274-PF-qBW" userLabel="가격제안불가">
-                                <rect key="frame" x="75" y="837" width="72" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="1Ft-IN-to1"/>
-                                    <constraint firstAttribute="height" constant="19" id="sHu-UZ-XAO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="13"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghb-uY-YUZ">
-                                <rect key="frame" x="269" y="819" width="122" height="41"/>
-                                <color key="backgroundColor" red="0.99607843137254903" green="0.49411764705882355" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="6C8-4j-2Fp"/>
-                                    <constraint firstAttribute="height" constant="41" id="PzV-4h-jOs"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="채팅 목록 보기">
-                                    <fontDescription key="titleFontDescription" name="NotoSansSC-Bold" family="Noto Sans SC" pointSize="15"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="FE7E35" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="chatButtonDIdTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QdG-C4-DSb"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-Q4-JHa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="705"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZYb-Q4-JHa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tLN-rN-d33" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="37O-B3-rVh"/>
-                            <constraint firstAttribute="trailing" secondItem="W9I-H5-vrV" secondAttribute="trailing" id="7X8-dE-ZAR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ghb-uY-YUZ" secondAttribute="trailing" constant="23" id="88V-5P-171"/>
-                            <constraint firstItem="x1f-Tt-mBo" firstAttribute="leading" secondItem="NY7-7Y-sOu" secondAttribute="trailing" constant="18" id="8Ir-Xg-ffa"/>
-                            <constraint firstItem="NY7-7Y-sOu" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="21" id="9oM-mG-4BT"/>
-                            <constraint firstItem="tLN-rN-d33" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="29" id="AJ4-02-jtj"/>
-                            <constraint firstItem="274-PF-qBW" firstAttribute="top" secondItem="x1f-Tt-mBo" secondAttribute="bottom" id="DYE-zg-1qm"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="68" id="Jq2-iT-rig"/>
-                            <constraint firstItem="x1f-Tt-mBo" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="19" id="Okd-lU-z3P"/>
-                            <constraint firstItem="W9I-H5-vrV" firstAttribute="top" secondItem="ZYb-Q4-JHa" secondAttribute="bottom" id="OnP-dC-k5F"/>
-                            <constraint firstItem="274-PF-qBW" firstAttribute="leading" secondItem="NY7-7Y-sOu" secondAttribute="trailing" constant="18" id="fxF-Oe-qdo"/>
-                            <constraint firstItem="W9I-H5-vrV" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gYu-RI-iCP"/>
-                            <constraint firstItem="NY7-7Y-sOu" firstAttribute="leading" secondItem="tLN-rN-d33" secondAttribute="trailing" constant="16" id="gm0-cB-lur"/>
-                            <constraint firstItem="Ghb-uY-YUZ" firstAttribute="top" secondItem="W9I-H5-vrV" secondAttribute="bottom" constant="25" id="grr-KE-AaP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pOM-SY-04N" secondAttribute="trailing" id="6c7-Ar-rjN"/>
+                            <constraint firstItem="pOM-SY-04N" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="FqD-bo-Rh4"/>
                             <constraint firstItem="ZYb-Q4-JHa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iKu-zu-nIy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="leading" secondItem="pOM-SY-04N" secondAttribute="leading" id="kf7-i4-7T8"/>
+                            <constraint firstItem="pOM-SY-04N" firstAttribute="top" secondItem="ZYb-Q4-JHa" secondAttribute="bottom" id="mif-VH-ozt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZYb-Q4-JHa" secondAttribute="trailing" id="s4z-8v-a87"/>
                             <constraint firstItem="ZYb-Q4-JHa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sux-Bm-wJX"/>
                         </constraints>
@@ -143,7 +147,7 @@
                         <outlet property="chatButton" destination="Ghb-uY-YUZ" id="mts-Rf-bTV"/>
                         <outlet property="itemDetailTableView" destination="ZYb-Q4-JHa" id="TH9-pC-mlc"/>
                         <outlet property="itemPriceLabel" destination="x1f-Tt-mBo" id="YLY-VQ-OcT"/>
-                        <outlet property="likeButton" destination="tLN-rN-d33" id="sRc-p0-Q2Y"/>
+                        <outlet property="likeButton" destination="tLN-rN-d33" id="FiK-X9-QE0"/>
                         <outlet property="proposalPriceLabel" destination="274-PF-qBW" id="KN6-9v-8Qd"/>
                     </connections>
                 </viewController>
@@ -154,6 +158,7 @@
     </scenes>
     <resources>
         <image name="icon_heart_off" width="24" height="24"/>
+        <image name="icon_heart_on" width="24" height="24"/>
         <image name="icon_home" width="24" height="24"/>
         <image name="icon_more" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">

@@ -13,7 +13,7 @@ struct FeedDetailModel: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: FeedDetailData
+    let data: FeedDetailData?
 }
 
 // MARK: - DataClass
@@ -23,7 +23,7 @@ struct FeedDetailData: Codable {
     let onSale, title, category, createdAt: String
     let view, price: Int
     let isPriceSuggestion, isLiked: Bool
-    let user: User
+    let user: User?
 }
 
 // MARK: - User
