@@ -62,23 +62,6 @@ Danggn
     |
     |── Global
     │   │── Extension
-    |
-    |── DataModel
-    │   │── FeedModel
-    |   |── BaseResponse
-    |   |── FeedDetailModel
-    |   |── FeedLikeModel
-    |   |── FeedOnSaleModel
-    |
-    |── Network
-    |   |── APIConstants
-    |   |── NetworkResults
-    |
-    |── Service
-    |   |── FeedService
-    |   |── FeedLikeService
-    |   |── FeedOnSaleService
-    |   |── FeedDetailService
     │
     |── Resource
     │   │── Assets.xcassets
@@ -99,20 +82,8 @@ Danggn
     │           |── TabBarController
     │   │── Home
     |       |── Cell
-    |           |── PostImageTableCell
-    |           |── PostDetailTableCell
-    |           |── PostImageCollectionCell
     │       |── View
-    │           |── ItemDetail
-    |           |── ListItem
-    |           |── ListItemCollectionViewCell
-    |           |── PostImageTableViewCell
-    |           |── PostDetailTableViewCell
-    |           |── PostImageCollectionCell
     │       |── Controller
-    |           |── ItemDetailViewController
-    │           |── ListItemViewController
-    |           |── ListItemCollectionViewCell
     │   │── Neighborhood
     │       |── View
     │           |── Neighborhood    
