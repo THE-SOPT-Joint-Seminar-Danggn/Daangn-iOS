@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -29,7 +30,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostDetailTableViewCell" rowHeight="321" id="KGk-i7-Jjw" customClass="PostDetailTableViewCell" customModule="Danggn" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="432" height="321"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="432" height="321"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -41,7 +42,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usssj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-2u-lo6">
-                        <rect key="frame" x="64" y="19" width="40" height="19"/>
+                        <rect key="frame" x="64" y="19" width="40" height="22"/>
                         <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -62,13 +63,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36.5℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjR-L8-2nv">
-                        <rect key="frame" x="334.5" y="16" width="49.5" height="19"/>
+                        <rect key="frame" x="333" y="16" width="51" height="22"/>
                         <fontDescription key="fontDescription" name="NunitoSans-ExtraBold" family="Nunito Sans" pointSize="16"/>
                         <color key="textColor" red="0.082352941176470587" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개봉동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8r-fS-6uM">
-                        <rect key="frame" x="64" y="41" width="32" height="14"/>
+                        <rect key="frame" x="64" y="44" width="32" height="20"/>
                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -101,7 +102,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도서/티켓/음반" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bno-ox-g8a">
-                        <rect key="frame" x="15" y="190" width="76.5" height="20"/>
+                        <rect key="frame" x="15" y="194" width="81" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="yxG-qb-nuw"/>
                         </constraints>
@@ -110,7 +111,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-N0-MxU">
-                        <rect key="frame" x="100.5" y="190" width="33.5" height="20"/>
+                        <rect key="frame" x="105" y="194" width="35" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="u5u-ku-kaN"/>
                         </constraints>
@@ -118,33 +119,27 @@
                         <color key="textColor" red="0.51764705879999995" green="0.53333333329999999" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새책입니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="457-TK-UL1">
-                        <rect key="frame" x="15" y="224" width="402" height="23"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="23" id="QeE-bL-vRI"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새책입니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="457-TK-UL1">
+                        <rect key="frame" x="15" y="228" width="402" height="25"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조회 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIf-ag-tdL">
-                        <rect key="frame" x="16" y="259" width="400" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="DrW-fh-XoE"/>
-                        </constraints>
+                        <rect key="frame" x="16" y="265" width="400" height="21.5"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                         <color key="textColor" red="0.51764705879999995" green="0.53333333329999999" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.35999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-e1-Pd5">
-                        <rect key="frame" x="335" y="40" width="50" height="4"/>
+                        <rect key="frame" x="335" y="43" width="50" height="4"/>
                         <color key="tintColor" red="0.08235294118" green="0.41176470590000003" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="aEj-gD-aY0"/>
                         </constraints>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="판매중" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnL-vk-KCV">
-                        <rect key="frame" x="28" y="108" width="58" height="16.5"/>
+                        <rect key="frame" x="28" y="108" width="58" height="23"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="58" id="Sna-X1-Rj4"/>
                         </constraints>
@@ -152,11 +147,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최태성 한능검 심화기출 500제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-Xv-YpH">
-                        <rect key="frame" x="15" y="153" width="402" height="29"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="29" id="9lo-TD-kbc"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최태성 한능검 심화기출 500제" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-Xv-YpH">
+                        <rect key="frame" x="15" y="154.5" width="402" height="31.5"/>
                         <fontDescription key="fontDescription" name="Poppins" family="Poppins" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -170,7 +162,7 @@
                     <constraint firstItem="e4R-N0-MxU" firstAttribute="top" secondItem="4cu-Xv-YpH" secondAttribute="bottom" constant="8" id="ABi-nq-DHs"/>
                     <constraint firstItem="WMw-IZ-M8S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="AFT-P2-vJv"/>
                     <constraint firstItem="bno-ox-g8a" firstAttribute="top" secondItem="4cu-Xv-YpH" secondAttribute="bottom" constant="8" id="Bci-yz-V7i"/>
-                    <constraint firstItem="4cu-Xv-YpH" firstAttribute="top" secondItem="XGd-n8-POM" secondAttribute="bottom" constant="15" id="BhO-z4-iuc"/>
+                    <constraint firstItem="4cu-Xv-YpH" firstAttribute="top" secondItem="XGd-n8-POM" secondAttribute="bottom" constant="16.5" id="Jer-fo-0im"/>
                     <constraint firstItem="IIf-ag-tdL" firstAttribute="top" secondItem="457-TK-UL1" secondAttribute="bottom" constant="12" id="LMQ-YG-7lS"/>
                     <constraint firstItem="V8r-fS-6uM" firstAttribute="top" secondItem="zgP-2u-lo6" secondAttribute="bottom" constant="3" id="Mnu-T5-neI"/>
                     <constraint firstItem="iA2-qh-qqQ" firstAttribute="top" secondItem="zkg-dg-DVd" secondAttribute="bottom" constant="14" id="Qeu-Cv-05u"/>
@@ -178,7 +170,6 @@
                     <constraint firstItem="9d2-e1-Pd5" firstAttribute="top" secondItem="cjR-L8-2nv" secondAttribute="bottom" constant="5" id="Qrc-aq-Fw8"/>
                     <constraint firstItem="XGd-n8-POM" firstAttribute="top" secondItem="iA2-qh-qqQ" secondAttribute="bottom" constant="18" id="Sjn-id-zhv"/>
                     <constraint firstItem="XGd-n8-POM" firstAttribute="leading" secondItem="DnL-vk-KCV" secondAttribute="trailing" constant="-70" id="Slv-Ss-Voc"/>
-                    <constraint firstAttribute="trailing" secondItem="4cu-Xv-YpH" secondAttribute="trailing" constant="15" id="Swc-vz-aQo"/>
                     <constraint firstAttribute="trailing" secondItem="zkg-dg-DVd" secondAttribute="trailing" constant="15" id="X10-TB-eFG"/>
                     <constraint firstAttribute="trailing" secondItem="IIf-ag-tdL" secondAttribute="trailing" constant="16" id="Xq7-kL-Ic3"/>
                     <constraint firstItem="zgP-2u-lo6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="YuL-AY-9LG"/>
@@ -187,6 +178,7 @@
                     <constraint firstAttribute="bottom" secondItem="IIf-ag-tdL" secondAttribute="bottom" constant="34.5" id="dBY-Rf-u0l"/>
                     <constraint firstItem="zgP-2u-lo6" firstAttribute="leading" secondItem="WMw-IZ-M8S" secondAttribute="trailing" constant="8" id="ex9-82-Da7"/>
                     <constraint firstAttribute="trailing" secondItem="EYj-JA-POu" secondAttribute="trailing" constant="15" id="iPg-PC-HXg"/>
+                    <constraint firstAttribute="trailing" secondItem="4cu-Xv-YpH" secondAttribute="trailing" constant="15" id="iui-qv-pRw"/>
                     <constraint firstItem="457-TK-UL1" firstAttribute="top" secondItem="bno-ox-g8a" secondAttribute="bottom" constant="14" id="oKl-nc-8tr"/>
                     <constraint firstItem="e4R-N0-MxU" firstAttribute="leading" secondItem="bno-ox-g8a" secondAttribute="trailing" constant="9" id="ofm-pQ-ZWt"/>
                     <constraint firstItem="zkg-dg-DVd" firstAttribute="top" secondItem="EYj-JA-POu" secondAttribute="bottom" constant="6" id="ohU-Ob-I0A"/>

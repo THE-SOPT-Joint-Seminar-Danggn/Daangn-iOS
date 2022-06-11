@@ -94,9 +94,7 @@ class ItemDetailViewController: UIViewController {
 extension ItemDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0:
-            return UITableView.automaticDimension
-        case 1:
+        case 0...1:
             return UITableView.automaticDimension
         default:
             return 0

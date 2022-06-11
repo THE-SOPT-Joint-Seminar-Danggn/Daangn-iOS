@@ -90,6 +90,13 @@
                                             <constraint firstAttribute="width" constant="1" id="Ph8-gV-OJ4"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVJ-L4-DSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="rRF-FG-dtv"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -97,9 +104,12 @@
                                     <constraint firstItem="NY7-7Y-sOu" firstAttribute="top" secondItem="pOM-SY-04N" secondAttribute="top" constant="21" id="86u-w7-X92"/>
                                     <constraint firstItem="NY7-7Y-sOu" firstAttribute="leading" secondItem="tLN-rN-d33" secondAttribute="trailing" constant="16" id="JIM-LF-qkU"/>
                                     <constraint firstItem="tLN-rN-d33" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="Khf-te-OdF"/>
+                                    <constraint firstAttribute="trailing" secondItem="GVJ-L4-DSV" secondAttribute="trailing" id="h8b-KO-3Up"/>
+                                    <constraint firstItem="GVJ-L4-DSV" firstAttribute="top" secondItem="pOM-SY-04N" secondAttribute="top" id="iAa-Fa-DWu"/>
                                     <constraint firstAttribute="height" constant="68" id="jnF-ki-hU8"/>
                                     <constraint firstAttribute="trailing" secondItem="Ghb-uY-YUZ" secondAttribute="trailing" constant="17" id="rhE-gp-Nxa"/>
                                     <constraint firstItem="Ghb-uY-YUZ" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="tls-m0-Zsf"/>
+                                    <constraint firstItem="GVJ-L4-DSV" firstAttribute="leading" secondItem="pOM-SY-04N" secondAttribute="leading" id="vWA-6U-K4M"/>
                                     <constraint firstItem="dw3-9B-p0b" firstAttribute="centerY" secondItem="pOM-SY-04N" secondAttribute="centerY" id="wKp-ts-clA"/>
                                     <constraint firstItem="dw3-9B-p0b" firstAttribute="leading" secondItem="NY7-7Y-sOu" secondAttribute="leading" constant="18" id="wOE-xZ-XWX"/>
                                 </constraints>
