@@ -29,7 +29,10 @@ class ListItemViewController: UIViewController {
     }
     
     @IBAction func itemCreateButtonDidTap(_ sender: UIButton) {
-        
+        let storyBoard = UIStoryboard(name: "CreatePost", bundle: nil)
+        guard let viewControoler = storyBoard.instantiateViewController(withIdentifier: "CreatePostViewController") as? CreatePostViewController else { return }
+        viewControoler.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.present(viewControoler, animated: true)
     }
 }
 
