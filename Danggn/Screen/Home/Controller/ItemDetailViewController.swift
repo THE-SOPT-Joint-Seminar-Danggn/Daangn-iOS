@@ -9,14 +9,15 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    private lazy var postCell = PostDetailTableCell()
-    
-    private lazy var tableView = itemDetailTableView
+    private lazy var postCell = PostDetailTableViewCell()
+//    private lazy var tableView = itemDetailTableView
     
     var feedDetailData: FeedDetailData?
+    var feedImageList: [String]?
+    
     var proposalPrice: Bool = false
     var feedId: String?
-
+    
     @IBOutlet weak var itemDetailTableView: UITableView!
     
     @IBOutlet weak var itemPriceLabel: UILabel!
@@ -28,48 +29,29 @@ class ItemDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setChatButton()
-        likeButtonNotSelected()
         setPostImageTableView()
         setPostDetailTableView()
         
         self.feedDetail(feedId: feedId ?? "")
-//        let url = URL(string: )
-//
-        
-//        feedDetail {
-//            print("아 제발 붙어주세요 ㅠㅠ")
-//        }
-        
-//        self.feedDetail {
-//            self.itemPriceLabel.text = "\(self.feedDetailData?.price)"
-//            self.proposalPriceLabel.text = "\(self.feedDetailData?.price)"
-//        }
     }
     
-//    private func feedDetail() {
-//        if let feedId = feedId,
-//            !proposalPrice {
-//            feedDetail(feedId: feedId)
-//        }
-//    }
-    
     func setPostImageTableView() {
-        let postImageNib = UINib(nibName: PostImageTableCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableCell.identifier)
-    
+        let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postImageNib, forCellReuseIdentifier: PostImageTableViewCell.identifier)
+        
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
     }
     
     func setPostDetailTableView() {
-        let postDetailNib = UINib(nibName: PostDetailTableCell.identifier, bundle: nil)
-        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableCell.identifier)
+        let postDetailNib = UINib(nibName: PostDetailTableViewCell.identifier, bundle: nil)
+        itemDetailTableView?.register(postDetailNib, forCellReuseIdentifier: PostDetailTableViewCell.identifier)
         
         itemDetailTableView?.delegate = self
         itemDetailTableView?.dataSource = self
         
     }
-
+    
     @IBAction func homeButtonDidTap(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -79,17 +61,8 @@ class ItemDetailViewController: UIViewController {
     
     // 좋아요 버튼 눌렀을 떄 이벤트 구현
     @IBAction func likeButtonDidTap(_ sender: UIButton) {
-        feedLike()
         likeButton.isSelected.toggle()
-        likeButton.isSelected ? likeButtonSelected() : likeButtonNotSelected()
-    }
-    
-    func likeButtonNotSelected() {
-        likeButton?.setImage(UIImage(named: "icon_heart_off"), for: .normal)
-    }
-    
-    func likeButtonSelected() {
-        likeButton?.setImage(UIImage(named: "icon_heart_on"), for: .normal)
+        feedLike()
     }
     
     func setChatButton() {
@@ -101,10 +74,8 @@ class ItemDetailViewController: UIViewController {
 extension ItemDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0:
-            return 375
-        case 1:
-            return 321
+        case 0...1:
+            return UITableView.automaticDimension
         default:
             return 0
         }
@@ -135,16 +106,21 @@ extension ItemDetailViewController: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostImageTableCell.identifier, for: indexPath) as? PostImageTableCell else { return UITableViewCell() }
-//             일부 데이터 붙여 주어야 함
-//            self.feedDetail {
-//                cell.setData(feedDetail: self.feedDetailData)
-//            }
- 
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: PostImageTableViewCell.identifier, for: indexPath)
+                    as? PostImageTableViewCell else { return UITableViewCell() }
+            if let feedImageList = feedImageList {
+                cell.feedImageData = feedImageList
+            }
             return cell
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostDetailTableCell.identifier, for: indexPath) as? PostDetailTableCell else { return UITableViewCell() }
-            // 여기서 cell을 쏴주어야 하는가?
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: PostDetailTableViewCell.identifier, for: indexPath)
+                    as? PostDetailTableViewCell else { return UITableViewCell() }
+            if let feedDetailData = feedDetailData {
+                cell.setData(feedDetail: feedDetailData)
+            }
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -153,7 +129,7 @@ extension ItemDetailViewController: UITableViewDataSource {
 }
 
 extension ItemDetailViewController: PostDetailTableViewCellDelegate {
-    func presentActionSheet(_ cell: PostDetailTableCell) {
+    func presentActionSheet(_ cell: PostDetailTableViewCell) {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
@@ -175,8 +151,9 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         actionSheet.addAction(reservedAction)
         actionSheet.addAction(soldOutAction)
         actionSheet.addAction(cancelAction)
-
+        
         self.present(actionSheet, animated: true)
+        
     }
 }
 
@@ -186,13 +163,20 @@ extension ItemDetailViewController {
         FeedDetailService.shared.feedDetail(feedId: feedId) { response in
             switch response {
             case .success(let data):
-//                print(data)
-                self.itemPriceLabel.text = "\(data.data.price)원"
-                self.proposalPriceLabel.text = data.data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+                guard let data = data as? FeedDetailModel,
+                let detailData = data.data else { return }
                 
-//                self.tableView?.reloadData()
-//                self.postCell.setData(feedDetail: data.data)
-//                itemDetailTableView.cell
+                self.itemPriceLabel.text = "\(detailData.price)원"
+                self.proposalPriceLabel.text = detailData.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+                
+                self.feedDetailData = detailData
+                self.feedImageList = detailData.image
+                
+                self.likeButton.isSelected = detailData.isLiked
+                
+                // 왜 이거를 해 주어야 할까?
+                self.itemDetailTableView.reloadData()
+                
             default:
                 print("아님?")
             }
@@ -200,22 +184,6 @@ extension ItemDetailViewController {
     }
 }
 
-// extension ItemDetailViewController {
-//    // 상품 상세 페이지 서버 통신
-//    func feedDetail(completion: @escaping () -> Void) {
-//        FeedDetailService.shared.feedDetail(feedId: "628f3743b32d474b28bba948") { response in
-//            switch response {
-//            case .success(let data):
-//                guard let feedDetailData = data as? FeedDetailModel else { return }
-//                completion()
-//                print(feedDetailData.data)
-//                print(feedDetailData)
-//            default:
-//                return
-//            }
-//        }
-//    }
-// }
 
 extension ItemDetailViewController {
     // 상품 좋아요
@@ -247,17 +215,3 @@ extension ItemDetailViewController {
         }
     }
 }
-
-// extension UIImageView {
-//    func load(url: URL) {
-//        DispatchQueue.global().async { [weak self] in
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self?.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-// }

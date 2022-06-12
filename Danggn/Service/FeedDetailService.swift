@@ -14,7 +14,7 @@ class FeedDetailService {
     private init() {}
     
     func feedDetail(feedId: String,
-                    completion: @escaping (NetworkResult<FeedDetailModel>) -> Void) {
+                    completion: @escaping (NetworkResult<Any>) -> Void) {
         let url = APIConstants.detailFeedURL + "\(feedId)"
         let header: HTTPHeaders = ["Content-Type": "application/json"]
         
@@ -40,7 +40,7 @@ class FeedDetailService {
         }
     }
     
-    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<FeedDetailModel> {
+    private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isVaildData(data: data)
         case 400: return .pathErr
@@ -50,7 +50,7 @@ class FeedDetailService {
         }
     }
     
-    private func isVaildData(data: Data) -> NetworkResult<FeedDetailModel> {
+    private func isVaildData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodeData = try? decoder.decode(FeedDetailModel.self, from: data) else { return .pathErr }
         
