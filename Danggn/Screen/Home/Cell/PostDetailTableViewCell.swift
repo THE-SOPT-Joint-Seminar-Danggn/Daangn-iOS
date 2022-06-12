@@ -38,10 +38,20 @@ class PostDetailTableViewCell: UITableViewCell {
     
     func setData(feedDetail: FeedDetailData) {
         guard let imageUrl = feedDetail.user?.profile else { return }
-        print(imageUrl)
         getImage(imageURL: imageUrl)
         userNameLabel.text = feedDetail.user?.name
         addressLabel.text = feedDetail.user?.region
+        
+        switch feedDetail.onSale {
+        case "0":
+            stateLabel.text = "판매중"
+        case "1":
+            stateLabel.text = "예약중"
+        case "2":
+            stateLabel.text = "판매완료"
+        default:
+            return
+        }
         
         titleLable.text = feedDetail.title
         categoryLabel.text = feedDetail.category

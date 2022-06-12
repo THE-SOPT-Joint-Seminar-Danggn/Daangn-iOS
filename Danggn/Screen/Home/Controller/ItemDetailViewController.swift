@@ -32,28 +32,8 @@ class ItemDetailViewController: UIViewController {
         setPostImageTableView()
         setPostDetailTableView()
         
-        itemDetailTableView.estimatedRowHeight = 100
-        
         self.feedDetail(feedId: feedId ?? "")
-        //        let url = URL(string: )
-        //
-        
-        //        feedDetail {
-        //            print("아 제발 붙어주세요 ㅠㅠ")
-        //        }
-        
-        //        self.feedDetail {
-        //            self.itemPriceLabel.text = "\(self.feedDetailData?.price)"
-        //            self.proposalPriceLabel.text = "\(self.feedDetailData?.price)"
-        //        }
     }
-    
-    //    private func feedDetail() {
-    //        if let feedId = feedId,
-    //            !proposalPrice {
-    //            feedDetail(feedId: feedId)
-    //        }
-    //    }
     
     func setPostImageTableView() {
         let postImageNib = UINib(nibName: PostImageTableViewCell.identifier, bundle: nil)
@@ -139,7 +119,6 @@ extension ItemDetailViewController: UITableViewDataSource {
                     as? PostDetailTableViewCell else { return UITableViewCell() }
             if let feedDetailData = feedDetailData {
                 cell.setData(feedDetail: feedDetailData)
-                feedOnSale(onSale: feedDetailData.onSale)
             }
             cell.delegate = self
             return cell
@@ -155,7 +134,7 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
             cell.stateLabel?.text = "판매중"
-            self.feedOnSale(onSale: "1")
+            self.feedOnSale(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
             cell.stateLabel?.text = "예약중"
@@ -204,6 +183,7 @@ extension ItemDetailViewController {
         }
     }
 }
+
 
 extension ItemDetailViewController {
     // 상품 좋아요
