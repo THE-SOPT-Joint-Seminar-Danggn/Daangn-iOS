@@ -153,7 +153,6 @@ extension ItemDetailViewController: PostDetailTableViewCellDelegate {
         actionSheet.addAction(cancelAction)
         
         self.present(actionSheet, animated: true)
-        
     }
 }
 
