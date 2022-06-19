@@ -16,6 +16,9 @@ class CreatePostViewController: UIViewController {
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var contextTextField: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var priceTextFiled: UITextField!
     @IBOutlet weak var priceOfferLabel: UILabel!
@@ -28,17 +31,26 @@ class CreatePostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         textViewPlaceHolder()
         setDelegate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         keyboardAddObserver()
+        navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         keyboardRemoveObserver()
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction func backBtnDidTap(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func completionBtnDidTap(_ sender: UIButton) {
+        feedCreate()
     }
 
     func textViewPlaceHolder() {
@@ -222,5 +234,56 @@ extension CreatePostViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
+    }
+}
+
+extension CreatePostViewController {
+    func feedCreate() {
+        guard let priceNumber = priceTextFiled.text?.replacingOccurrences(of: ",", with: ""),
+              let price = Int(priceNumber),
+              let title = titleTextField.text,
+              let category = categoryTextField.text,
+              let contents = postTextView.text else { return }
+              let isPriceSuggestion = priceOfferButton.isSelected ? true : false
+        
+        FeedCreateService.shared.feedCreate(imageCount: photoModel.userSelectedImages.count,
+                                            title: title,
+                                            category: category,
+                                            price: price,
+                                            contents: contents,
+                                            isPriceSuggestion: isPriceSuggestion) { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? FeedCreateModel else { return }
+                      let createData = data.data
+                let detailModel = FeedDetailData.init(id: createData.id,
+                                                      image: [""],
+                                                      onSale: "0",
+                                                      title: title,
+                                                      category: category,
+                                                      createdAt: "1분전",
+                                                      view: 1,
+                                                      price: price,
+                                                      isPriceSuggestion: isPriceSuggestion,
+                                                      isLiked: false,
+                                                      user: User.init(profile: "",
+                                                                      name: "짠미",
+                                                                      region: "수원",
+                                                                      id: ""))
+                
+                guard let itemDetailViewController = UIStoryboard(name: "ItemDetail",
+                                                                  bundle: nil).instantiateViewController(
+                    withIdentifier: "ItemDetailViewController")
+                        as? ItemDetailViewController else { return }
+                
+                itemDetailViewController.fromPostCreate = true
+                itemDetailViewController.feedId = detailModel.id
+                itemDetailViewController.feedDetailData = detailModel
+                self.navigationController?.pushViewController(itemDetailViewController, animated: true)
+            default:
+                return
+            }
+            
+        }
     }
 }

@@ -32,6 +32,9 @@
                                             <fontDescription key="titleFontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="17"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backBtnDidTap:" destination="2CJ-KI-Lz2" eventType="touchUpInside" id="Aeh-Kl-BQd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-kn-Q5k">
                                         <rect key="frame" x="345.5" y="9" width="53.5" height="27"/>
@@ -40,6 +43,9 @@
                                             <fontDescription key="titleFontDescription" name="NotoSansSC-Regular" family="Noto Sans SC" pointSize="17"/>
                                             <color key="baseForegroundColor" red="0.94509803920000002" green="0.51764705879999995" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="completionBtnDidTap:" destination="2CJ-KI-Lz2" eventType="touchUpInside" id="yoO-OW-U6L"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중고거래 글쓰기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQJ-sU-mEe">
                                         <rect key="frame" x="156.5" y="13" width="101" height="19.5"/>
@@ -420,6 +426,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="Uu7-XW-MwY" id="JSb-0F-SrH"/>
+                        <outlet property="categoryTextField" destination="guS-6m-jtB" id="l6r-NO-lqg"/>
                         <outlet property="collectionView" destination="3VQ-c4-zmK" id="2qo-g7-0uE"/>
                         <outlet property="postTextView" destination="t8L-mz-WPy" id="IAt-4C-m1T"/>
                         <outlet property="priceOfferButton" destination="IoI-tX-u21" id="UjD-Vv-5cq"/>
@@ -427,6 +434,7 @@
                         <outlet property="priceOfferTextLabel" destination="boI-eU-VDB" id="qIo-kX-Fvo"/>
                         <outlet property="priceTextFiled" destination="9U5-ZE-S7Q" id="FFj-3v-KYs"/>
                         <outlet property="scrollView" destination="X2a-fw-0zm" id="IeD-F2-Eew"/>
+                        <outlet property="titleTextField" destination="y2V-O8-kqf" id="azp-T2-1Uj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPn-ig-zZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

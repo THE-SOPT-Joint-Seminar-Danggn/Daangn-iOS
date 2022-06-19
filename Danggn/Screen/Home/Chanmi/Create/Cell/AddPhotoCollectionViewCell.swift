@@ -46,7 +46,6 @@ class AddPhotoCollectionViewCell: UICollectionViewCell {
         }, cancel: { (_) in
 
         }, finish: { (assets) in
-            print("aaa")
             for asset in 0..<assets.count {
                 self.selectedAssets.append(assets[asset])
             }

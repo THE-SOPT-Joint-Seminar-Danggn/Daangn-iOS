@@ -14,8 +14,10 @@ class ItemDetailViewController: UIViewController {
     
     var feedDetailData: FeedDetailData?
     var feedImageList: [String]?
+    var fromPostCreate: Bool = false
     
     var proposalPrice: Bool = false
+    var itemPrice: Int?
     var feedId: String?
     
     @IBOutlet weak var itemDetailTableView: UITableView!
@@ -32,7 +34,16 @@ class ItemDetailViewController: UIViewController {
         setPostImageTableView()
         setPostDetailTableView()
         
-        self.feedDetail(feedId: feedId ?? "")
+        if fromPostCreate == false {
+            self.feedDetail(feedId: feedId ?? "")
+        }
+        setData()
+        
+    }
+    
+    func setData() {
+        self.itemPriceLabel.text = numberFormatter(number: feedDetailData?.price ?? 0)
+        self.proposalPriceLabel.text = feedDetailData?.isPriceSuggestion ?? true ? "가격제안가능" : "가격제한불가"
     }
     
     func setPostImageTableView() {
@@ -67,6 +78,13 @@ class ItemDetailViewController: UIViewController {
     
     func setChatButton() {
         chatButton?.layer.cornerRadius = 5
+    }
+    
+    func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number)) ?? ""
     }
 }
 
@@ -165,7 +183,7 @@ extension ItemDetailViewController {
                 guard let data = data as? FeedDetailModel,
                 let detailData = data.data else { return }
                 
-                self.itemPriceLabel.text = "\(detailData.price)원"
+                self.itemPriceLabel.text = self.numberFormatter(number: detailData.price)
                 self.proposalPriceLabel.text = detailData.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
                 
                 self.feedDetailData = detailData

@@ -130,7 +130,6 @@ extension ListItemViewController: UICollectionViewDelegateFlowLayout {
         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
-
 }
 
 extension ListItemViewController {
