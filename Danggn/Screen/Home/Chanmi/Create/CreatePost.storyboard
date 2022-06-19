@@ -116,9 +116,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="가격" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9U5-ZE-S7Q">
-                                                <rect key="frame" x="36" y="279" width="29.5" height="24"/>
+                                                <rect key="frame" x="36" y="279" width="162.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="priceEditingChanged:" destination="2CJ-KI-Lz2" eventType="editingChanged" id="5Tu-ag-Q69"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPt-hc-xh1" userLabel="Line 5">
                                                 <rect key="frame" x="15" y="326" width="383" height="1"/>
@@ -127,14 +130,18 @@
                                                     <constraint firstAttribute="height" constant="1" id="etl-xD-C3q"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoI-tX-u21">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoI-tX-u21">
                                                 <rect key="frame" x="298.5" y="282" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="VcL-5a-Bgf"/>
                                                     <constraint firstAttribute="width" constant="24" id="bCj-lc-mWi"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="ios_icon_check" title=""/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="" image="ios_icon_check"/>
+                                                <state key="selected" image="icon_check_selected"/>
+                                                <connections>
+                                                    <action selector="offerBtnDidTap:" destination="2CJ-KI-Lz2" eventType="touchUpInside" id="fc8-Uv-LdK"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boI-eU-VDB">
                                                 <rect key="frame" x="327.5" y="283" width="71.5" height="21.5"/>
@@ -301,6 +308,7 @@
                                             <constraint firstAttribute="trailing" secondItem="RPt-hc-xh1" secondAttribute="trailing" constant="16" id="L6M-W0-NFj"/>
                                             <constraint firstAttribute="trailing" secondItem="AWP-cf-g4T" secondAttribute="trailing" constant="15" id="LJv-wK-ihC"/>
                                             <constraint firstItem="guS-6m-jtB" firstAttribute="top" secondItem="rMf-uX-9yq" secondAttribute="bottom" constant="22" id="MzM-DL-1bv"/>
+                                            <constraint firstItem="IoI-tX-u21" firstAttribute="leading" secondItem="9U5-ZE-S7Q" secondAttribute="trailing" constant="100" id="N6a-tC-hOW"/>
                                             <constraint firstItem="AWP-cf-g4T" firstAttribute="top" secondItem="3VQ-c4-zmK" secondAttribute="bottom" id="Ngo-Vg-KVj"/>
                                             <constraint firstAttribute="height" constant="771" id="Ol7-Bc-z5D"/>
                                             <constraint firstItem="t8L-mz-WPy" firstAttribute="top" secondItem="RPt-hc-xh1" secondAttribute="bottom" constant="22" id="Piq-5F-cAz"/>
@@ -414,6 +422,10 @@
                         <outlet property="bottomView" destination="Uu7-XW-MwY" id="JSb-0F-SrH"/>
                         <outlet property="collectionView" destination="3VQ-c4-zmK" id="2qo-g7-0uE"/>
                         <outlet property="postTextView" destination="t8L-mz-WPy" id="IAt-4C-m1T"/>
+                        <outlet property="priceOfferButton" destination="IoI-tX-u21" id="UjD-Vv-5cq"/>
+                        <outlet property="priceOfferLabel" destination="38r-lB-qQo" id="lPN-s4-lie"/>
+                        <outlet property="priceOfferTextLabel" destination="boI-eU-VDB" id="qIo-kX-Fvo"/>
+                        <outlet property="priceTextFiled" destination="9U5-ZE-S7Q" id="FFj-3v-KYs"/>
                         <outlet property="scrollView" destination="X2a-fw-0zm" id="IeD-F2-Eew"/>
                     </connections>
                 </viewController>
@@ -423,6 +435,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_check_selected" width="24" height="24"/>
         <image name="ios_camera" width="24" height="24"/>
         <image name="ios_delete1" width="24" height="24"/>
         <image name="ios_icon_check" width="24" height="24"/>

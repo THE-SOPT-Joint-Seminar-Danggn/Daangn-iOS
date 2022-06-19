@@ -17,15 +17,22 @@ class CreatePostViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var priceTextFiled: UITextField!
+    @IBOutlet weak var priceOfferLabel: UILabel!
+    @IBOutlet weak var priceOfferButton: UIButton! {
+        didSet {
+            priceOfferButton.isEnabled = false
+        }
+    }
+    @IBOutlet weak var priceOfferTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         textViewPlaceHolder()
         setDelegate()
-        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 80, height: 80)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         keyboardAddObserver()
     }
@@ -40,9 +47,43 @@ class CreatePostViewController: UIViewController {
         postTextView.textColor = UIColor.opaqueSeparator
     }
     
+    func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number)) ?? ""
+    }
+    
     func setDelegate() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    @IBAction func priceEditingChanged(_ sender: UITextField) {
+        priceOfferButton.isEnabled = priceTextFiled.hasText
+        checkMaxLength(textField: priceTextFiled, maxLength: 11)
+        
+        if sender.text?.isEmpty == true {
+            priceOfferLabel.textColor = .lightGray
+            priceOfferButton.isEnabled = false
+            priceOfferLabel.textColor = .lightGray
+        } else {
+            let priceNumber = priceTextFiled.text?.replacingOccurrences(of: ",", with: "")
+            priceTextFiled.text = numberFormatter(number: Int(priceNumber ?? "") ?? 0)
+            priceOfferLabel.textColor = .black
+            priceOfferTextLabel.textColor = .black
+            priceOfferButton.setImage(UIImage(named: "ios_icon_check-2"), for: .normal)
+        }
+    }
+    
+    func checkMaxLength(textField: UITextField, maxLength: Int) {
+        if priceTextFiled.text?.count ?? 0 > maxLength {
+            textField.deleteBackward()
+        }
+    }
+
+    @IBAction func offerBtnDidTap(_ sender: UIButton) {
+        sender.isSelected.toggle()
     }
     
     // MARK: 옵저버 생성
