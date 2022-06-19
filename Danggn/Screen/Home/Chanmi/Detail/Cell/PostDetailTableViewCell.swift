@@ -41,7 +41,7 @@ class PostDetailTableViewCell: UITableViewCell {
         getImage(imageURL: imageUrl)
         userNameLabel.text = feedDetail.user?.name
         addressLabel.text = feedDetail.user?.region
-        
+
         switch feedDetail.onSale {
         case "0":
             stateLabel.text = "판매중"
@@ -50,7 +50,7 @@ class PostDetailTableViewCell: UITableViewCell {
         case "2":
             stateLabel.text = "판매완료"
         default:
-            return
+            break
         }
         
         titleLable.text = feedDetail.title

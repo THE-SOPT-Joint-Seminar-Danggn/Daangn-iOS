@@ -7,4 +7,5 @@ target 'Danggn' do
 
   # Pods for Danggn
   pod 'Alamofire'
+  pod "BSImagePicker", "~> 3.1"
 end

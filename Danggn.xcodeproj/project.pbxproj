@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A08289C28357DF700A582CD /* ItemDetailViewController.swift */; };
+		4A516114285B9065005CECB6 /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A516113285B9065005CECB6 /* AddPhotoCollectionViewCell.swift */; };
+		4A516118285B9808005CECB6 /* ListPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A516117285B9808005CECB6 /* ListPhotoCollectionViewCell.swift */; };
+		4A51611C285BA388005CECB6 /* PhotoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A51611B285BA388005CECB6 /* PhotoDataModel.swift */; };
+		4AAB1DE0285603110096A427 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB1DDF285603110096A427 /* CreatePostViewController.swift */; };
+		4AAB1DE2285603190096A427 /* CreatePost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB1DE1285603190096A427 /* CreatePost.storyboard */; };
 		4AB07A43284CE88D0090C730 /* FeedLikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */; };
 		4AB07A45284CEA6D0090C730 /* FeedOnSaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */; };
 		4AB75E9D284A3F4100D55204 /* PostImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB75E9C284A3F4100D55204 /* PostImageTableViewCell.swift */; };
 		4AB75E9F284A3F5500D55204 /* PostDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB75E9E284A3F5500D55204 /* PostDetailTableViewCell.swift */; };
+		4ABCF3BE285F58AE005DB2E4 /* FeedCreateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCF3BD285F58AE005DB2E4 /* FeedCreateService.swift */; };
+		4ABCF3C0285F5C13005DB2E4 /* FeedCreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCF3BF285F5C13005DB2E4 /* FeedCreateModel.swift */; };
 		4ADAC09F28474AAF00B8193A /* FeedLikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADAC09E28474AAF00B8193A /* FeedLikeService.swift */; };
 		4ADAC0A128474E8B00B8193A /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADAC0A028474E8B00B8193A /* BaseResponse.swift */; };
 		4ADAC0A328479F6A00B8193A /* FeedOnSaleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADAC0A228479F6A00B8193A /* FeedOnSaleService.swift */; };
@@ -79,10 +86,18 @@
 		289C9054B49733CA08C0D180 /* Pods-Danggn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Danggn.debug.xcconfig"; path = "Target Support Files/Pods-Danggn/Pods-Danggn.debug.xcconfig"; sourceTree = "<group>"; };
 		4A08289828357B2C00A582CD /* ItemDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		4A08289C28357DF700A582CD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		4A516113285B9065005CECB6 /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A516117285B9808005CECB6 /* ListPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A51611B285BA388005CECB6 /* PhotoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataModel.swift; sourceTree = "<group>"; };
+		4AA53E14285DE3CE00E6AEF8 /* BSImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BSImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAB1DDF285603110096A427 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		4AAB1DE1285603190096A427 /* CreatePost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreatePost.storyboard; sourceTree = "<group>"; };
 		4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeModel.swift; sourceTree = "<group>"; };
 		4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOnSaleModel.swift; sourceTree = "<group>"; };
 		4AB75E9C284A3F4100D55204 /* PostImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageTableViewCell.swift; sourceTree = "<group>"; };
 		4AB75E9E284A3F5500D55204 /* PostDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewCell.swift; sourceTree = "<group>"; };
+		4ABCF3BD285F58AE005DB2E4 /* FeedCreateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateService.swift; sourceTree = "<group>"; };
+		4ABCF3BF285F5C13005DB2E4 /* FeedCreateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCreateModel.swift; sourceTree = "<group>"; };
 		4ADAC09E28474AAF00B8193A /* FeedLikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLikeService.swift; sourceTree = "<group>"; };
 		4ADAC0A028474E8B00B8193A /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		4ADAC0A228479F6A00B8193A /* FeedOnSaleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedOnSaleService.swift; sourceTree = "<group>"; };
@@ -167,6 +182,7 @@
 		31D7DB10938B91CCF27C5B5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4AA53E14285DE3CE00E6AEF8 /* BSImagePicker.framework */,
 				C8475C0C3F8165FEF23B6CDE /* Pods_Danggn.framework */,
 			);
 			name = Frameworks;
@@ -181,12 +197,70 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		4AE93814283FDD5900961E5B /* Cell */ = {
+		4A51610E285B89E2005CECB6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4A516113285B9065005CECB6 /* AddPhotoCollectionViewCell.swift */,
+				4A516117285B9808005CECB6 /* ListPhotoCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4A51611D285CECE4005CECB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A51611B285BA388005CECB6 /* PhotoDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AA1CAD8285600EF00A5F384 /* Chanmi */ = {
+			isa = PBXGroup;
+			children = (
+				4AA1CADB285600FE00A5F384 /* Detail */,
+				4AA1CADA285600F900A5F384 /* Create */,
+				4AA1CAD9285600F400A5F384 /* ListItem */,
+			);
+			path = Chanmi;
+			sourceTree = "<group>";
+		};
+		4AA1CAD9285600F400A5F384 /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListItem;
+			sourceTree = "<group>";
+		};
+		4AA1CADA285600F900A5F384 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				4A51611D285CECE4005CECB6 /* Model */,
+				4A51610E285B89E2005CECB6 /* Cell */,
+				4AAB1DDF285603110096A427 /* CreatePostViewController.swift */,
+				4AAB1DE1285603190096A427 /* CreatePost.storyboard */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		4AA1CADB285600FE00A5F384 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4AA1CADC2856011000A5F384 /* Cell */,
+				4A08289828357B2C00A582CD /* ItemDetail.storyboard */,
+				4A08289C28357DF700A582CD /* ItemDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4AA1CADC2856011000A5F384 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				4AB75E9C284A3F4100D55204 /* PostImageTableViewCell.swift */,
 				4AB75E9E284A3F5500D55204 /* PostDetailTableViewCell.swift */,
 				4AE93810283FDD2F00961E5B /* PostImageCollectionCell.swift */,
+				4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */,
+				4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */,
+				4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -335,12 +409,8 @@
 		E70333912834674600ABF306 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4A08289828357B2C00A582CD /* ItemDetail.storyboard */,
 				E70333952834689D00ABF306 /* ListItem.storyboard */,
 				E7F2375D283DDD7000177E7C /* ListItemCollectionViewCell.xib */,
-				4AE93809283FDCF000961E5B /* PostImageTableViewCell.xib */,
-				4AE9380D283FDCFB00961E5B /* PostDetailTableViewCell.xib */,
-				4AE93811283FDD2F00961E5B /* PostImageCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,7 +418,6 @@
 		E70333922834674A00ABF306 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4A08289C28357DF700A582CD /* ItemDetailViewController.swift */,
 				E70333932834687200ABF306 /* ListItemViewController.swift */,
 				E7F2375C283DDD7000177E7C /* ListItemCollectionViewCell.swift */,
 			);
@@ -358,7 +427,7 @@
 		E7033397283468D700ABF306 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4AE93814283FDD5900961E5B /* Cell */,
+				4AA1CAD8285600EF00A5F384 /* Chanmi */,
 				E70333902834673800ABF306 /* Model */,
 				E70333912834674600ABF306 /* View */,
 				E70333922834674A00ABF306 /* Controller */,
@@ -533,6 +602,7 @@
 				4ADAC0A72847DBF800B8193A /* FeedDetailModel.swift */,
 				4AB07A42284CE88D0090C730 /* FeedLikeModel.swift */,
 				4AB07A44284CEA6D0090C730 /* FeedOnSaleModel.swift */,
+				4ABCF3BF285F5C13005DB2E4 /* FeedCreateModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -544,6 +614,7 @@
 				4ADAC09E28474AAF00B8193A /* FeedLikeService.swift */,
 				4ADAC0A228479F6A00B8193A /* FeedOnSaleService.swift */,
 				4ADAC0A42847D8A600B8193A /* FeedDetailService.swift */,
+				4ABCF3BD285F58AE005DB2E4 /* FeedCreateService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -636,6 +707,7 @@
 				4F1ADAC42834085800969E1D /* NunitoSans-Light.ttf in Resources */,
 				4F1ADAAA2834083900969E1D /* NotoSansSC-Regular.otf in Resources */,
 				E70333BC2834729D00ABF306 /* MyDanggn.storyboard in Resources */,
+				4AAB1DE2285603190096A427 /* CreatePost.storyboard in Resources */,
 				4F1ADACB2834085800969E1D /* NunitoSans-Bold.ttf in Resources */,
 				4F1ADACD2834085800969E1D /* NunitoSans-Black.ttf in Resources */,
 				E70333B02834722E00ABF306 /* Neighborhood.storyboard in Resources */,
@@ -717,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A51611C285BA388005CECB6 /* PhotoDataModel.swift in Sources */,
 				E70333B62834727800ABF306 /* MyPlaceViewController.swift in Sources */,
 				E7F53C79284070090078B8C2 /* FeedService.swift in Sources */,
 				4ADAC0A52847D8A600B8193A /* FeedDetailService.swift in Sources */,
@@ -725,7 +798,9 @@
 				E7F53C71284065C70078B8C2 /* APIConstants.swift in Sources */,
 				E7F53C73284066FE0078B8C2 /* NetworkResults.swift in Sources */,
 				4AB07A45284CEA6D0090C730 /* FeedOnSaleModel.swift in Sources */,
+				4A516114285B9065005CECB6 /* AddPhotoCollectionViewCell.swift in Sources */,
 				E70333AD2834721900ABF306 /* NeighborhoodViewController.swift in Sources */,
+				4ABCF3BE285F58AE005DB2E4 /* FeedCreateService.swift in Sources */,
 				E70333BA2834728F00ABF306 /* ChatViewController.swift in Sources */,
 				E70333C22834761800ABF306 /* TabBarController.swift in Sources */,
 				E7F53C7628406DDC0078B8C2 /* FeedModel.swift in Sources */,
@@ -735,10 +810,13 @@
 				4FE39D952833D033002D99B6 /* AppDelegate.swift in Sources */,
 				E7C2C1E2283F0B8C00C0CED1 /* ListDataModel.swift in Sources */,
 				4A08289D28357DF700A582CD /* ItemDetailViewController.swift in Sources */,
+				4A516118285B9808005CECB6 /* ListPhotoCollectionViewCell.swift in Sources */,
+				4ABCF3C0285F5C13005DB2E4 /* FeedCreateModel.swift in Sources */,
 				E70333942834687200ABF306 /* ListItemViewController.swift in Sources */,
 				4FE39D972833D033002D99B6 /* SceneDelegate.swift in Sources */,
 				4ADAC09F28474AAF00B8193A /* FeedLikeService.swift in Sources */,
 				4AB07A43284CE88D0090C730 /* FeedLikeModel.swift in Sources */,
+				4AAB1DE0285603110096A427 /* CreatePostViewController.swift in Sources */,
 				E7EB78E8283660630094D855 /* UINavigationItem+Extension.swift in Sources */,
 				4AB75E9D284A3F4100D55204 /* PostImageTableViewCell.swift in Sources */,
 				E7EB78E528354EF80094D855 /* TabBarTemp.swift in Sources */,

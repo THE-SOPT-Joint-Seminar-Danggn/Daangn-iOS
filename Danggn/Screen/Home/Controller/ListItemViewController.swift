@@ -29,7 +29,11 @@ class ListItemViewController: UIViewController {
     }
     
     @IBAction func itemCreateButtonDidTap(_ sender: UIButton) {
-        
+        let storyBoard = UIStoryboard(name: "CreatePost", bundle: nil)
+        guard let viewControoler = storyBoard.instantiateViewController(withIdentifier: "CreatePostViewController")
+                as? CreatePostViewController else { return }
+        viewControoler.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        self.navigationController?.pushViewController(viewControoler, animated: true)
     }
 }
 
@@ -126,7 +130,6 @@ extension ListItemViewController: UICollectionViewDelegateFlowLayout {
         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
     }
-
 }
 
 extension ListItemViewController {
