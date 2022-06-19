@@ -173,7 +173,6 @@ extension ItemDetailViewController {
                 
                 self.likeButton.isSelected = detailData.isLiked
                 
-                // 왜 이거를 해 주어야 할까?
                 self.itemDetailTableView.reloadData()
                 
             default:
@@ -182,7 +181,6 @@ extension ItemDetailViewController {
         }
     }
 }
-
 
 extension ItemDetailViewController {
     // 상품 좋아요
